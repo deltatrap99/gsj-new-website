@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSJ - Global Scholars Journey</title>
+    <meta name="description" content="GSJ offers an exclusive, limited-access pathway to conduct original research and build competitive profiles under the direct mentorship of professionals.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px; width: auto; object-fit: contain; vertical-align: middle;">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="about.html">About ▾</a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About us</a>
+                        <a href="about.html#blog">Research Blog</a>
+                        <a href="terms.html">Term of service</a>
+                    </div>
+                </div>
+                <a href="services.html">What we offer</a>
+                <a href="mentors.html">Mentors</a>
+                <a href="index.html#testimonials">Testimonials</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+                <style>
+                    .lang-wrapper { position: relative; margin-right: 5px; }
+                    .lang-wrapper:hover .lang-menu { display: block; animation: fadeIn 0.2s ease-in-out; }
+                    .lang-btn { display: flex; align-items: center; gap: 5px; border: 1px solid #cbd5e1; border-radius: 20px; padding: 6px 14px; color: #0f172a; font-weight: 600; text-decoration: none; font-size: 0.95rem; background: white; transition: all 0.2s; cursor: pointer; font-family: inherit;}
+                    .lang-wrapper:hover .lang-btn { border-color: #0f4c81; color: #0f4c81; }
+                    .lang-menu { display: none; position: absolute; right: 0; top: 100%; min-width: 150px; padding-top: 15px; z-index: 1000; }
+                    .lang-menu-inner { background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 8px 0; overflow: hidden; }
+                    .lang-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; color: #475569; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: background 0.2s; }
+                    .lang-item:hover { background-color: #f8fafc; color: #0f4c81; }
+                    .lang-item.active { background-color: #f0f7ff; color: #0f4c81; font-weight: 700; }
+                </style>
+                <div class="lang-wrapper">
+                    <button class="lang-btn">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
+                    </button>
+                    <div class="lang-menu">
+                        <div class="lang-menu-inner">
+                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
+                            <a href="#" class="lang-item">Tiếng Việt</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">More Questions</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- New Hero Section from Mockup -->
+    <section id="hero" class="hero-new">
+        <!-- Background Image on the right -->
+        <div class="hero-new-bg"></div>
+
+        <div class="container hero-new-container">
+            <!-- Left Side -->
+            <div class="hero-new-content fade-up-element fade-up-delay-1" style="animation-fill-mode: both;">
+                <div class="hero-new-tagline">
+                    YOUR CAREER JOURNEY STARTS NOW <span class="tagline-line"></span><span class="tagline-dots"></span>
+                </div>
+                
+                <h1 class="hero-new-title">
+                    Real research.<br>
+                    Global mentors.<br>
+                    <span class="text-gradient">Limitless impact.</span>
+                </h1>
+                
+                <p class="hero-new-description">
+                    GSJ connects ambitious students with world-class mentors to conduct original research, build academic excellence, and prepare for the future of science and innovation.
+                </p>
+                
+                <div class="hero-new-buttons">
+                    <a href="services.html" class="btn btn-primary btn-pill">Apply Now <span class="material-symbols-outlined" style="font-size: 1.2rem; margin-left: 5px;">arrow_forward</span></a>
+                    <a href="services.html" class="btn btn-outline btn-pill">Explore Programs <span class="material-symbols-outlined" style="font-size: 1.2rem; margin-left: 5px;">arrow_forward</span></a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-avatars">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="Student">
+                        <img src="https://i.pravatar.cc/100?img=32" alt="Student">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="Student">
+                    </div>
+                    <div class="trust-text">
+                        <div class="stars">★★★★★</div>
+                        <div>Trusted by students worldwide</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Floating Cards -->
+            <div class="hero-new-cards fade-up-element fade-up-delay-3" style="animation-fill-mode: both;">
+                <div class="glass-card-new card-top">
+                    <div class="card-icon-new"><span class="material-symbols-outlined">school</span></div>
+                    <div class="card-text-new">
+                        <strong>Top Mentors</strong>
+                        <span>From Ivy League<br>& leading institutions</span>
+                    </div>
+                </div>
+                <div class="glass-card-new card-middle">
+                    <div class="card-icon-new"><span class="material-symbols-outlined">trending_up</span></div>
+                    <div class="card-text-new">
+                        <strong>Proven Outcomes</strong>
+                        <strong class="stat-number">1200+</strong>
+                        <span>Student projects completed</span>
+                    </div>
+                </div>
+                <div class="glass-card-new card-bottom">
+                    <div class="card-icon-new"><span class="material-symbols-outlined">language</span></div>
+                    <div class="card-text-new">
+                        <strong>Global Opportunities</strong>
+                        <span>Research experience<br>with worldwide impact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="about-section section-padding bg-light">
+        <div class="container text-center">
+            <p class="section-desc" style="max-width: 1000px; font-size: 1.25rem; line-height: 1.8; color: var(--text-main);">
+                GSJ offers an exclusive, limited-access pathway to conduct original projects under the direct mentorship of active professionals. Successful applicants gain immediate placement on ready-to-start, on-demand projects; priority access to immersive, deeper summer experiences when students have extended availability; or a fully bespoke, mentor-guided program designed around a student’s own goals. Spots are highly competitive and limited each cycle — missing this chance means forfeiting a rare, portfolio-defining opportunity that selective colleges and scholarship panels prize. Apply now to claim a seat among the next generation of global scholars.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services / Pathways -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Choose Your Pathway ✦</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Pathway 1 -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>On-Demand Programs</h3>
+                        <p>We present curated projects hand-selected by leading field experts and fully developed for immediate launch upon selection of a qualified student, offering an exclusive pathway to advanced, mentor-guided academic inquiry.</p>
+                        <p><em>These projects are assigned using rolling admissions.</em></p>
+                    </div>
+                </div>
+
+                <!-- Pathway 2 -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3>Summer Cohort</h3>
+                        <p>We offer a selective summer program designed for motivated students. The extended availability of the summer months allows participants to engage in deeper, more rigorous projects under the mentorship of experienced professionals. Candidates are expected to demonstrate strong academic preparation; only the most promising applicants will be admitted.</p>
+                        <p><em>Application period: March 1–May 1 annually.<br>Selected participants begin projects in June or July.</em></p>
+                    </div>
+                </div>
+
+                <!-- Pathway 3 -->
+                <div class="service-card premium-card">
+                    <div class="service-content">
+                        <div class="service-tag premium">Premium</div>
+                        <h3>Personalized Experience</h3>
+                        <p>Students selecting this premium pathway partner one-on-one with a GSJ mentor to craft an original, high-impact project from the ground up. Ideal for driven students who have already identified a compelling goal, this option guarantees personalized project design, targeted mentor matching with a vetted professional in the field, and guided launch support. Enrollment is limited to maintain bespoke attention.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="contact.html" class="btn btn-primary btn-large">Apply Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentors / Partnerships -->
+    <section id="mentors" class="mentors-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Notable places where our esteemed mentors work:</h2>
+            </div>
+            
+            <div class="partners-logo-grid">
+                <div class="partner-logo"><span>Case Western Reserve University</span></div>
+                <div class="partner-logo"><span>Massachusetts Institute of Technology</span></div>
+                <div class="partner-logo"><span>Harvard University</span></div>
+                <div class="partner-logo"><span>Washington University</span></div>
+                <div class="partner-logo"><span>Pfizer Research & Development</span></div>
+                <div class="partner-logo"><span>Columbia University</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="media-section section-padding">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>GSJ in the Media</h2>
+                <p class="section-desc" style="max-width: 800px; margin-top: 20px;">You may have seen students conducting high-level research and winning awards in top international competitions under our guidance!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials-section section-padding bg-light">
+        <div class="container">
+            <div class="testimonials-grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+                
+                <div class="testimonial-card">
+                    <p class="quote-text">"My time conducting independent projects while in high school has been an incredible opportunity for me to explore career options, improve my resume, and build important connections."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <h4>—Conner E.</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote-text">"Everything from Powerpoint, to writing papers, to public speaking, networking, and the art of persuasion — all of these skills were honed in the independent research that I conducted, and each put me at a great advantage upon arriving at University."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <h4>—Matthew K.</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote-text">"I owe my entire future career to this process and I am so thankful it was offered to me."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <h4>—Keelyn F.</h4>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="quote-text">"Research is a story: What are you curious about? Is there a problem or question on your mind? What do you care about? Why? And is there something new you can contribute or find? In my experience, those answers are incredibly valuable personally and professionally, and those are questions I'll continue to ask while studying at MIT."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <h4>—Angelina A.</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contact" class="cta-section section-padding text-center">
+        <div class="container">
+            <h2 class="cta-title">Get started today.</h2>
+            <a href="contact.html" class="btn btn-primary btn-large" style="margin-top: 20px;">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Column 1: Brand & Contact -->
+            <div class="footer-brand">
+                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px;">
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+                    GSJ offers an exclusive, limited-access pathway to conduct original research and build competitive profiles under the direct mentorship of professionals.
+                </p>
+                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
+                    <div style="display: flex; gap: 10px; align-items: flex-start;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
+                        <span style="font-size: 0.9rem; line-height: 1.5;">Lô A2.1 và A2.2, Tầng 01, Tòa A, Khu A của TTTM Imperia Garden, Số 203 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội, Việt Nam</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
+                        <span style="font-size: 0.9rem;">032 732 6655</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
+                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4>Programs</h4>
+                <div class="footer-links">
+                    <a href="services.html#pathway-1">Integrated STEM</a>
+                    <a href="services.html#pathway-2">Advanced Business</a>
+                    <a href="services.html#pathway-3">Global Scholarship</a>
+                    <a href="contact.html">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Column 3: About -->
+            <div>
+                <h4>About GSJ</h4>
+                <div class="footer-links">
+                    <a href="about.html">Our Story</a>
+                    <a href="mentors.html">Expert Mentors</a>
+                    <a href="about.html#blog">Research Blog</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Legal -->
+            <div>
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="services.html">FAQ</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

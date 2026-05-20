@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GSJ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px; width: auto; object-fit: contain; vertical-align: middle;">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="about.html">About ▾</a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About us</a>
+                        <a href="about.html#blog">Research Blog</a>
+                        <a href="terms.html">Term of service</a>
+                    </div>
+                </div>
+                <a href="services.html">What we offer</a>
+                <a href="mentors.html">Mentors</a>
+                <a href="index.html#testimonials">Testimonials</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+                <style>
+                    .lang-wrapper { position: relative; margin-right: 5px; }
+                    .lang-wrapper:hover .lang-menu { display: block; animation: fadeIn 0.2s ease-in-out; }
+                    .lang-btn { display: flex; align-items: center; gap: 5px; border: 1px solid #cbd5e1; border-radius: 20px; padding: 6px 14px; color: #0f172a; font-weight: 600; text-decoration: none; font-size: 0.95rem; background: white; transition: all 0.2s; cursor: pointer; font-family: inherit;}
+                    .lang-wrapper:hover .lang-btn { border-color: #0f4c81; color: #0f4c81; }
+                    .lang-menu { display: none; position: absolute; right: 0; top: 100%; min-width: 150px; padding-top: 15px; z-index: 1000; }
+                    .lang-menu-inner { background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 8px 0; overflow: hidden; }
+                    .lang-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; color: #475569; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: background 0.2s; }
+                    .lang-item:hover { background-color: #f8fafc; color: #0f4c81; }
+                    .lang-item.active { background-color: #f0f7ff; color: #0f4c81; font-weight: 700; }
+                </style>
+                <div class="lang-wrapper">
+                    <button class="lang-btn">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
+                    </button>
+                    <div class="lang-menu">
+                        <div class="lang-menu-inner">
+                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
+                            <a href="#" class="lang-item">Tiếng Việt</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">More Questions</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section style="position: relative; padding: 160px 0 100px; background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%); overflow: hidden;">
+        <!-- Decorative Globe Image -->
+        <div style="position: absolute; top: -50px; right: -100px; width: 60%; height: 150%; background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80'); background-size: cover; background-position: center; opacity: 0.15; mix-blend-mode: luminosity; border-radius: 50%;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 600px;">
+                <span style="font-size: 0.9rem; font-weight: 700; color: #0f4c81; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 20px;">Contact GSJ</span>
+                <h1 style="font-size: 4rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px;">
+                    Let's Start<br>
+                    a <span style="color: #0f4c81;">Conversation</span>
+                </h1>
+                <div style="width: 60px; height: 4px; background-color: #0f4c81; margin-bottom: 30px;"></div>
+                <p style="font-size: 1.15rem; color: #475569; line-height: 1.6; max-width: 500px;">
+                    Have questions or need guidance? Our team is here to support you on your academic and research journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section-padding" style="background-color: #f8fafc; padding-top: 80px; padding-bottom: 100px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px;">
+                <!-- Left: Info -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                        <span style="font-size: 0.85rem; font-weight: 700; color: #0f4c81; letter-spacing: 1px; text-transform: uppercase;">We're Here To Help</span>
+                        <div style="height: 1px; width: 40px; background-color: #0f4c81;"></div>
+                    </div>
+                    <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.2;">Get in Touch<br>With Our Team</h2>
+                    <p style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin-bottom: 40px;">
+                        Whether you're a student, parent, or educator, we're happy to answer your questions and provide the support you need.
+                    </p>
+                    
+                    <div style="height: 1px; width: 100%; background-color: #e2e8f0; margin-bottom: 40px;"></div>
+
+                    <!-- Contact Items -->
+                    <div style="display: flex; flex-direction: column; gap: 30px;">
+                        <div style="display: flex; gap: 20px;">
+                            <div style="width: 50px; height: 50px; background: #e0e7ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined" style="color: #4338ca;">mail</span>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: #0f172a; font-size: 1.1rem; margin-bottom: 5px;">Email Us</strong>
+                                <a href="mailto:cskh@gsj.edu.vn" style="color: #475569; text-decoration: none;">cskh@gsj.edu.vn</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px;">
+                            <div style="width: 50px; height: 50px; background: #e0e7ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined" style="color: #4338ca;">call</span>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: #0f172a; font-size: 1.1rem; margin-bottom: 5px;">Call Us</strong>
+                                <a href="tel:0327326655" style="color: #475569; text-decoration: none;">032 732 6655</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 20px;">
+                            <div style="width: 50px; height: 50px; background: #e0e7ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined" style="color: #4338ca;">location_on</span>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: #0f172a; font-size: 1.1rem; margin-bottom: 5px;">Our Office</strong>
+                                <span style="color: #475569;">Lô A2.1 và A2.2, Tầng 01, Tòa A, Khu A của TTTM Imperia Garden,<br>Số 203 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội, Việt Nam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form Card -->
+                <div>
+                    <div style="background: white; padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.04);">
+                        <h3 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Get Expert Support Today</h3>
+                        <p style="color: #64748b; margin-bottom: 30px;">Fill out the form below and we'll get back to you ASAP.</p>
+                        
+                        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Row 1: Name & Email -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Full Name *</label>
+                                    <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                </div>
+                                <div>
+                                    <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Email Address *</label>
+                                    <input type="email" placeholder="Enter your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Row 2: Subject -->
+                            <div>
+                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Subject *</label>
+                                <select style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background-color: white; color: #64748b; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;" required>
+                                    <option value="" disabled selected>Select a subject</option>
+                                    <option value="programs">Inquire about Programs</option>
+                                    <option value="mentorship">Mentorship Opportunities</option>
+                                    <option value="partnership">Partnerships</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Row 3: Message -->
+                            <div>
+                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Message *</label>
+                                <textarea placeholder="How can we help you?" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 120px; resize: vertical;" required></textarea>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" style="width: 100%; background: #0f4c81; color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; transition: background 0.3s;">
+                                <span class="material-symbols-outlined" style="font-size: 1.2rem;">send</span> Send Message
+                            </button>
+                            
+                            <!-- Privacy Note -->
+                            <div style="text-align: center; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 5px; color: #64748b; font-size: 0.9rem;">
+                                <span class="material-symbols-outlined" style="font-size: 1.1rem; color: #0f4c81;">verified_user</span>
+                                We respect your privacy. Your information is safe with us.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Column 1: Brand & Contact -->
+            <div class="footer-brand">
+                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px;">
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+                    GSJ offers an exclusive, limited-access pathway to conduct original research and build competitive profiles under the direct mentorship of professionals.
+                </p>
+                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
+                    <div style="display: flex; gap: 10px; align-items: flex-start;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
+                        <span style="font-size: 0.9rem; line-height: 1.5;">Lô A2.1 và A2.2, Tầng 01, Tòa A, Khu A của TTTM Imperia Garden, Số 203 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội, Việt Nam</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
+                        <span style="font-size: 0.9rem;">032 732 6655</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
+                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4>Programs</h4>
+                <div class="footer-links">
+                    <a href="services.html#pathway-1">Integrated STEM</a>
+                    <a href="services.html#pathway-2">Advanced Business</a>
+                    <a href="services.html#pathway-3">Global Scholarship</a>
+                    <a href="contact.html">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Column 3: About -->
+            <div>
+                <h4>About GSJ</h4>
+                <div class="footer-links">
+                    <a href="about.html">Our Story</a>
+                    <a href="mentors.html">Expert Mentors</a>
+                    <a href="about.html#blog">Research Blog</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Legal -->
+            <div>
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="services.html">FAQ</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

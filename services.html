@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Offer | GSJ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css?v=3">
+    <style>
+        .service-detail-block {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .service-detail-block:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .service-detail-block:last-of-type {
+            border-bottom: none;
+        }
+        .service-detail-content {
+            flex: 1;
+        }
+        .service-detail-image {
+            flex: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        .service-detail-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .service-detail-image:hover img {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .service-detail-block, .service-detail-block:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+                padding: 50px 0;
+            }
+        }
+        .service-detail-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .service-detail-text {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-light);
+            padding: 80px 0;
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-question {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+        .faq-answer {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        .faq-answer ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .faq-answer li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .faq-answer li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px; width: auto; object-fit: contain; vertical-align: middle;">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="about.html">About ▾</a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About us</a>
+                        <a href="about.html#blog">Research Blog</a>
+                        <a href="terms.html">Term of service</a>
+                    </div>
+                </div>
+                <a href="services.html" style="color: var(--primary-color);">What we offer</a>
+                <a href="mentors.html">Mentors</a>
+                <a href="index.html#testimonials">Testimonials</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+                <style>
+                    .lang-wrapper { position: relative; margin-right: 5px; }
+                    .lang-wrapper:hover .lang-menu { display: block; animation: fadeIn 0.2s ease-in-out; }
+                    .lang-btn { display: flex; align-items: center; gap: 5px; border: 1px solid #cbd5e1; border-radius: 20px; padding: 6px 14px; color: #0f172a; font-weight: 600; text-decoration: none; font-size: 0.95rem; background: white; transition: all 0.2s; cursor: pointer; font-family: inherit;}
+                    .lang-wrapper:hover .lang-btn { border-color: #0f4c81; color: #0f4c81; }
+                    .lang-menu { display: none; position: absolute; right: 0; top: 100%; min-width: 150px; padding-top: 15px; z-index: 1000; }
+                    .lang-menu-inner { background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 8px 0; overflow: hidden; }
+                    .lang-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; color: #475569; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: background 0.2s; }
+                    .lang-item:hover { background-color: #f8fafc; color: #0f4c81; }
+                    .lang-item.active { background-color: #f0f7ff; color: #0f4c81; font-weight: 700; }
+                </style>
+                <div class="lang-wrapper">
+                    <button class="lang-btn">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
+                    </button>
+                    <div class="lang-menu">
+                        <div class="lang-menu-inner">
+                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
+                            <a href="#" class="lang-item">Tiếng Việt</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">More Questions</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- New Services Hero -->
+    <section class="services-hero">
+        <div class="services-hero-bg"></div>
+        <div class="container services-hero-container">
+            <div class="services-hero-content fade-up-element">
+                <div class="hero-new-tagline">
+                    YOUR GLOBAL JOURNEY BEGINS HERE <span class="tagline-line"></span>
+                </div>
+                <h1 class="services-hero-title">
+                    World-Class Programs.<br>
+                    Real Research.<br>
+                    <span style="color: #0f4c81;">Exceptional Futures.</span>
+                </h1>
+                <p class="hero-new-description">
+                    GSJ empowers exceptional students through immersive STEM programs, authentic scientific research, and global mentorship. Build knowledge. Solve real-world problems. Lead with impact.
+                </p>
+                <div class="hero-new-buttons">
+                    <a href="#programs" class="btn btn-primary btn-pill"><span class="material-symbols-outlined" style="font-size: 1.2rem; margin-right: 8px; vertical-align: middle;">rocket_launch</span> Explore Programs</a>
+                    <a href="#" class="btn btn-outline btn-pill"><span class="material-symbols-outlined" style="font-size: 1.2rem; margin-right: 8px; vertical-align: middle;">play_circle</span> Watch Overview</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Overlapping Stats Cards -->
+    <div class="container" style="position: relative; z-index: 10; margin-top: -50px;">
+        <div class="stats-cards-wrapper fade-up-element fade-up-delay-2" style="animation-fill-mode: both;">
+            <div class="stat-card">
+                <div class="stat-icon"><span class="material-symbols-outlined">person</span></div>
+                <div class="stat-text">
+                    <strong>300+</strong>
+                    <span>Expert Mentors</span>
+                    <p>Researchers, professors & industry leaders worldwide</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><span class="material-symbols-outlined">science</span></div>
+                <div class="stat-text">
+                    <strong>100+</strong>
+                    <span>Research Opportunities</span>
+                    <p>Cutting-edge projects across STEM disciplines</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><span class="material-symbols-outlined">school</span></div>
+                <div class="stat-text">
+                    <strong>92%</strong>
+                    <span>Student Impact</span>
+                    <p>Students publish, present, or pursue top-tier universities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Programs Intro Section -->
+    <section id="programs" class="programs-intro container section-padding" style="padding-top: 80px; max-width: 1100px;">
+        <div class="programs-intro-header fade-up-element">
+            <div>
+                <span class="programs-tagline">OUR PROGRAMS</span>
+                <h2 class="programs-title">Programs Designed for<br>Future Innovators</h2>
+            </div>
+            <div>
+                <p class="programs-desc">From intensive research experiences to leadership development and scholarships, our programs are built to challenge, inspire, and elevate.</p>
+            </div>
+        </div>
+        
+        <div class="programs-quick-links fade-up-element fade-up-delay-1" style="animation-fill-mode: both;">
+            <a href="#pathway-1" class="quick-link-card">
+                <div class="ql-icon"><span class="material-symbols-outlined">biotech</span></div>
+                <div class="ql-text">
+                    <strong>Integrated STEM &<br>Research Programs</strong>
+                    <p>Hands-on research aligned with advanced STEM learning and academic excellence.</p>
+                </div>
+                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
+            </a>
+            <a href="#pathway-2" class="quick-link-card">
+                <div class="ql-icon"><span class="material-symbols-outlined">language</span></div>
+                <div class="ql-text">
+                    <strong>Global Mentorship<br>& Networking</strong>
+                    <p>Learn from world-class mentors and connect with a global community.</p>
+                </div>
+                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
+            </a>
+            <a href="#pathway-3" class="quick-link-card">
+                <div class="ql-icon"><span class="material-symbols-outlined">workspace_premium</span></div>
+                <div class="ql-text">
+                    <strong>Scholarships &<br>Recognition</strong>
+                    <p>Merit-based scholarships and recognition for outstanding student achievements.</p>
+                </div>
+                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="container" style="max-width: 1100px;">
+        <!-- Pathway 1 -->
+        <div id="pathway-1" class="service-detail-block">
+            <div class="service-detail-content">
+                <h2 class="service-detail-title">Integrated STEM & Scientific Research</h2>
+                <p class="service-detail-text">
+                    A comprehensive STEM foundation integrating advanced theory with intensive practical applications. We ignite a passion for science early on through hands-on experimental projects in modern, internationally-standardized laboratories.
+                </p>
+                <p class="service-detail-text">
+                    Students are guided to conduct independent scientific research projects, culminating in participation in prestigious international competitions (such as ISEF and World Invention). Under the mentorship of leading scientists and field experts, students develop 21st-century skills: critical thinking, creativity, and advanced problem-solving. This pathway provides the rigor, structure, and depth of a premier research experience.
+                </p>
+            </div>
+            <div class="service-detail-image">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_S-26V8OTAsUH743lGI8XxuTbN3O055T2RDYdfDh3RkMepM_Z4GTSNQ46-4TxVG8mNdytF-KbAWkRDYFHU9noFQuI4uznOs1oGzoCqVvkUJdKYksnyecsz98pSVbtkm2AR3NOLJXYKG_ZvQPiOeAR1S2gdPMNZ0AuGoIek4M3-6ylOwk1MbPqLYM-Z8sdblMeFO7jVz5fzbQznrRqRcXyTSoxrUAOWUSRHeyTAx_sc9cFl47MleMt6YUlh1F1v0fmLYqE5HeHxoU" alt="Integrated STEM & Scientific Research">
+            </div>
+        </div>
+
+    <!-- Pathway 2 -->
+        <div id="pathway-2" class="service-detail-block">
+            <div class="service-detail-content">
+                <h2 class="service-detail-title">Advanced Business & Career Orientation</h2>
+                <p class="service-detail-text">
+                    The Advanced Business School (ABS) equips the next generation with essential management, entrepreneurship, and leadership skills. This pathway is an intensive, immersive opportunity for students ready to pursue in-depth business education and practical career orientation.
+                </p>
+                <p class="service-detail-text">
+                    Students participate in practical internships at major domestic and international corporations. Furthermore, our Global Youth Conferences connect students with a worldwide network of young leaders through academic forums. Outdoor team-building experiences and specialized school-based programs are also provided to help students discover and position their personal strengths early on.
+                </p>
+            </div>
+            <div class="service-detail-image">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5-tL6NC7Olsf4SUtWeyE9A6LUpDnY-Fa-kUpM8ROMZJb7Nj0iuxamZsra8u3YvILgXssmxSnXxUfAR2lkwxCKHG4ClLCZ8KqqYMNwXdPUVHfmWfhzHYWaGvrXxoI9_oy370mHG5qdgxQfqYn9Q2ZVRMeBMNoYvDIw1Pxm65EKhwG1n3M-eCXtXXtUKyiVeEdEd232HvCw6uYpiRFqFhDqv4qr-82wuAM3kIvCCXQ7g-ob8i5I36Fs9xQ6rUy7qilJKEsYbVD5KE" alt="Advanced Business & Career Orientation">
+            </div>
+        </div>
+
+        <!-- Pathway 3 -->
+        <div id="pathway-3" class="service-detail-block">
+            <div class="service-detail-content">
+                <h2 class="service-detail-title">Global Scholarship Strategy (Premium)</h2>
+                <p class="service-detail-text">
+                    Our most comprehensive and elite package. GSJ doesn't just educate; we construct breakthrough portfolios to help you conquer the highest peaks of global education in the USA (Ivy League, Top 50), UK (Russell Group), and Australia (Go8).
+                </p>
+                <p class="service-detail-text">
+                    Be paired with a professional strategist who will mentor you through every stage of the application. We customize a 70-100% scholarship strategy based on your unique strengths. By seamlessly integrating the results from your Scientific Research, ABS projects, and international standardized tests (SAT/IELTS), we create an undeniably powerful and unique application profile. This package is perfect for students who want a competitive edge and high-level support.
+                </p>
+            </div>
+            <div class="service-detail-image">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIlyCXcESN9CwZr1q4TK_RJh9ubpN5Zq4bz9XWHh8m7lhjAckRb4Yv4trljRoqDQQUDc3uj_-umbA3rEwyn8nIUo4WxzgI5pQR2iuv1RzJ0uTDQu1L1dKI9Pdjya_SsMUlNKla8zRwHWTqXjb0PI2cN9r2d_fSfJ0rZpegBZHw9EP27ycRyKO27S-PdJhT0GX3JfFgoYHL5Q1gEITuFrMBXnvZL41WTDu4AehnWRGmcTTe9BQ7LcGyCnsGjd-TR-8iLobqMyO0XY" alt="Global Scholarship Strategy">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section like SRA -->
+    <section class="faq-section">
+        <div class="container" style="max-width: 900px;">
+            <div class="faq-item">
+                <h3 class="faq-question">What's included with a membership?</h3>
+                <div class="faq-answer">
+                    <p>When you join a GSJ program, you gain access to an exclusive educational ecosystem:</p>
+                    <ul>
+                        <li><strong>Professional Mentorship:</strong> You will be paired with a scientist or industry expert working in their field to collaborate on authentic projects.</li>
+                        <li><strong>GSJ Facilities & Portal:</strong> Access to our modern labs and our exclusive portal to manage tasks, milestones, and communicate with your mentors.</li>
+                        <li><strong>Research & Strategy Coaches:</strong> Access to our team of professionals with decades of experience working with high school students.</li>
+                        <li><strong>Resource Library & Priority Help:</strong> Templates, examples, and dedicated support staff to answer any questions you may have.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What does the application process look like?</h3>
+                <div class="faq-answer">
+                    <p>Once you submit an application, it will be reviewed by the staff at GSJ. If your application meets our criteria, it will be passed along to the specific program director for review. We will then schedule virtual interviews with top candidates. Final selection occurs after the interview. If chosen, you will receive an acceptance letter and have a limited time to submit your enrollment to secure your spot.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What payment methods do you accept? Can I pay in installments?</h3>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards and bank transfers. Payments can be made either in full or spread out over monthly installments depending on the specific pathway you choose.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What are GSJ's Terms of Service?</h3>
+                <div class="faq-answer">
+                    <p>You can review our program policies, responsibilities, and guidelines <a href="terms.html" style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">HERE</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Column 1: Brand & Contact -->
+            <div class="footer-brand">
+                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px;">
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+                    GSJ offers an exclusive, limited-access pathway to conduct original research and build competitive profiles under the direct mentorship of professionals.
+                </p>
+                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
+                    <div style="display: flex; gap: 10px; align-items: flex-start;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
+                        <span style="font-size: 0.9rem; line-height: 1.5;">Lô A2.1 và A2.2, Tầng 01, Tòa A, Khu A của TTTM Imperia Garden, Số 203 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội, Việt Nam</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
+                        <span style="font-size: 0.9rem;">032 732 6655</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
+                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4>Programs</h4>
+                <div class="footer-links">
+                    <a href="services.html#pathway-1">Integrated STEM</a>
+                    <a href="services.html#pathway-2">Advanced Business</a>
+                    <a href="services.html#pathway-3">Global Scholarship</a>
+                    <a href="contact.html">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Column 3: About -->
+            <div>
+                <h4>About GSJ</h4>
+                <div class="footer-links">
+                    <a href="about.html">Our Story</a>
+                    <a href="mentors.html">Expert Mentors</a>
+                    <a href="about.html#blog">Research Blog</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Legal -->
+            <div>
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="services.html">FAQ</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

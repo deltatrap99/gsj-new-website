@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Questions | GSJ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px; width: auto; object-fit: contain; vertical-align: middle;">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="about.html">About ▾</a>
+                    <div class="nav-dropdown-content">
+                        <a href="about.html">About us</a>
+                        <a href="about.html#blog">Research Blog</a>
+                        <a href="terms.html">Term of service</a>
+                    </div>
+                </div>
+                <a href="services.html">What we offer</a>
+                <a href="mentors.html">Mentors</a>
+                <a href="index.html#testimonials">Testimonials</a>
+            </nav>
+            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
+                <style>
+                    .lang-wrapper { position: relative; margin-right: 5px; }
+                    .lang-wrapper:hover .lang-menu { display: block; animation: fadeIn 0.2s ease-in-out; }
+                    .lang-btn { display: flex; align-items: center; gap: 5px; border: 1px solid #cbd5e1; border-radius: 20px; padding: 6px 14px; color: #0f172a; font-weight: 600; text-decoration: none; font-size: 0.95rem; background: white; transition: all 0.2s; cursor: pointer; font-family: inherit;}
+                    .lang-wrapper:hover .lang-btn { border-color: #0f4c81; color: #0f4c81; }
+                    .lang-menu { display: none; position: absolute; right: 0; top: 100%; min-width: 150px; padding-top: 15px; z-index: 1000; }
+                    .lang-menu-inner { background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 8px 0; overflow: hidden; }
+                    .lang-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; color: #475569; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: background 0.2s; }
+                    .lang-item:hover { background-color: #f8fafc; color: #0f4c81; }
+                    .lang-item.active { background-color: #f0f7ff; color: #0f4c81; font-weight: 700; }
+                </style>
+                <div class="lang-wrapper">
+                    <button class="lang-btn">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
+                    </button>
+                    <div class="lang-menu">
+                        <div class="lang-menu-inner">
+                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
+                            <a href="#" class="lang-item">Tiếng Việt</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">More Questions</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Questions Hero -->
+    <section style="position: relative; padding: 160px 0 100px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); overflow: hidden;">
+        <!-- Decorative Elements -->
+        <div style="position: absolute; top: -50px; right: -100px; width: 300px; height: 300px; background: rgba(245, 158, 11, 0.1); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.05); border-radius: 50%;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="max-width: 650px; margin: 0 auto; text-align: center;">
+                <span style="font-size: 0.9rem; font-weight: 700; color: #b45309; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 20px;">We are here to listen</span>
+                <h1 style="font-size: 3.5rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px;">
+                    Still wondering if this is <span style="color: #d97706;">right for you?</span>
+                </h1>
+                <p style="font-size: 1.15rem; color: #475569; line-height: 1.6; margin-bottom: 0;">
+                    Embarking on a research journey is a big decision. Whether you're unsure about the time commitment, choosing a topic, or finding the right mentor, tell us what's on your mind. We're happy to guide you!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Questions Section -->
+    <section class="section-padding" style="background-color: #f8fafc; padding-top: 80px; padding-bottom: 100px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px;">
+                
+                <!-- Left: FAQ / Info -->
+                <div>
+                    <h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 30px; line-height: 1.2;">Common Concerns</h2>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 25px;">
+                        <div style="background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">"Will I have enough time?"</h4>
+                            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">Most of our students balance research with a full high-school workload. Our mentors help you set a realistic schedule, typically requiring just 3-5 hours a week.</p>
+                        </div>
+
+                        <div style="background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">"I don't know what to research."</h4>
+                            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">That's completely normal! The first phase of the program is dedicated entirely to exploring your interests and brainstorming a unique topic alongside your mentor.</p>
+                        </div>
+
+                        <div style="background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
+                            <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">"Is my English good enough?"</h4>
+                            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">We welcome students from all backgrounds. Your mentor will support you not just with research, but also with academic writing and communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Dedicated Questions Form -->
+                <div>
+                    <div style="background: white; padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.04); border-top: 6px solid #d97706;">
+                        <h3 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Tell us what you're thinking</h3>
+                        <p style="color: #64748b; margin-bottom: 30px;">Let's clear up any doubts before you apply.</p>
+                        
+                        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                            <!-- Row 1: Name & Email -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Full Name</label>
+                                    <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                </div>
+                                <div>
+                                    <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Email Address</label>
+                                    <input type="email" placeholder="Your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Row 2: Main Concern -->
+                            <div>
+                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">What is your main concern?</label>
+                                <select style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background-color: white; color: #0f172a; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;" required>
+                                    <option value="" disabled selected>Select what's on your mind...</option>
+                                    <option value="time">I'm worried about the time commitment</option>
+                                    <option value="topic">I don't know what topic to research</option>
+                                    <option value="skills">I'm not sure if I have the right skills</option>
+                                    <option value="cost">I have questions about program costs</option>
+                                    <option value="other">Something else...</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Row 3: Message -->
+                            <div>
+                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Tell us more about your situation</label>
+                                <textarea placeholder="E.g. I am currently in 11th grade and taking 3 AP classes. I love biology but I'm not sure if I have enough time for a 12-week research project..." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 140px; resize: vertical;" required></textarea>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" style="width: 100%; background: #d97706; color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; transition: background 0.3s; box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);">
+                                <span class="material-symbols-outlined" style="font-size: 1.2rem;">support_agent</span> Get Advice from our Experts
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Column 1: Brand & Contact -->
+            <div class="footer-brand">
+                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
+                    <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px;">
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+                    GSJ offers an exclusive, limited-access pathway to conduct original research and build competitive profiles under the direct mentorship of professionals.
+                </p>
+                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
+                    <div style="display: flex; gap: 10px; align-items: flex-start;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
+                        <span style="font-size: 0.9rem; line-height: 1.5;">Lô A2.1 và A2.2, Tầng 01, Tòa A, Khu A của TTTM Imperia Garden, Số 203 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội, Việt Nam</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
+                        <span style="font-size: 0.9rem;">032 732 6655</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
+                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4>Programs</h4>
+                <div class="footer-links">
+                    <a href="services.html#pathway-1">Integrated STEM</a>
+                    <a href="services.html#pathway-2">Advanced Business</a>
+                    <a href="services.html#pathway-3">Global Scholarship</a>
+                    <a href="contact.html">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Column 3: About -->
+            <div>
+                <h4>About GSJ</h4>
+                <div class="footer-links">
+                    <a href="about.html">Our Story</a>
+                    <a href="mentors.html">Expert Mentors</a>
+                    <a href="about.html#blog">Research Blog</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Legal -->
+            <div>
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="services.html">FAQ</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
