@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "awf_version": "4.0.2",
+    "created_at": "2026-05-24T14:05:00+07:00"
+  },
+  "project": {
+    "name": "New Website GSJ",
+    "type": "static_website",
+    "status": "running"
+  },
+  "updated_at": "2026-05-24T14:05:00+07:00"
+}

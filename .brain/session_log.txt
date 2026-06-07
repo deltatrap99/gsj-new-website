@@ -1,0 +1,3 @@
+[2026-05-24 14:05] ONBOARDING COMPLETE
+[2026-05-24 14:05] Technical level: basic
+[2026-05-24 14:05] RUN SUCCESS: App running at http://localhost:3000
