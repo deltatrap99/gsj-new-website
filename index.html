@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -34,18 +34,7 @@
                 <a href="mentors.html">Mentors</a>
                 <a href="index.html#testimonials">Testimonials</a>
             </nav>
-            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-                <style>
-                    .lang-wrapper { position: relative; margin-right: 5px; }
-                    .lang-wrapper:hover .lang-menu { display: block; animation: fadeIn 0.2s ease-in-out; }
-                    .lang-btn { display: flex; align-items: center; gap: 5px; border: 1px solid #cbd5e1; border-radius: 20px; padding: 6px 14px; color: #0f172a; font-weight: 600; text-decoration: none; font-size: 0.95rem; background: white; transition: all 0.2s; cursor: pointer; font-family: inherit;}
-                    .lang-wrapper:hover .lang-btn { border-color: #0f4c81; color: #0f4c81; }
-                    .lang-menu { display: none; position: absolute; right: 0; top: 100%; min-width: 150px; padding-top: 15px; z-index: 1000; }
-                    .lang-menu-inner { background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 8px 0; overflow: hidden; }
-                    .lang-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; color: #475569; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: background 0.2s; }
-                    .lang-item:hover { background-color: #f8fafc; color: #0f4c81; }
-                    .lang-item.active { background-color: #f0f7ff; color: #0f4c81; font-weight: 700; }
-                </style>
+            <div class="nav-actions">
                 <div class="lang-wrapper">
                     <button class="lang-btn">
                         <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
@@ -83,7 +72,7 @@
                 </h1>
                 
                 <p class="hero-new-description">
-                    Empowering young learners to achieve their highest potential through personalized mentorship and global academic opportunities.
+                    GSJ empowers ambitious students through world-class STEM research, mentorship, and global opportunities that shape future leaders in science and beyond.
                 </p>
                 
                 <div class="hero-new-buttons">
@@ -130,16 +119,54 @@
                 </div>
             </div>
         </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        </div>
     </section>
 
     <!-- Value Proposition -->
     <section class="about-section section-padding bg-light">
-        <div class="container text-center">
-            <div style="max-width: 1000px; margin: 0 auto; text-align: justify; font-size: 1.15rem; line-height: 1.8; color: var(--text-main);">
-                <p style="margin-bottom: 20px;">Global Science Journey is an in-depth knowledge and skills educational ecosystem built with the mission of accompanying young learners on their journey of growth and future development.</p>
-                <p style="margin-bottom: 20px;">Bringing together leading educators and researchers from Vietnam and internationally across Natural Sciences, Social Sciences, Engineering, Technology, and Business, we develop meaningful, practice-oriented programs grounded in a shared belief that every student can thrive when guided and supported in a way that is personal to them.</p>
-                <p style="margin-bottom: 20px;">We continuously expand our network of partner universities, research institutes, and educational organizations worldwide, opening doors for students to access world-class academic environments and global competitions.</p>
+        <div class="container">
+            <!-- Stats Counter Row -->
+            <div class="stats-row reveal">
+                <div class="stat-item">
+                    <div class="stat-number-large" data-count="1200" data-suffix="+">0</div>
+                    <div class="stat-label">Student Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-large" data-count="50" data-suffix="+">0</div>
+                    <div class="stat-label">Expert Mentors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-large" data-count="7" data-suffix="">0</div>
+                    <div class="stat-label">International Awards</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-large" data-count="92" data-suffix="%">0</div>
+                    <div class="stat-label">Student Impact Rate</div>
+                </div>
+            </div>
+
+            <div class="about-text reveal">
+                <p>Global Science Journey is an in-depth knowledge and skills educational ecosystem built with the mission of accompanying young learners on their journey of growth and future development.</p>
+                <p>Bringing together leading educators and researchers from Vietnam and internationally across Natural Sciences, Social Sciences, Engineering, Technology, and Business, we develop meaningful, practice-oriented programs grounded in a shared belief that every student can thrive when guided and supported in a way that is personal to them.</p>
+                <p>We continuously expand our network of partner universities, research institutes, and educational organizations worldwide, opening doors for students to access world-class academic environments and global competitions.</p>
                 <p>Guided by the philosophy that "Education is not about making students the same, but about helping each student become the best version of themselves," we design personalized academic pathways and career guidance based on each student's individual strengths, passions, and abilities. Beyond delivering knowledge, we help students build confidence, develop real skills, and find the motivation to live by the ideal of "Become a better version of yourself, every day."</p>
+
+                <div class="mission-vision-grid">
+                    <div class="vision-card reveal stagger-1">
+                        <span class="material-symbols-outlined" style="color: var(--primary-color);">visibility</span>
+                        <h3>Vision</h3>
+                        <p>To become an internationally recognized organization in career education and skills development for students. We are committed to building a sustainable talent ecosystem by equipping young people with strong academic foundations and practical competencies. Through this, we empower students to develop holistically, integrate confidently into the global community, and take meaningful steps toward becoming responsible global citizens.</p>
+                    </div>
+                    <div class="mission-card reveal stagger-2">
+                        <span class="material-symbols-outlined" style="color: var(--accent-gold);">flag</span>
+                        <h3>Mission</h3>
+                        <p>To empower 1 million students to become the best version of themselves-confident, resilient, and successful in pursuing their future careers.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -147,12 +174,12 @@
     <!-- Services / Pathways -->
     <section id="services" class="services-section section-padding">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header text-center reveal">
                 <h2>Choose Your Pathway ✦</h2>
             </div>
             <div class="services-grid">
                 <!-- Pathway 1 -->
-                <div class="service-card">
+                <div class="service-card reveal stagger-1">
                     <div class="service-content">
                         <h3>On-Demand Programs</h3>
                         <p>We present curated projects hand-selected by leading field experts and fully developed for immediate launch upon selection of a qualified student, offering an exclusive pathway to advanced, mentor-guided academic inquiry.</p>
@@ -161,7 +188,7 @@
                 </div>
 
                 <!-- Pathway 2 -->
-                <div class="service-card">
+                <div class="service-card reveal stagger-2">
                     <div class="service-content">
                         <h3>Summer Cohort</h3>
                         <p>We offer a selective summer program designed for motivated students. The extended availability of the summer months allows participants to engage in deeper, more rigorous projects under the mentorship of experienced professionals. Candidates are expected to demonstrate strong academic preparation; only the most promising applicants will be admitted.</p>
@@ -170,7 +197,7 @@
                 </div>
 
                 <!-- Pathway 3 -->
-                <div class="service-card premium-card">
+                <div class="service-card premium-card reveal stagger-3">
                     <div class="service-content">
                         <div class="service-tag premium">Premium</div>
                         <h3>Personalized Experience</h3>
@@ -188,14 +215,14 @@
     <!-- Leadership Team -->
     <section id="leadership" class="team-section section-padding">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-header text-center reveal">
                 <h2>Our Leadership Team</h2>
             </div>
             <div class="team-grid">
                 <!-- Member 1 -->
-                <div class="team-member-card">
+                <div class="team-member-card reveal stagger-1">
                     <div class="team-image-wrapper">
-                        <img src="images/nga.jpg" alt="Mrs. Dang Thuy Nga" class="team-image">
+                        <img src="images/Mrs._Dang_Thuy_Nga.JPG" alt="Mrs. Dang Thuy Nga" class="team-image" onerror="this.src='https://ui-avatars.com/api/?name=Dang+Thuy+Nga&background=0f4c81&color=fff&size=200'">
                     </div>
                     <div class="team-info">
                         <h3>Mrs. Dang Thuy Nga</h3>
@@ -211,9 +238,9 @@
                 </div>
 
                 <!-- Member 2 -->
-                <div class="team-member-card">
+                <div class="team-member-card reveal stagger-2">
                     <div class="team-image-wrapper">
-                        <img src="https://ui-avatars.com/api/?name=Vu+Ngan+Binh&background=0f4c81&color=fff&size=200" alt="Mrs. Vu Ngan Binh" class="team-image">
+                        <img src="images/Mrs._Vu_Ngan_Binh.JPG" alt="Mrs. Vu Ngan Binh" class="team-image" onerror="this.src='https://ui-avatars.com/api/?name=Vu+Ngan+Binh&background=0f4c81&color=fff&size=200'">
                     </div>
                     <div class="team-info">
                         <h3>Mrs. Vu Ngan Binh</h3>
@@ -230,9 +257,9 @@
                 </div>
 
                 <!-- Member 3 -->
-                <div class="team-member-card">
+                <div class="team-member-card reveal stagger-3">
                     <div class="team-image-wrapper">
-                        <img src="https://ui-avatars.com/api/?name=Hoang+Tuyet+Mai&background=0f4c81&color=fff&size=200" alt="Mrs. Hoang Tuyet Mai" class="team-image">
+                        <img src="images/Mrs._Hoang_Tuyet_Mai.png" alt="Mrs. Hoang Tuyet Mai" class="team-image" onerror="this.src='https://ui-avatars.com/api/?name=Hoang+Tuyet+Mai&background=0f4c81&color=fff&size=200'">
                     </div>
                     <div class="team-info">
                         <h3>Mrs. Hoang Tuyet Mai</h3>
@@ -246,9 +273,9 @@
                 </div>
 
                 <!-- Member 4 -->
-                <div class="team-member-card">
+                <div class="team-member-card reveal stagger-4">
                     <div class="team-image-wrapper">
-                        <img src="https://ui-avatars.com/api/?name=Luong+Thi+Hong+Hanh&background=0f4c81&color=fff&size=200" alt="Ms. Luong Thi Hong Hanh" class="team-image">
+                        <img src="images/Ms._Luong_Thi_Hong_Hanh.png" alt="Ms. Luong Thi Hong Hanh" class="team-image" onerror="this.src='https://ui-avatars.com/api/?name=Luong+Thi+Hong+Hanh&background=0f4c81&color=fff&size=200'">
                     </div>
                     <div class="team-info">
                         <h3>Ms. Luong Thi Hong Hanh</h3>
@@ -265,17 +292,23 @@
     <!-- Mentors / Partnerships -->
     <section id="mentors" class="mentors-section section-padding bg-light">
         <div class="container">
-            <div class="section-header text-center">
-                <h2>Notable places where our esteemed mentors work:</h2>
+            <div class="section-header text-center reveal">
+                <h2>Partnership</h2>
+                <p class="section-desc" style="max-width: 800px;">
+                    GSJ collaborates with globally ranked universities, international foundations, and specialist education partners — connecting our students with academic mentorship, world-class learning environments, and early career exposure.
+                </p>
             </div>
             
-            <div class="partners-logo-grid">
-                <div class="partner-logo"><span>Case Western Reserve University</span></div>
-                <div class="partner-logo"><span>Massachusetts Institute of Technology</span></div>
-                <div class="partner-logo"><span>Harvard University</span></div>
-                <div class="partner-logo"><span>Washington University</span></div>
-                <div class="partner-logo"><span>Pfizer Research & Development</span></div>
-                <div class="partner-logo"><span>Columbia University</span></div>
+            <div class="partners-logo-grid reveal">
+                <div class="partner-logo">UNSW Sydney</div>
+                <div class="partner-logo">University of Sydney</div>
+                <div class="partner-logo">NUS Singapore</div>
+                <div class="partner-logo">NTU Singapore</div>
+                <div class="partner-logo">Hemispheres Foundation</div>
+                <div class="partner-logo">HUST Vietnam</div>
+                <div class="partner-logo">The English Connection</div>
+                <div class="partner-logo">Kevin Doan English Center</div>
+                <div class="partner-logo">CN Vision</div>
             </div>
         </div>
     </section>
@@ -283,9 +316,40 @@
     <!-- Media Section -->
     <section class="media-section section-padding">
         <div class="container text-center">
-            <div class="section-header">
-                <h2>GSJ in the Media</h2>
-                <p class="section-desc" style="max-width: 800px; margin-top: 20px;">You may have seen students conducting high-level research and winning awards in top international competitions under our guidance!</p>
+            <div class="section-header reveal">
+                <h2>Students Achievements & Awards</h2>
+                <p class="section-desc" style="max-width: 800px;">You may have seen students conducting high-level research and winning awards in top international competitions under our guidance!</p>
+            </div>
+            
+            <div class="awards-grid reveal">
+                <div class="award-card reveal stagger-1">
+                    <img src="images/award_kiyo.jpg" alt="KIYO Award">
+                    <div class="award-card-body">Korea-International Youth Olympiad (KIYO)</div>
+                </div>
+                <div class="award-card reveal stagger-2">
+                    <img src="images/award_gys.jpg" alt="GYS Award">
+                    <div class="award-card-body">Global Youth Summit (GYS)</div>
+                </div>
+                <div class="award-card reveal stagger-3">
+                    <img src="images/award_ai_jam.jpg" alt="AI JAM Award">
+                    <div class="award-card-body">AI JAM US</div>
+                </div>
+                <div class="award-card reveal stagger-4">
+                    <img src="images/award_tesla.jpg" alt="TESLA FEST">
+                    <div class="award-card-body">TESLA FEST</div>
+                </div>
+                <div class="award-card reveal stagger-5">
+                    <img src="images/award_abs.jpg" alt="Asia Business Simulation">
+                    <div class="award-card-body">Asia Business Simulation (ABS)</div>
+                </div>
+                <div class="award-card reveal stagger-6">
+                    <img src="images/award_icpc.jpg" alt="ICPC Award">
+                    <div class="award-card-body">International Creative Papers Conference (ICPC)</div>
+                </div>
+                <div class="award-card reveal stagger-7">
+                    <img src="images/award_iwise.png" alt="iWise Award">
+                    <div class="award-card-body">iWise Global Final (Dubai)</div>
+                </div>
             </div>
         </div>
     </section>
@@ -293,53 +357,118 @@
     <!-- Testimonials -->
     <section id="testimonials" class="testimonials-section section-padding bg-light">
         <div class="container">
-            <div class="testimonials-grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
-                
-                <div class="testimonial-card">
-                    <p class="quote-text">"My time conducting independent projects while in high school has been an incredible opportunity for me to explore career options, improve my resume, and build important connections."</p>
-                    <div class="testimonial-author">
-                        <div>
-                            <h4>—Conner E.</h4>
+            <div class="section-header text-center reveal">
+                <h2>What Our Students Say</h2>
+                <p class="section-desc">Hear from students and parents who have experienced the GSJ journey firsthand.</p>
+            </div>
+
+            <div class="testimonial-carousel reveal">
+                <div class="testimonial-track">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card-v2">
+                            <p class="quote-text">"My name is Đỗ Hoàng Minh Tuệ, looking back on my high school years, what has shaped me the most was not only exams or grades, but also my experience working on research project at GSJ. Before this project, I had participated in several smaller research activities, but mostly at an introductory level. It was only through hands-on experimental research that I began to understand the level of persistence and pressure that laboratory work requires."</p>
+                            <div class="testimonial-author">
+                                <img src="images/Ảnh_testimonial_Đỗ_Hoàng_Minh_Tuệ.jpg" alt="Đỗ Hoàng Minh Tuệ" onerror="this.src='https://ui-avatars.com/api/?name=Do+Hoang+Minh+Tue&background=0f4c81&color=fff'">
+                                <div style="text-align: left;">
+                                    <h4>Đỗ Hoàng Minh Tuệ</h4>
+                                    <p>80% Scholarship VinUni, Medical Doctor Program</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="quote-text">"Everything from Powerpoint, to writing papers, to public speaking, networking, and the art of persuasion — all of these skills were honed in the independent research that I conducted, and each put me at a great advantage upon arriving at University."</p>
-                    <div class="testimonial-author">
-                        <div>
-                            <h4>—Matthew K.</h4>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card-v2">
+                            <p class="quote-text">"Throughout the one year journey with GSJ, I was very impressed by the professionalism and the enthusiasm in their teaching. The skills in researching and searching documents, writing reports and doing experiments that they provided me were extremely useful and necessary, not only supporting me during the process of finishing the project and presenting before the jury at international science competitions, but also helping me build a solid foundation as I step into my future academic journey."</p>
+                            <div class="testimonial-author">
+                                <img src="images/Ảnh_testimonial_Tran_Mai_Chi,_Student_at_Hanoi_Amsterdam_High_School_for_the_Gifted.jpg" alt="Tran Mai Chi" onerror="this.src='https://ui-avatars.com/api/?name=Tran+Mai+Chi&background=0f4c81&color=fff'">
+                                <div style="text-align: left;">
+                                    <h4>Tran Mai Chi</h4>
+                                    <p>Student at Hanoi Amsterdam High School for the Gifted</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="quote-text">"I owe my entire future career to this process and I am so thankful it was offered to me."</p>
-                    <div class="testimonial-author">
-                        <div>
-                            <h4>—Keelyn F.</h4>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card-v2">
+                            <p class="quote-text">"At first, I didn't think I would gain much from the Science Research Project, but the truth was completely different. The teachers were incredibly dedicated, answering every question and encouraging us to ask even more. The most important thing I gained was learning how to identify problems in daily life, find solutions based on scientific evidence, and, most importantly, develop critical thinking skills. As long as you give it a try and maintain a strong passion, even the most challenging science project can be successfully completed. Good luck to you all!"</p>
+                            <div class="testimonial-author">
+                                <img src="images/Ảnh_testimonial_Vu_Ba_Minh,_Student_in_the_Environmental_Chemistry_Research_Project.jpg" alt="Vu Ba Minh" onerror="this.src='https://ui-avatars.com/api/?name=Vu+Ba+Minh&background=0f4c81&color=fff'">
+                                <div style="text-align: left;">
+                                    <h4>Vu Ba Minh</h4>
+                                    <p>Student in the Environmental Chemistry Research Project</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="quote-text">"Research is a story: What are you curious about? Is there a problem or question on your mind? What do you care about? Why? And is there something new you can contribute or find? In my experience, those answers are incredibly valuable personally and professionally, and those are questions I'll continue to ask while studying at MIT."</p>
-                    <div class="testimonial-author">
-                        <div>
-                            <h4>—Angelina A.</h4>
+                    <!-- Slide 4 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card-v2">
+                            <p class="quote-text">"I sincerely want to thank all the teachers at GSJ, friends, mothers, and everyone who joined the competition in Dubai. I'm truly grateful not only for the opportunity to participate in this competition, but also for all the memorable experiences throughout the journey. I have never met people as kind and genuine as everyone here. I truly appreciate and cherish all of you, and I hope we will meet again someday."</p>
+                            <div class="testimonial-author">
+                                <img src="images/Ảnh_testimonial_Hwang_YoungGoon_-_Gold_Medalist_at_iWise_Global_Final_(Dubai).jpg" alt="Hwang YoungGoon" onerror="this.src='https://ui-avatars.com/api/?name=Hwang+YoungGoon&background=0f4c81&color=fff'">
+                                <div style="text-align: left;">
+                                    <h4>Hwang YoungGoon</h4>
+                                    <p>Gold Medalist at iWise Global Final (Dubai)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card-v2">
+                            <p class="quote-text">"Hi, my name is Lan Bao, and I recently won a Gold Medal at the iWise Competition in Dubai. Throughout my preparation for the competition, I was very grateful to receive support from the GSJ team, especially Mrs. Vu Ngan Binh. She helped me carefully prepare every detail of my project. With the support and guidance from the GSJ team, I was able to complete all of my work on time and feel much more prepared."</p>
+                            <div class="testimonial-author">
+                                <img src="images/Ảnh_testimonial_Nguyen_Lan_Bao_-_Gold_Medalist_at_iWise_Global_Final_(Dubai).jpg" alt="Nguyen Lan Bao" onerror="this.src='https://ui-avatars.com/api/?name=Nguyen+Lan+Bao&background=0f4c81&color=fff'">
+                                <div style="text-align: left;">
+                                    <h4>Nguyen Lan Bao</h4>
+                                    <p>Gold Medalist at iWise Global Final (Dubai)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card-v2">
+                            <p class="quote-text">"Watching my child grow step by step through the scientific research journey, I cannot help but feel deeply moved and proud. From the very first days coming to the lab for hands-on practice, to the moment she confidently presented in front of professors and experts, I truly witnessed her grow more than I ever imagined. And when she received the certificate of merit at an international competition, I knew that all of her efforts and the support from GSJ had been well rewarded."</p>
+                            <div class="testimonial-author">
+                                <img src="https://ui-avatars.com/api/?name=Duong+Quynh+Huong&background=0f4c81&color=fff" alt="Mrs. Duong Quynh Huong">
+                                <div style="text-align: left;">
+                                    <h4>Mrs. Duong Quynh Huong</h4>
+                                    <p>Parent of Student Nguyen Quynh Trang</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn carousel-prev"><span class="material-symbols-outlined">chevron_left</span></button>
+                    <div class="carousel-dots">
+                        <button class="carousel-dot active"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                    </div>
+                    <button class="carousel-btn carousel-next"><span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action -->
-    <section id="contact" class="cta-section section-padding text-center">
+    <section id="contact" class="cta-section text-center">
         <div class="container">
-            <h2 class="cta-title">Your Career Journey starts now!</h2>
-            <a href="contact.html" class="btn btn-primary btn-large" style="margin-top: 20px;">Apply Now</a>
+            <div class="cta-content reveal">
+                <h2 class="cta-title">Your Career Journey Starts Now!</h2>
+                <p class="cta-desc">Join 1,200+ students who have transformed their academic futures with GSJ's world-class mentorship and research programs.</p>
+                <a href="contact.html" class="btn btn-primary btn-large btn-glow">Apply Now <span class="material-symbols-outlined" style="margin-left: 8px;">arrow_forward</span></a>
+            </div>
         </div>
     </section>
 
@@ -351,22 +480,34 @@
                 <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
                     <img src="https://gsj.edu.vn/wp-content/uploads/2023/04/logo-GSJ-02.jpg" alt="GSJ Logo" style="height: 50px;">
                 </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">
                     GSJ offers an exclusive, limited-access pathway to conduct original research and build competitive profiles under the direct mentorship of professionals.
                 </p>
                 <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
                     <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">location_on</span>
                         <span style="font-size: 0.9rem; line-height: 1.5;">Lô A2.1 và A2.2, Tầng 01, Tòa A, Khu A của TTTM Imperia Garden, Số 203 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội, Việt Nam</span>
                     </div>
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">phone</span>
                         <span style="font-size: 0.9rem;">032 732 6655</span>
                     </div>
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
+                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">mail</span>
                         <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
                     </div>
+                </div>
+                <!-- Social Links -->
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/GlobalScienceJourney" target="_blank" title="Facebook">
+                        <span class="material-symbols-outlined">public</span>
+                    </a>
+                    <a href="mailto:cskh@gsj.edu.vn" title="Email">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                    <a href="tel:0327326655" title="Phone">
+                        <span class="material-symbols-outlined">call</span>
+                    </a>
                 </div>
             </div>
 
@@ -405,6 +546,21 @@
         </div>
     </footer>
 
-    <script type="module" src="main.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" title="Back to top">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="services.html">Our Services</a>
+        <a href="mentors.html">Mentors</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="contact.html">Apply Now</a>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
