@@ -299,5 +299,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    console.log("GSJ Website v2.0 loaded ✦");
+    // ========================================
+    // 9. ACTIVE NAV LINK HIGHLIGHTING
+    // ========================================
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && (href === currentPath || (currentPath === '' && href === 'index.html'))) {
+            link.classList.add('active');
+        }
+    });
+
+    // ========================================
+    // 10. LAZY IMAGE FADE-IN
+    // ========================================
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+        }
+    });
+
+    // Also handle non-lazy images that are already loaded
+    document.querySelectorAll('img:not([loading="lazy"])').forEach(img => {
+        img.style.opacity = '1';
+    });
+
+    // ========================================
+    // 11. HERO PARALLAX EFFECT
+    // ========================================
+    const heroBg = document.querySelector('.hero-new-bg');
+    if (heroBg) {
+        let parallaxTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!parallaxTicking) {
+                requestAnimationFrame(() => {
+                    const scrolled = window.scrollY;
+                    if (scrolled < window.innerHeight) {
+                        heroBg.style.transform = `translateY(${scrolled * 0.15}px)`;
+                    }
+                    parallaxTicking = false;
+                });
+                parallaxTicking = true;
+            }
+        });
+    }
+
+    console.log("GSJ Website v3.0 loaded ✦ UI/UX Enhanced");
 });
