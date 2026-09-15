@@ -6,7 +6,7 @@
     <title>Contact Us | GSJ</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <style>
         .contact-form {
             max-width: 600px;
@@ -162,23 +162,23 @@
                         <h3 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Get Expert Support Today</h3>
                         <p style="color: #64748b; margin-bottom: 30px;">Fill out the form below and we'll get back to you ASAP.</p>
                         
-                        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                        <form id="contact-form" onsubmit="submitContactForm(event)" style="display: flex; flex-direction: column; gap: 20px;">
                             <!-- Row 1: Name & Email -->
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
                                     <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Full Name *</label>
-                                    <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                    <input id="contact-name" type="text" placeholder="Enter your full name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
                                 </div>
                                 <div>
                                     <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Email Address *</label>
-                                    <input type="email" placeholder="Enter your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                    <input id="contact-email" type="email" placeholder="Enter your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
                                 </div>
                             </div>
                             
                             <!-- Row 2: Subject -->
                             <div>
                                 <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Subject *</label>
-                                <select style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background-color: white; color: #64748b; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;" required>
+                                <select id="contact-subject" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background-color: white; color: #64748b; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;" required>
                                     <option value="" disabled selected>Select a subject</option>
                                     <option value="programs">Inquire about Programs</option>
                                     <option value="mentorship">Mentorship Opportunities</option>
@@ -190,7 +190,7 @@
                             <!-- Row 3: Message -->
                             <div>
                                 <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Message *</label>
-                                <textarea placeholder="How can we help you?" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 120px; resize: vertical;" required></textarea>
+                                <textarea id="contact-message" placeholder="How can we help you?" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 120px; resize: vertical;" required></textarea>
                             </div>
                             
                             <!-- Submit Button -->
@@ -275,6 +275,8 @@
             <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

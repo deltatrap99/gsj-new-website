@@ -6,7 +6,7 @@
     <title>More Questions | GSJ</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <style>
         .contact-form {
             max-width: 600px;
@@ -139,16 +139,16 @@
                         <h3 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Tell us what you're thinking</h3>
                         <p style="color: #64748b; margin-bottom: 30px;">Let's clear up any doubts before you apply.</p>
                         
-                        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                        <form id="question-form" onsubmit="submitQuestion(event)" style="display: flex; flex-direction: column; gap: 20px;">
                             <!-- Row 1: Name & Email -->
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
                                     <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Full Name</label>
-                                    <input type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                    <input id="question-name" type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
                                 </div>
                                 <div>
                                     <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Email Address</label>
-                                    <input type="email" placeholder="Your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
+                                    <input id="question-email" type="email" placeholder="Your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
                                 </div>
                             </div>
                             
@@ -168,7 +168,7 @@
                             <!-- Row 3: Message -->
                             <div>
                                 <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Tell us more about your situation</label>
-                                <textarea placeholder="E.g. I am currently in 11th grade and taking 3 AP classes. I love biology but I'm not sure if I have enough time for a 12-week research project..." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 140px; resize: vertical;" required></textarea>
+                                <textarea id="question-message" placeholder="E.g. I am currently in 11th grade and taking 3 AP classes. I love biology but I'm not sure if I have enough time for a 12-week research project..." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 140px; resize: vertical;" required></textarea>
                             </div>
                             
                             <!-- Submit Button -->
@@ -247,6 +247,8 @@
             <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
         </div>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
