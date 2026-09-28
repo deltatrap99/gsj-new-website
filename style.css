@@ -309,17 +309,19 @@ h2 {
 
 .nav-links {
     display: flex;
-    gap: 32px;
+    gap: 20px;
+    margin-left: 40px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.92rem;
     transition: var(--transition-fast);
     position: relative;
     padding: 4px 0;
+    white-space: nowrap;
 }
 
 .nav-links a::after {
