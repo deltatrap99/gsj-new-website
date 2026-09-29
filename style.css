@@ -351,6 +351,16 @@ h2 {
     display: inline-block;
 }
 
+/* Invisible bridge to prevent hover loss between nav item and dropdown */
+.nav-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
 .nav-dropdown-content {
     display: none;
     position: absolute;
