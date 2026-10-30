@@ -4,9 +4,12 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve-site.mjs",
-    "cms": "npm --prefix cms run develop",
+    "cms": "npm --prefix studio run dev",
     "cms:prepare": "node scripts/prepare-cms.mjs",
-    "check": "node scripts/check-site.mjs && node scripts/check-forms.mjs && node scripts/check-cms.mjs && node scripts/check-cms-client.mjs"
+    "cms:sanity": "npm --prefix studio run dev",
+    "cms:strapi": "npm --prefix cms run develop",
+    "cms:export-strapi": "node scripts/export-strapi-for-sanity.cjs",
+    "check": "node scripts/check-site.mjs && node scripts/check-forms.mjs && node scripts/check-cms.mjs && node scripts/check-cms-client.mjs && node scripts/check-sanity.mjs"
   },
   "devDependencies": {
     "cheerio": "1.1.2"

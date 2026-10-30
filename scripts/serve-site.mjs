@@ -49,7 +49,7 @@ const server = http.createServer(async (req, res) => {
       new URL(req.url, "http://localhost").pathname,
     ).replace(/^\//, "");
     if (name === "admin" || name === "admin/") {
-      res.writeHead(302, { Location: "http://localhost:1337/admin" });
+      res.writeHead(302, { Location: "https://gsj-website-cms-i5m9t12o.sanity.studio/" });
       return res.end();
     }
     if (!name) name = "index.html";
@@ -87,6 +87,6 @@ server.listen(Number(process.env.PORT || 8008), "127.0.0.1", () =>
   console.log(
     "GSJ website: http://localhost:" +
       (process.env.PORT || 8008) +
-      "\nStrapi CMS: http://localhost:1337/admin\nOnly public website assets are served. CMS secrets and database files are blocked.",
+      "\nSanity CMS: https://gsj-website-cms-i5m9t12o.sanity.studio/\nStudio development: http://localhost:3333/\nOnly public website assets are served. CMS secrets and database files are blocked.",
   ),
 );

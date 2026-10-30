@@ -1,16 +1,19 @@
-/* Strapi content adapter. Static HTML remains a complete fallback, never a blank shell. */
+/* CMS adapters. Static HTML remains a complete fallback, never a blank shell. */
 (() => {
   const slug = document.body.dataset.cmsPage;
-  if (!slug || !window.GSJ_CMS_URL) return;
+  const sanity = window.GSJ_CMS_PROVIDER === "sanity" ? window.GSJ_SANITY : null;
+  if (!slug || (!sanity && !window.GSJ_CMS_URL)) return;
   let base;
   try {
-    base = new URL(window.GSJ_CMS_URL);
+    if (sanity && (!/^[a-z0-9]+$/.test(sanity.projectId) ||
+      !/^[a-z0-9_-]+$/.test(sanity.dataset) || !/^\d{4}-\d{2}-\d{2}$/.test(sanity.apiVersion))) return;
+    base = new URL(sanity ? `https://${sanity.projectId}.apicdn.sanity.io` : window.GSJ_CMS_URL);
     if (!["http:", "https:"].includes(base.protocol)) return;
     if (location.protocol === "https:" && base.protocol !== "https:") return;
   } catch {
     return;
   }
-  const preview = location.hash.startsWith("#cms-preview=")
+  const preview = !sanity && location.hash.startsWith("#cms-preview=")
     ? location.hash.slice(13)
     : "";
   const safeUrl = (value, image = false) => {
@@ -114,13 +117,33 @@
     node.append(exit);
     document.body.append(node);
   };
-  fetch(
-    new URL(
+  let endpoint;
+  if (sanity) {
+    // Explicit projection + published perspective. No admin token or draft access in the browser.
+    const sections = `sections[]{texts[]{code,text},images[]{code,alt,source,
+      "image":image.asset->{url,"width":metadata.dimensions.width,"height":metadata.dimensions.height}},links[]{code,href}}`;
+    const published = '!(_id in path("drafts.**")) && !(_id in path("versions.**"))';
+    const query = `{"page":*[_type=="page" && slug==$slug && ${published}][0]{slug,seoTitle,seoDescription,${sections}},
+      "settings":*[_type=="siteSettings" && _id=="site-settings" && ${published}][0]{${sections}}}`;
+    endpoint = new URL(`/v${sanity.apiVersion}/data/query/${sanity.dataset}`, base);
+    endpoint.searchParams.set("query", query);
+    endpoint.searchParams.set("$slug", JSON.stringify(slug));
+    endpoint.searchParams.set("perspective", "published");
+  } else {
+    endpoint = new URL(
       preview
         ? "/api/website/preview"
         : `/api/website/${encodeURIComponent(slug)}`,
       base,
-    ),
+    );
+  }
+  const flatten = (doc) => doc && ({...doc, fields: (doc.sections || []).flatMap((section) => [
+    ...(section.texts || []).map((field) => ({...field, kind: "text"})),
+    ...(section.images || []).map((field) => ({...field, kind: "image"})),
+    ...(section.links || []).map((field) => ({...field, kind: "link"})),
+  ])});
+  fetch(
+    endpoint,
     {
       headers: preview ? { Authorization: `Bearer ${preview}` } : {},
       signal: AbortSignal.timeout(6000),
@@ -130,7 +153,10 @@
   )
     .then(async (response) => {
       if (!response.ok) throw new Error(`CMS HTTP ${response.status}`);
-      const { data } = await response.json();
+      const payload = await response.json();
+      const data = sanity ? {
+        page: flatten(payload.result?.page), settings: flatten(payload.result?.settings),
+      } : payload.data;
       if (!data?.page || data.page.slug !== slug)
         throw new Error("CMS page mismatch");
       apply(data.settings);

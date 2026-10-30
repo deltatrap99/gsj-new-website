@@ -34,7 +34,7 @@ export function preparePage(html, slug) {
   $("script[data-gsj-cms]").remove();
   $("body").attr("data-cms-page", slug);
   $("head").append(
-    '<script data-gsj-cms src="cms-config.js?v=1" defer></script><script data-gsj-cms src="cms-client.js?v=20261031-media" defer></script>',
+    '<script data-gsj-cms src="cms-config.js?v=20261031-sanity" defer></script><script data-gsj-cms src="cms-client.js?v=20261031-sanity" defer></script>',
   );
 
   function section(root, code, name) {

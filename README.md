@@ -1,6 +1,6 @@
 # GSJ — Global Scholars Journey
 
-A responsive website with static fallback HTML and a real Strapi 5 CMS for text, links, SEO and images. Supabase remains the backend for enquiry forms.
+A responsive website with static fallback HTML and a hosted Sanity CMS for text, links, SEO and images. Supabase remains the backend for enquiry forms. The previous Strapi installation is preserved for rollback.
 
 ## Run locally
 
@@ -13,7 +13,7 @@ npm run dev
 
 Open http://localhost:8008/. Keep the server running while previewing. The allowlisted server supports existing extensionless links and does not expose CMS secrets or databases. Do not use `serve .` at the repository root now that backend files are present.
 
-For content management, run `npm --prefix cms install`, then `npm run cms` in another terminal and open http://localhost:1337/admin. Read [CMS-GUIDE.md](CMS-GUIDE.md) for editing, publishing, backups, roles and deployment requirements. This is a local installation, not an online staff portal yet.
+For content management, open [GSJ Content Studio online](https://gsj-website-cms-i5m9t12o.sanity.studio/); no local server is needed for staff. For Studio development, run `npm --prefix studio ci` then `npm run cms:sanity` and open http://localhost:3333/. Both Studios use the same live dataset. Read [CMS-GUIDE.md](CMS-GUIDE.md) for editing, publishing, Free-plan role limitations and backups. The website itself is still local unless separately deployed.
 
 ## Content and authoring
 
@@ -25,7 +25,7 @@ For content management, run `npm --prefix cms install`, then `npm run cms` in an
 node scripts/render-site.mjs --write
 ```
 
-Optional: pass one or more HTML filenames to render only those pages. Without `--write`, the renderer prints a JSON object and does not change files. Rendering updates only the static fallback, not records already edited in Strapi. `npm run cms:prepare` rebuilds the initial import snapshot; the CMS seeds missing records only on its first start and never overwrites existing staff edits.
+Optional: pass one or more HTML filenames to render only those pages. Without `--write`, the renderer prints a JSON object and does not change files. Rendering updates only the static fallback, not records edited in Sanity. `npm run cms:prepare` is the legacy Strapi seed preparation command, not a Sanity synchronization. Do not rerun the migration to overwrite staff edits.
 
 `content/universities.json` records university image sources. `content/images.json` maps original photos to optimized WebP copies with dimensions. Original repository photos are preserved.
 
@@ -35,6 +35,13 @@ Optional: pass one or more HTML filenames to render only those pages. Without `-
 node scripts/check-site.mjs
 node scripts/check-forms.mjs
 node scripts/check-cms.mjs
+node scripts/check-sanity.mjs
+npm --prefix studio run build
+```
+
+Legacy Strapi rollback integration test (isolated database):
+
+```powershell
 node scripts/check-cms-integration.cjs
 ```
 

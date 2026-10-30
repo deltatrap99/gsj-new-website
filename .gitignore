@@ -12,3 +12,7 @@ cms/dist/
 cms/build/
 cms/public/uploads/*
 !cms/public/uploads/.gitkeep
+studio/.env*
+!studio/.env.example
+studio/.sanity/
+studio/dist/
