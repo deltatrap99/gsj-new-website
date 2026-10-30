@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_content_images",
+  "info": { "displayName": "Hình ảnh", "icon": "picture" },
+  "attributes": {
+    "label": { "type": "string", "required": true },
+    "code": { "type": "string", "required": true },
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "alt": { "type": "string" },
+    "source": { "type": "string" }
+  }
+}

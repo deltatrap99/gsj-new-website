@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_content_sections",
+  "info": {
+    "displayName": "Phần nội dung",
+    "icon": "layout",
+    "description": "Sửa chữ, thay ảnh và đường dẫn. Giữ nguyên các phần để bảo toàn bố cục website."
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "code": { "type": "string", "required": true },
+    "texts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.text"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.image"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.link"
+    }
+  }
+}

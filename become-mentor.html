@@ -1,377 +1,889 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Become A Mentor | GSJ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=7">
-</head>
-<body>
-    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 90px; width: auto; object-fit: contain; vertical-align: middle;">
-                </a>
-            </div>
-                        <nav class="nav-links">
-                <div class="nav-dropdown">
-                    <a href="about.html">About ▾</a>
-                    <div class="nav-dropdown-content">
-                        <a href="about.html">About us</a>
-                        <a href="about.html#blog">Research Blog</a>
-                        <a href="about.html#partnership">Partnership</a>
-                    </div>
-                </div>
-                <a href="services.html">Our Program</a>
-                <a href="research.html">Advanced Scientific Research</a>
-                <a href="become-mentor.html" style="color: var(--primary-color);">Become A Mentor</a>
-                <a href="index.html#testimonials">Testimonials</a>
-            </nav>
-            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-<div class="lang-wrapper">
-                    <button class="lang-btn">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
-                    </button>
-                    <div class="lang-menu">
-                        <div class="lang-menu-inner">
-                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
-                            <a href="#" class="lang-item">Tiếng Việt</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">FAQ</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Become a Mentor | GSJ — Global Scholars Journey</title>
+    <meta
+      name="description"
+      content="At GSJ, mentors play a vital role in shaping the next generation of scientists, innovators, and thinkers. Our team brings together experts from diverse academic institutions and professional backgrounds worldwide, each committed to nurturing curiosity and scientific literacy. Beyond guiding a single research project, our mentors inspire students and share their expertise across a wide range of fields. If you are passionate about research and believe in the power of mentorship, we invite you to join our growing community at GSJ."
+    />
+    <meta name="theme-color" content="#0f4c81" />
+    <link rel="icon" href="images/gsj_logo_new.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261031-portraits" />
+    <script src="main.js?v=20261031-cms" defer=""></script>
+    <script src="supabase.js?v=20261030" defer=""></script>
+    <script data-gsj-cms="" src="cms-config.js?v=1" defer=""></script>
+    <script data-gsj-cms="" src="cms-client.js?v=1" defer=""></script>
+  </head>
+  <body data-cms-page="become-mentor">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="GSJ — Global Scholars Journey home"
+          data-cms-link="header.l1"
+          ><img
+            src="images/optimized/gsj_logo_new.webp"
+            alt="GSJ"
+            class=""
+            width="332"
+            height="160"
+            fetchpriority="high"
+            decoding="async"
+            data-cms-image="header.i1"
+          /><span data-cms-text="header.t1"
+            >GLOBAL SCHOLARS<br />JOURNEY</span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a
+            href="about.html"
+            data-cms-text="header.t2"
+            data-cms-link="header.l2"
+            >About us</a
+          ><a
+            href="services.html"
+            data-cms-text="header.t3"
+            data-cms-link="header.l3"
+            >Our Programs</a
+          ><a
+            href="study-abroad.html"
+            data-cms-text="header.t4"
+            data-cms-link="header.l4"
+            >Study Abroad</a
+          ><a
+            href="research.html"
+            data-cms-text="header.t5"
+            data-cms-link="header.l5"
+            >Research</a
+          ><a
+            href="become-mentor.html"
+            aria-current="page"
+            data-cms-text="header.t6"
+            data-cms-link="header.l6"
+            >Become a Mentor</a
+          ><a
+            href="student-stories.html"
+            data-cms-text="header.t7"
+            data-cms-link="header.l7"
+            >Student Stories</a
+          >
+        </nav>
+        <div class="header-actions">
+          <a
+            href="contact.html"
+            class="button button-primary header-cta"
+            data-cms-link="header.l8"
+          >
+            <span data-cms-wrap="true" data-cms-text="header.t8"
+              >Let’s talk</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >north_east</span
+            ></a
+          ><button
+            class="menu-toggle icon-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >menu</span
+            >
+          </button>
         </div>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </header>
-
-    <!-- Hero Section -->
-    <section style="position: relative; padding: 180px 0 100px; background-color: #f8fafc;">
-        <div style="position: absolute; top: 0; right: 0; bottom: 0; width: 55%; background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; z-index: 1;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to right, #f8fafc 0%, rgba(248,250,252,0.8) 20%, transparent 50%);"></div>
+    <dialog id="site-menu" class="menu-drawer" aria-labelledby="menu-title">
+      <div class="drawer-top">
+        <p id="menu-title" class="eyebrow" data-cms-text="drawer.t1">
+          YOUR NEXT CHAPTER
+        </p>
+        <button
+          class="menu-close icon-button"
+          aria-label="Close navigation menu"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >close</span
+          >
+        </button>
+      </div>
+      <nav aria-label="Sidebar navigation">
+        <a href="about.html" data-cms-link="drawer.l1"
+          ><span class="menu-number">01</span
+          ><span data-cms-text="drawer.t2">About us</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="services.html" data-cms-link="drawer.l2"
+          ><span class="menu-number">02</span
+          ><span data-cms-text="drawer.t3">Our Programs</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="study-abroad.html" data-cms-link="drawer.l3"
+          ><span class="menu-number">03</span
+          ><span data-cms-text="drawer.t4">Study Abroad</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="research.html" data-cms-link="drawer.l4"
+          ><span class="menu-number">04</span
+          ><span data-cms-text="drawer.t5">Research</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a
+          href="become-mentor.html"
+          aria-current="page"
+          data-cms-link="drawer.l5"
+          ><span class="menu-number">05</span
+          ><span data-cms-text="drawer.t6">Become a Mentor</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="student-stories.html" data-cms-link="drawer.l6"
+          ><span class="menu-number">06</span
+          ><span data-cms-text="drawer.t7">Student Stories</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        >
+      </nav>
+      <div class="drawer-bottom">
+        <a
+          class="button button-primary"
+          href="contact.html?program=study-abroad#consultation"
+          data-cms-link="drawer.l7"
+        >
+          <span data-cms-wrap="true" data-cms-text="drawer.t8"
+            >Book a consultation</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          ></a
+        ><a href="questions.html" class="text-link" data-cms-link="drawer.l8">
+          <span data-cms-wrap="true" data-cms-text="drawer.t9"
+            >Frequently asked questions</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          ></a
+        ><a
+          href="tel:0327326655"
+          data-cms-text="drawer.t10"
+          data-cms-link="drawer.l9"
+          >032 732 6655</a
+        ><a
+          href="mailto:info@gsj.edu.vn"
+          data-cms-text="drawer.t11"
+          data-cms-link="drawer.l10"
+          >info@gsj.edu.vn</a
+        ><span class="small" data-cms-text="drawer.t12"
+          >Hanoi · Ho Chi Minh City · Da Nang</span
+        >
+      </div>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="page-hero">
+        <div class="container split-hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-cms-text="section1.t1">BECOME A MENTOR</p>
+            <h1>
+              <span data-cms-wrap="true" data-cms-text="section1.t2"
+                >Share your expertise.</span
+              >
+              <br /><em data-cms-text="section1.t3"
+                >Shape a scholar’s future.</em
+              >
+            </h1>
+            <p class="hero-description" data-cms-text="section1.t4">
+              At GSJ, mentors play a vital role in shaping the next generation
+              of scientists, innovators, and thinkers. Our team brings together
+              experts from diverse academic institutions and professional
+              backgrounds worldwide, each committed to nurturing curiosity and
+              scientific literacy. Beyond guiding a single research project, our
+              mentors inspire students and share their expertise across a wide
+              range of fields. If you are passionate about research and believe
+              in the power of mentorship, we invite you to join our growing
+              community at GSJ.
+            </p>
+            <a class="button button-primary" href="#mentor-apply">
+              <span data-cms-wrap="true" data-cms-text="section1.t5"
+                >Join our mentor community</span
+              >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_forward</span
+              ></a
+            >
+          </div>
+          <figure class="page-hero-visual">
+            <img
+              src="images/research-experience.webp"
+              alt="Mentorship in a GSJ research laboratory"
+              class=""
+              width="1600"
+              height="1200"
+              fetchpriority="high"
+              decoding="async"
+              data-cms-image="section1.i1"
+            />
+            <figcaption>
+              <span class="caption-dot"></span>
+              <span data-cms-wrap="true" data-cms-text="section1.t6"
+                >Real experiences. Meaningful growth.</span
+              >
+            </figcaption>
+          </figure>
         </div>
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="max-width: 650px;">
-                <span style="font-size: 0.9rem; font-weight: 700; color: #0f4c81; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 20px;">Join Our Community</span>
-                <h1 style="font-size: 3.8rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px;">
-                    Become a Mentor with<br>
-                    <span style="color: #0f4c81;">Global Science Journey</span>
-                </h1>
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 40px; max-width: 600px; text-align: justify;">
-                    At Global Science Journey (GSJ), mentors play a vital role in shaping the next generation of scientists, innovators, and thinkers. Our team brings together experts from diverse academic institutions and professional backgrounds worldwide, each committed to nurturing curiosity and scientific literacy. Beyond guiding a single research project, our mentors inspire students and share their expertise across a wide range of fields. If you are passionate about research and believe in the power of mentorship, we invite you to join our growing community at GSJ.
-                </p>
-                <a href="#mentor-apply" class="btn btn-primary" style="border-radius: 30px; padding: 14px 32px; display: inline-flex; align-items: center; gap: 8px;">Apply as Mentor <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span></a>
+      </section>
+      <section class="section">
+        <div class="container mentor-info">
+          <article class="mentor-info-block reveal">
+            <p class="eyebrow" data-cms-text="section2.t1">
+              01 / MENTORING AT GSJ
+            </p>
+            <h2 data-cms-text="section2.t2">Benefits for Mentors</h2>
+            <div class="prose">
+              <ul class="check-list">
+                <li data-cms-text="section2.t3">
+                  Meaningful Impact: Directly contribute to a young scholar's
+                  academic growth, confidence, and future opportunities.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t4">
+                  Professional Development: Gain valuable teaching and
+                  mentorship experience that strengthens your professional
+                  profile.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t5">
+                  Networking &amp; Recognition: Join a growing community of
+                  scientists, educators, and professionals at GSJ committed to
+                  expanding access to authentic research experiences.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t6">
+                  Stipend: Receive a stipend per student to compensate you for
+                  your time and any expenses incurred throughout the research
+                  process.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t7">
+                  Flexible Engagement: Work with students remotely or in-person
+                  based on your availability and field.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t8">
+                  Professional Support &amp; Guidance: Receive dedicated support
+                  from GSJ staff with extensive experience guiding high school
+                  students through research projects.
+                </li>
+              </ul>
             </div>
+          </article>
+          <article class="mentor-info-block reveal">
+            <p class="eyebrow" data-cms-text="section2.t9">
+              02 / MENTORING AT GSJ
+            </p>
+            <h2 data-cms-text="section2.t10">What We Provide</h2>
+            <div class="prose">
+              <ul class="check-list">
+                <li data-cms-text="section2.t11">
+                  GSJ provides mentors with a dedicated workspace on Zoom to
+                  conduct mentoring sessions, with scheduling support handled by
+                  our team to ensure a smooth and hassle-free experience.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t12">
+                  Mentors can easily monitor student progress, assign tasks and
+                  milestones, communicate with their student, and review
+                  submitted materials such as research plans, abstracts, data,
+                  and research papers throughout the process.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t13">
+                  Students are supported by GSJ's team of dedicated teaching
+                  assistants with extensive experience guiding high school
+                  students through research projects, ensuring they remain on
+                  track every step of the way.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t14">
+                  GSJ staff are always available to address any questions or
+                  concerns that arise, providing responsive and attentive
+                  support to both mentors and students throughout the program.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="mentor-info-block reveal">
+            <p class="eyebrow" data-cms-text="section2.t15">
+              03 / MENTORING AT GSJ
+            </p>
+            <h2 data-cms-text="section2.t16">
+              Expectations &amp; Requirements
+            </h2>
+            <div class="prose">
+              <ul class="check-list">
+                <li data-cms-text="section2.t17">
+                  Guide students through the research process by sharing your
+                  knowledge, providing constructive feedback, and offering
+                  expertise in your field.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t18">
+                  Meet regularly with your mentee to review progress, discuss
+                  findings, and work through any challenges that arise.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t19">
+                  Review and provide feedback on data analysis, paper drafts,
+                  and presentations as the project approaches completion.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t20">
+                  Maintain open communication with GSJ staff to support student
+                  progress and uphold academic integrity throughout the program.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t21">
+                  Hold at least a bachelor's degree in a relevant field across
+                  Natural Sciences, Technology, Engineering, Social Sciences, or
+                  Business (graduate students, postdoctoral researchers, and
+                  working professionals are welcome).
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="mentor-info-block reveal">
+            <p class="eyebrow" data-cms-text="section2.t22">
+              04 / MENTORING AT GSJ
+            </p>
+            <h2 data-cms-text="section2.t23">Time Commitment</h2>
+            <div class="prose">
+              <ul class="check-list">
+                <li data-cms-text="section2.t24">
+                  Research engagements can be conducted remotely or in-person,
+                  depending on the nature of each research project.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t25">
+                  Mentors are expected to commit to a 5 to 6 month engagement,
+                  with one session of approximately 2.5 to 3 hours per week per
+                  project.
+                </li>
+              </ul>
+              <ul class="check-list">
+                <li data-cms-text="section2.t26">
+                  As most research projects are conducted in person, we kindly
+                  ask that mentors confirm their availability to participate
+                  on-site before joining the program.
+                </li>
+              </ul>
+            </div>
+          </article>
         </div>
-    </section>
-
-    <section class="mentors-section section-padding">
+      </section>
+      <section class="section pale">
         <div class="container">
-            <div class="content-block" style="max-width: 1000px; margin: 0 auto 60px;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
-                    <!-- Benefits for Mentors -->
-                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0f4c81;">
-                        <h3 style="color: #0f172a; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined" style="color: #0f4c81;">redeem</span> Benefits for Mentors
-                        </h3>
-                        <ul style="list-style: none; padding-left: 0; color: #475569; line-height: 1.6; font-size: 0.95rem;">
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> <strong>Meaningful Impact:</strong> Directly contribute to a young scholar's academic growth, confidence, and future opportunities.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> <strong>Professional Development:</strong> Gain valuable teaching and mentorship experience that strengthens your professional profile.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> <strong>Networking & Recognition:</strong> Join a growing community of scientists, educators, and professionals at GSJ committed to expanding access to authentic research experiences.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> <strong>Stipend:</strong> Receive a stipend per student to compensate you for your time and any expenses incurred throughout the research process.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> <strong>Flexible Engagement:</strong> Work with students remotely or in-person based on your availability and field.</li>
-                            <li><span style="color: #b49a5b; margin-right: 8px;">•</span> <strong>Professional Support & Guidance:</strong> Receive dedicated support from GSJ staff with extensive experience guiding high school students through research projects.</li>
-                        </ul>
-                    </div>
-
-                    <!-- What do we provide? -->
-                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0f4c81;">
-                        <h3 style="color: #0f172a; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined" style="color: #0f4c81;">support_agent</span> What do we provide?
-                        </h3>
-                        <ul style="list-style: none; padding-left: 0; color: #475569; line-height: 1.6; font-size: 0.95rem;">
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> GSJ provides mentors with a dedicated workspace on Zoom to conduct mentoring sessions, with scheduling support handled by our team to ensure a smooth and hassle-free experience.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Mentors can easily monitor student progress, assign tasks and milestones, communicate with their student, and review submitted materials such as research plans, abstracts, data, and research papers throughout the process.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Students are supported by GSJ's team of dedicated teaching assistants with extensive experience guiding high school students through research projects, ensuring they remain on track every step of the way.</li>
-                            <li><span style="color: #b49a5b; margin-right: 8px;">•</span> GSJ staff are always available to address any questions or concerns that arise, providing responsive and attentive support to both mentors and students throughout the program.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Expectation & Require -->
-                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0f4c81;">
-                        <h3 style="color: #0f172a; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined" style="color: #0f4c81;">fact_check</span> Expectation & Require
-                        </h3>
-                        <ul style="list-style: none; padding-left: 0; color: #475569; line-height: 1.6; font-size: 0.95rem;">
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Guide students through the research process by sharing your knowledge, providing constructive feedback, and offering expertise in your field.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Meet regularly with your mentee to review progress, discuss findings, and work through any challenges that arise.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Review and provide feedback on data analysis, paper drafts, and presentations as the project approaches completion.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Maintain open communication with GSJ staff to support student progress and uphold academic integrity throughout the program.</li>
-                            <li><span style="color: #b49a5b; margin-right: 8px;">•</span> Hold at least a bachelor's degree in a relevant field across Natural Sciences, Technology, Engineering, Social Sciences, or Business (graduate students, postdoctoral researchers, and working professionals are welcome).</li>
-                        </ul>
-                    </div>
-
-                    <!-- Time Commitment -->
-                    <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 4px solid #0f4c81;">
-                        <h3 style="color: #0f172a; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
-                            <span class="material-symbols-outlined" style="color: #0f4c81;">schedule</span> Time Commitment
-                        </h3>
-                        <ul style="list-style: none; padding-left: 0; color: #475569; line-height: 1.6; font-size: 0.95rem;">
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Research engagements can be conducted remotely or in-person, depending on the nature of each research project.</li>
-                            <li style="margin-bottom: 12px;"><span style="color: #b49a5b; margin-right: 8px;">•</span> Mentors are expected to commit to a 5 to 6 month engagement, with one session of approximately 2.5 to 3 hours per week per project.</li>
-                            <li><span style="color: #b49a5b; margin-right: 8px;">•</span> As most research projects are conducted in person, we kindly ask that mentors confirm their availability to participate on-site before joining the program.</li>
-                        </ul>
-                    </div>
-                </div>
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section3.t1">
+                A COMMUNITY OF EXPERTISE
+              </p>
+              <h2 data-cms-text="section3.t2">
+                Notable places where our mentors work
+              </h2>
             </div>
-
-            <div class="section-header text-center">
-                <h2>Notable places where our esteemed mentors work:</h2>
-            </div>
-            
-            <div style="overflow: hidden; margin-bottom: 60px; position: relative;">
-                <!-- Fade edges -->
-                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 80px; background: linear-gradient(to right, #f8fafc, transparent); z-index: 2;"></div>
-                <div style="position: absolute; right: 0; top: 0; bottom: 0; width: 80px; background: linear-gradient(to left, #f8fafc, transparent); z-index: 2;"></div>
-                <div class="marquee-track" style="display: flex; gap: 30px; animation: marqueeScroll 25s linear infinite; width: max-content;">
-                    <!-- First set -->
-                    <div class="marquee-item">VNU University of Science</div>
-                    <div class="marquee-item">Hanoi University of Pharmacy</div>
-                    <div class="marquee-item">Hanoi University of Science and Technology (HUST)</div>
-                    <div class="marquee-item">Institute of Biotechnology</div>
-                    <div class="marquee-item">Vietnam National University, Hanoi</div>
-                    <div class="marquee-item">National Economics University</div>
-                    <div class="marquee-item">Ho Chi Minh City University of Technology</div>
-                    <div class="marquee-item">University of Medicine and Pharmacy at HCMC</div>
-                    <!-- Duplicate set for seamless loop -->
-                    <div class="marquee-item">VNU University of Science</div>
-                    <div class="marquee-item">Hanoi University of Pharmacy</div>
-                    <div class="marquee-item">Hanoi University of Science and Technology (HUST)</div>
-                    <div class="marquee-item">Institute of Biotechnology</div>
-                    <div class="marquee-item">Vietnam National University, Hanoi</div>
-                    <div class="marquee-item">National Economics University</div>
-                    <div class="marquee-item">Ho Chi Minh City University of Technology</div>
-                    <div class="marquee-item">University of Medicine and Pharmacy at HCMC</div>
-                </div>
-            </div>
-            <style>
-                .marquee-item {
-                    flex-shrink: 0;
-                    padding: 14px 28px;
-                    background: white;
-                    border: 1px solid #e2e8f0;
-                    border-radius: 12px;
-                    font-weight: 600;
-                    color: #0f172a;
-                    font-size: 0.95rem;
-                    white-space: nowrap;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-                }
-                @keyframes marqueeScroll {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                }
-                .marquee-track:hover {
-                    animation-play-state: paused;
-                }
-            </style>
+          </div>
+          <ul class="institution-list">
+            <li data-cms-text="section3.t3">Johns Hopkins University</li>
+            <li data-cms-text="section3.t4">ETH Zürich</li>
+            <li data-cms-text="section3.t5">University of Manchester</li>
+            <li data-cms-text="section3.t6">University of Bristol</li>
+            <li data-cms-text="section3.t7">
+              Nanyang Technological University (NTU)
+            </li>
+            <li data-cms-text="section3.t8">University of Melbourne</li>
+            <li data-cms-text="section3.t9">
+              University of New South Wales (UNSW)
+            </li>
+            <li data-cms-text="section3.t10">University of Sydney</li>
+            <li data-cms-text="section3.t11">University of Queensland</li>
+            <li data-cms-text="section3.t12">RMIT University</li>
+            <li data-cms-text="section3.t13">
+              Swinburne University of Technology
+            </li>
+            <li data-cms-text="section3.t14">
+              Korea Institute of Science and Technology (KIST)
+            </li>
+            <li data-cms-text="section3.t15">Pukyong National University</li>
+            <li data-cms-text="section3.t16">
+              Tokyo University of Agriculture and Technology (TUAT)
+            </li>
+            <li data-cms-text="section3.t17">
+              Hanoi University of Science and Technology (HUST)
+            </li>
+            <li data-cms-text="section3.t18">
+              Hanoi University of Pharmacy (HUP)
+            </li>
+            <li data-cms-text="section3.t19">
+              Biotechnology Center of Ho Chi Minh City
+            </li>
+            <li data-cms-text="section3.t20">
+              Center for Nuclear Techniques in Ho Chi Minh City
+            </li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Let's Work Together Section -->
-    <section id="mentor-apply" class="section-padding" style="background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);">
-        <div class="container">
-            <div class="section-header text-center reveal">
-                <h2>Let's Work Together</h2>
-                <p class="section-desc" style="max-width: 700px;">Are you a researcher or professional passionate about inspiring the next generation? Do you have a research project that a student can work on? Fill out the form below and we will be in touch shortly!</p>
-            </div>
-
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="background: white; padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.04);" class="reveal">
-                    <form id="mentor-form" class="form-input-enhanced" onsubmit="submitMentorApplication(event)" style="display: flex; flex-direction: column; gap: 24px;">
-                        <!-- Name -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">First Name *</label>
-                                <input id="mentor-first-name" type="text" placeholder="First name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;" required>
-                            </div>
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Last Name *</label>
-                                <input id="mentor-last-name" type="text" placeholder="Last name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;" required>
-                            </div>
-                        </div>
-                        <!-- Email & Phone -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Email *</label>
-                                <input id="mentor-email" type="email" placeholder="Your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;" required>
-                            </div>
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Phone *</label>
-                                <input id="mentor-phone" type="tel" placeholder="Your phone number" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;" required>
-                            </div>
-                        </div>
-                        <!-- Research Project Title -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Research Project Title</label>
-                            <input id="mentor-project-title" type="text" placeholder="This can be a working title" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;">
-                        </div>
-                        <!-- Project Overview -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Project Overview</label>
-                            <textarea id="mentor-project-overview" placeholder="Please briefly describe the research project a student would be participating in." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 100px; resize: vertical;"></textarea>
-                        </div>
-                        <!-- Research Field -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Research Field</label>
-                            <input id="mentor-research-field" type="text" placeholder="e.g. Biotechnology, Economics, Environmental Science..." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;">
-                        </div>
-                        <!-- Availability & Mode -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Availability</label>
-                                <select id="mentor-availability" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background: white;">
-                                    <option value="" disabled selected>Select an option</option>
-                                    <option value="open">Open Enrollment</option>
-                                    <option value="cohort">Cohort</option>
-                                    <option value="either">Either</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Mode of Engagement</label>
-                                <select id="mentor-mode" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background: white;">
-                                    <option value="" disabled selected>Select an option</option>
-                                    <option value="in-person">In-Person</option>
-                                    <option value="remote">Remote</option>
-                                    <option value="either">Either</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Prior Experience -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Prior Experience with High School Students</label>
-                            <select id="mentor-experience" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background: white;">
-                                <option value="" disabled selected>Have you previously worked with a high school student on a research project?</option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
-                        <!-- Student Responsibilities -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Student Responsibilities</label>
-                            <textarea id="mentor-responsibilities" placeholder="Please describe the responsibilities and expectations for a student joining your project." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 80px; resize: vertical;"></textarea>
-                        </div>
-                        <!-- Ideal Student Profile -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Ideal Student Profile</label>
-                            <textarea id="mentor-student-profile" placeholder="Please share any traits, skills, or qualities you are looking for." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 80px; resize: vertical;"></textarea>
-                        </div>
-                        <!-- Skills and Learning Outcomes -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Skills and Learning Outcomes</label>
-                            <textarea id="mentor-skills" placeholder="What specific skills or knowledge can a student expect to gain?" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 80px; resize: vertical;"></textarea>
-                        </div>
-                        <!-- Weekly Time Commitment -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Weekly Time Commitment</label>
-                            <select id="mentor-time" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background: white;">
-                                <option value="" disabled selected>Select expected time</option>
-                                <option value="2-3">2 to 3 hours per week</option>
-                                <option value="4-6">4 to 6 hours per week</option>
-                                <option value="7-10">7 to 10 hours per week</option>
-                                <option value="10-20">10 to 20 hours per week</option>
-                            </select>
-                        </div>
-                        <!-- Additional Information -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Additional Information</label>
-                            <textarea id="mentor-additional" placeholder="Please share any other details that would help us match and promote this opportunity." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 80px; resize: vertical;"></textarea>
-                        </div>
-                        <!-- How did you hear -->
-                        <div>
-                            <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">How did you hear about GSJ?</label>
-                            <input id="mentor-how-heard" type="text" placeholder="If you were referred by someone, please include their name here." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem;">
-                        </div>
-                        <!-- Submit -->
-                        <button type="submit" style="width: 100%; background: var(--gradient-primary); color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; transition: all 0.3s; box-shadow: 0 4px 14px rgba(15, 76, 129, 0.3);">
-                            <span class="material-symbols-outlined" style="font-size: 1.2rem;">send</span> Submit Application
-                        </button>
-                    </form>
+      </section>
+      <section class="section" id="mentor-apply">
+        <div class="container form-layout">
+          <div class="form-intro">
+            <p class="eyebrow" data-cms-text="section4.t1">
+              BECOME PART OF THE JOURNEY
+            </p>
+            <h2 data-cms-text="section4.t2">Let’s Work Together</h2>
+            <p data-cms-text="section4.t3">
+              Are you a researcher or professional passionate about inspiring
+              the next generation?
+            </p>
+            <p data-cms-text="section4.t4">
+              Do you have a research project that a student can work on?
+            </p>
+            <p data-cms-text="section4.t5">
+              Fill out the form below and we will be in touch shortly! We can't
+              wait to hear from you!
+            </p>
+            <p class="small">
+              <span data-cms-wrap="true" data-cms-text="section4.t6"
+                >For questions, reach us at</span
+              >
+              <a
+                href="mailto:info@gsj.edu.vn"
+                data-cms-text="section4.t8"
+                data-cms-link="section4.l1"
+                >info@gsj.edu.vn</a
+              >
+              <span data-cms-wrap="true" data-cms-text="section4.t7">.</span>
+            </p>
+          </div>
+          <div class="form-panel">
+            <form id="mentor-form" data-form="mentor">
+              <p class="small form-required" data-cms-text="section4.t9">
+                Fields marked * are required.
+              </p>
+              <div class="form-row">
+                <div class="field">
+                  <label for="mentor-first-name">
+                    <span data-cms-wrap="true" data-cms-text="section4.t10"
+                      >First name</span
+                    >
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="mentor-first-name"
+                    name="mentor-first-name"
+                    type="text"
+                    required=""
+                  />
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <!-- Column 1: Brand & Contact -->
-            <div class="footer-brand">
-                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 100px;">
+                <div class="field">
+                  <label for="mentor-last-name">
+                    <span data-cms-wrap="true" data-cms-text="section4.t11"
+                      >Last name</span
+                    >
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="mentor-last-name"
+                    name="mentor-last-name"
+                    type="text"
+                    required=""
+                  />
                 </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
-                    Encouraging & Inspiring Young Minds
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="mentor-email">
+                    <span data-cms-wrap="true" data-cms-text="section4.t12"
+                      >Email</span
+                    >
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="mentor-email"
+                    name="mentor-email"
+                    type="email"
+                    required=""
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="field">
+                  <label for="mentor-phone">
+                    <span data-cms-wrap="true" data-cms-text="section4.t13"
+                      >Phone</span
+                    >
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="mentor-phone"
+                    name="mentor-phone"
+                    type="tel"
+                    required=""
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="mentor-project-title" data-cms-text="section4.t14"
+                  >Research project title</label
+                ><input
+                  id="mentor-project-title"
+                  name="mentor-project-title"
+                  type="text"
+                />
+                <p class="field-help" data-cms-text="section4.t15">
+                  A working title is welcome.
                 </p>
-                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
-                    <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
-                        <span style="font-size: 0.9rem; line-height: 1.5;">Lot A2.1 & A2.2, 1st Floor, Building A, Zone A, Imperia Garden Mall, 203 Nguyen Huy Tuong, Thanh Xuan, Hanoi, Vietnam</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
-                        <span style="font-size: 0.9rem;">032 732 6655</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
-                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
-                    </div>
+              </div>
+              <div class="field">
+                <label
+                  for="mentor-project-overview"
+                  data-cms-text="section4.t16"
+                  >Project overview</label
+                ><textarea
+                  id="mentor-project-overview"
+                  name="mentor-project-overview"
+                  rows="4"
+                ></textarea>
+                <p class="field-help" data-cms-text="section4.t17">
+                  Briefly describe the research project a student would
+                  participate in.
+                </p>
+              </div>
+              <div class="field">
+                <label for="mentor-research-field" data-cms-text="section4.t18"
+                  >Research field</label
+                ><input
+                  id="mentor-research-field"
+                  name="mentor-research-field"
+                  type="text"
+                />
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="mentor-availability" data-cms-text="section4.t19"
+                    >Availability</label
+                  ><select id="mentor-availability" name="mentor-availability">
+                    <option value="" data-cms-text="section4.t20">
+                      Select an option
+                    </option>
+                    <option value="open" data-cms-text="section4.t21">
+                      Open Enrollment
+                    </option>
+                    <option value="cohort" data-cms-text="section4.t22">
+                      Cohort
+                    </option>
+                    <option value="either" data-cms-text="section4.t23">
+                      Either
+                    </option>
+                  </select>
                 </div>
-            </div>
-
-            <!-- Column 2: Quick Links -->
-            <div>
-                <h4>Programs</h4>
-                <div class="footer-links">
-                    <a href="services.html#pathway-1">Integrated STEM</a>
-                    <a href="services.html#pathway-2">Advanced Business</a>
-                    <a href="services.html#pathway-3">Global Scholarship</a>
-                    <a href="contact.html">Apply Now</a>
+                <div class="field">
+                  <label for="mentor-mode" data-cms-text="section4.t24"
+                    >Mode of engagement</label
+                  ><select id="mentor-mode" name="mentor-mode">
+                    <option value="" data-cms-text="section4.t25">
+                      Select an option
+                    </option>
+                    <option value="in-person" data-cms-text="section4.t26">
+                      In-Person
+                    </option>
+                    <option value="remote" data-cms-text="section4.t27">
+                      Remote
+                    </option>
+                    <option value="either" data-cms-text="section4.t28">
+                      Either
+                    </option>
+                  </select>
                 </div>
-            </div>
-
-            <!-- Column 3: About -->
-            <div>
-                <h4>About GSJ</h4>
-                <div class="footer-links">
-                    <a href="about.html">Our Story</a>
-                    <a href="mentors.html">Expert Mentors</a>
-                    <a href="about.html#blog">Research Blog</a>
-                    <a href="index.html#testimonials">Testimonials</a>
-                </div>
-            </div>
-
-            <!-- Column 4: Legal -->
-            <div>
-                <h4>Support</h4>
-                <div class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="services.html">FAQ</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
+              </div>
+              <div class="field">
+                <label for="mentor-experience" data-cms-text="section4.t29"
+                  >Prior experience with high school students</label
+                ><select id="mentor-experience" name="mentor-experience">
+                  <option value="" data-cms-text="section4.t30">
+                    Select an option
+                  </option>
+                  <option value="yes" data-cms-text="section4.t31">Yes</option>
+                  <option value="no" data-cms-text="section4.t32">No</option>
+                </select>
+              </div>
+              <div class="field">
+                <label
+                  for="mentor-responsibilities"
+                  data-cms-text="section4.t33"
+                  >Student responsibilities</label
+                ><textarea
+                  id="mentor-responsibilities"
+                  name="mentor-responsibilities"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="mentor-student-profile" data-cms-text="section4.t34"
+                  >Ideal student profile</label
+                ><textarea
+                  id="mentor-student-profile"
+                  name="mentor-student-profile"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="mentor-skills" data-cms-text="section4.t35"
+                  >Skills and learning outcomes</label
+                ><textarea
+                  id="mentor-skills"
+                  name="mentor-skills"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="mentor-time" data-cms-text="section4.t36"
+                  >Weekly time commitment</label
+                ><select id="mentor-time" name="mentor-time">
+                  <option value="" data-cms-text="section4.t37">
+                    Select an option
+                  </option>
+                  <option value="2-3" data-cms-text="section4.t38">
+                    2 to 3 hours per week
+                  </option>
+                  <option value="4-6" data-cms-text="section4.t39">
+                    4 to 6 hours per week
+                  </option>
+                  <option value="7-10" data-cms-text="section4.t40">
+                    7 to 10 hours per week
+                  </option>
+                  <option value="10-20" data-cms-text="section4.t41">
+                    10 to 20 hours per week
+                  </option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="mentor-additional" data-cms-text="section4.t42"
+                  >Additional information</label
+                ><textarea
+                  id="mentor-additional"
+                  name="mentor-additional"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="mentor-how-heard" data-cms-text="section4.t43"
+                  >How did you hear about GSJ?</label
+                ><input
+                  id="mentor-how-heard"
+                  name="mentor-how-heard"
+                  type="text"
+                />
+                <p class="field-help" data-cms-text="section4.t44">
+                  If someone referred you, please include their name.
+                </p>
+              </div>
+              <button class="button button-primary" type="submit">
+                <span data-cms-wrap="true" data-cms-text="section4.t45"
+                  >Submit application</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >arrow_forward</span
+                >
+              </button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="footer-logo" href="index.html" data-cms-link="footer.l1"
+              ><img
+                src="images/optimized/gsj_logo_new.webp"
+                alt="GSJ — Global Scholars Journey"
+                class=""
+                width="332"
+                height="160"
+                loading="lazy"
+                decoding="async"
+                data-cms-image="footer.i1"
+            /></a>
+            <h2 data-cms-text="footer.t1">
+              Your potential.<br />A world of possibilities.
+            </h2>
+            <p data-cms-text="footer.t2">
+              Empowering young minds on their journey<br />to becoming global
+              scholars.
+            </p>
+            <a
+              href="mailto:info@gsj.edu.vn"
+              data-cms-text="footer.t3"
+              data-cms-link="footer.l2"
+              >info@gsj.edu.vn</a
+            ><a
+              href="tel:0327326655"
+              data-cms-text="footer.t4"
+              data-cms-link="footer.l3"
+              >032 732 6655</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t5">Explore GSJ</h3>
+            <a
+              href="about.html"
+              data-cms-text="footer.t6"
+              data-cms-link="footer.l4"
+              >About us</a
+            ><a
+              href="services.html"
+              data-cms-text="footer.t7"
+              data-cms-link="footer.l5"
+              >Our Programs</a
+            ><a
+              href="study-abroad.html"
+              data-cms-text="footer.t8"
+              data-cms-link="footer.l6"
+              >Study Abroad</a
+            ><a
+              href="research.html"
+              data-cms-text="footer.t9"
+              data-cms-link="footer.l7"
+              >Research</a
+            ><a
+              href="become-mentor.html"
+              data-cms-text="footer.t10"
+              data-cms-link="footer.l8"
+              >Become a Mentor</a
+            ><a
+              href="student-stories.html"
+              data-cms-text="footer.t11"
+              data-cms-link="footer.l9"
+              >Student Stories</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t12">Let’s connect</h3>
+            <a
+              href="contact.html"
+              data-cms-text="footer.t13"
+              data-cms-link="footer.l10"
+              >Book a consultation</a
+            ><a
+              href="questions.html"
+              data-cms-text="footer.t14"
+              data-cms-link="footer.l11"
+              >FAQs &amp; support</a
+            ><a
+              href="https://www.facebook.com/hocvienkhoahocgsj"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t15"
+              data-cms-link="footer.l12"
+              >Facebook ↗</a
+            ><a
+              href="https://www.tiktok.com/@gsj.education"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t16"
+              data-cms-link="footer.l13"
+              >TikTok ↗</a
+            ><a
+              href="https://www.youtube.com/@gsj-hocviensangtaokhoahoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t17"
+              data-cms-link="footer.l14"
+              >YouTube ↗</a
+            >
+          </div>
         </div>
+        <div class="footer-offices">
+          <div>
+            <h3 data-cms-text="footer.t18">Hanoi - Head Office</h3>
+            <p data-cms-text="footer.t19">
+              Building A-Imperia Garden Building, 203 Nguyen Huy Tuong, Thanh
+              Xuan Ward, Hanoi
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t20">Hanoi - Office 2</h3>
+            <p data-cms-text="footer.t21">
+              Nguyet Que 25-08, Vinhomes Harmony, Phuc Dong, Long Bien, Hanoi,
+              Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t22">Ho Chi Minh City Office</h3>
+            <p data-cms-text="footer.t23">
+              36D Luong Dinh Cua Street, An Khanh Ward, Thu Duc City, Ho Chi
+              Minh City, Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t24">Da Nang Office</h3>
+            <p data-cms-text="footer.t25">
+              89-91 Doan Huu Trung Street, An Khe, Da Nang, Vietnam.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-cms-text="footer.t26"
+            >© 2026 GSJ. All rights reserved.</span
+          ><a
+            href="terms.html"
+            data-cms-text="footer.t27"
+            data-cms-link="footer.l15"
+            >Terms of service</a
+          ><span data-cms-text="footer.t28">Global Scholars Journey</span>
+        </div>
+      </div>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase.js"></script>
-<script src="main.js"></script>
-</body>
+    <button class="back-top icon-button" aria-label="Back to top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >arrow_upward</span
+      >
+    </button>
+    <div
+      id="form-status"
+      class="form-status"
+      role="status"
+      aria-live="polite"
+      hidden=""
+    ></div>
+  </body>
 </html>

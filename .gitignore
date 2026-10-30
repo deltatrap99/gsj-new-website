@@ -1,1 +1,14 @@
 .vercel
+node_modules/
+artifacts/
+logo-review.jpg
+images/*-source.*
+cms/.env*
+!cms/.env.example
+cms/.tmp/
+cms/.cache/
+cms/.strapi/
+cms/dist/
+cms/build/
+cms/public/uploads/*
+!cms/public/uploads/.gitkeep

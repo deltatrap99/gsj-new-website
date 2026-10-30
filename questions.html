@@ -1,308 +1,694 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Questions | GSJ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=7">
-    <style>
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: inherit;
-        }
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-    </style>
-</head>
-<body>
-    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 90px; width: auto; object-fit: contain; vertical-align: middle;">
-                </a>
-            </div>
-                        <nav class="nav-links">
-                <div class="nav-dropdown">
-                    <a href="about.html">About ▾</a>
-                    <div class="nav-dropdown-content">
-                        <a href="about.html">About us</a>
-                        <a href="about.html#blog">Research Blog</a>
-                        <a href="about.html#partnership">Partnership</a>
-                    </div>
-                </div>
-                <a href="services.html">Our Program</a>
-                <a href="research.html">Advanced Scientific Research</a>
-                <a href="become-mentor.html">Become A Mentor</a>
-                <a href="index.html#testimonials">Testimonials</a>
-            </nav>
-            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-<div class="lang-wrapper">
-                    <button class="lang-btn">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
-                    </button>
-                    <div class="lang-menu">
-                        <div class="lang-menu-inner">
-                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
-                            <a href="#" class="lang-item">Tiếng Việt</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">FAQ</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frequently Asked Questions | GSJ — Global Scholars Journey</title>
+    <meta
+      name="description"
+      content="Answers about GSJ programs, mentoring, research projects, competitions and study abroad."
+    />
+    <meta name="theme-color" content="#0f4c81" />
+    <link rel="icon" href="images/gsj_logo_new.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261031-portraits" />
+    <script src="main.js?v=20261031-cms" defer=""></script>
+    <script src="supabase.js?v=20261030" defer=""></script>
+    <script data-gsj-cms="" src="cms-config.js?v=1" defer=""></script>
+    <script data-gsj-cms="" src="cms-client.js?v=1" defer=""></script>
+  </head>
+  <body data-cms-page="questions">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="GSJ — Global Scholars Journey home"
+          data-cms-link="header.l1"
+          ><img
+            src="images/optimized/gsj_logo_new.webp"
+            alt="GSJ"
+            class=""
+            width="332"
+            height="160"
+            fetchpriority="high"
+            decoding="async"
+            data-cms-image="header.i1"
+          /><span data-cms-text="header.t1"
+            >GLOBAL SCHOLARS<br />JOURNEY</span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a
+            href="about.html"
+            data-cms-text="header.t2"
+            data-cms-link="header.l2"
+            >About us</a
+          ><a
+            href="services.html"
+            data-cms-text="header.t3"
+            data-cms-link="header.l3"
+            >Our Programs</a
+          ><a
+            href="study-abroad.html"
+            data-cms-text="header.t4"
+            data-cms-link="header.l4"
+            >Study Abroad</a
+          ><a
+            href="research.html"
+            data-cms-text="header.t5"
+            data-cms-link="header.l5"
+            >Research</a
+          ><a
+            href="become-mentor.html"
+            data-cms-text="header.t6"
+            data-cms-link="header.l6"
+            >Become a Mentor</a
+          ><a
+            href="student-stories.html"
+            data-cms-text="header.t7"
+            data-cms-link="header.l7"
+            >Student Stories</a
+          >
+        </nav>
+        <div class="header-actions">
+          <a
+            href="contact.html"
+            class="button button-primary header-cta"
+            data-cms-link="header.l8"
+          >
+            <span data-cms-wrap="true" data-cms-text="header.t8"
+              >Let’s talk</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >north_east</span
+            ></a
+          ><button
+            class="menu-toggle icon-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >menu</span
+            >
+          </button>
         </div>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </header>
-
-    <!-- Questions Hero -->
-    <section style="position: relative; padding: 160px 0 100px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); overflow: hidden;">
-        <!-- Decorative Elements -->
-        <div style="position: absolute; top: -50px; right: -100px; width: 300px; height: 300px; background: rgba(245, 158, 11, 0.1); border-radius: 50%;"></div>
-        <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.05); border-radius: 50%;"></div>
-        
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="max-width: 650px; margin: 0 auto; text-align: center;">
-                <span style="font-size: 0.9rem; font-weight: 700; color: #b45309; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 20px;">We are here to listen</span>
-                <h1 style="font-size: 3.5rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px;">
-                    Still wondering if this is <span style="color: #d97706;">right for you?</span>
-                </h1>
-                <p style="font-size: 1.15rem; color: #475569; line-height: 1.6; margin-bottom: 0;">
-                    Embarking on a research journey is a big decision. Whether you're unsure about the time commitment, choosing a topic, or finding the right mentor, tell us what's on your mind. We're happy to guide you!
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Questions Section -->
-    <section class="section-padding" style="background-color: #f8fafc; padding-top: 80px; padding-bottom: 100px;">
+    <dialog id="site-menu" class="menu-drawer" aria-labelledby="menu-title">
+      <div class="drawer-top">
+        <p id="menu-title" class="eyebrow" data-cms-text="drawer.t1">
+          YOUR NEXT CHAPTER
+        </p>
+        <button
+          class="menu-close icon-button"
+          aria-label="Close navigation menu"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >close</span
+          >
+        </button>
+      </div>
+      <nav aria-label="Sidebar navigation">
+        <a href="about.html" data-cms-link="drawer.l1"
+          ><span class="menu-number">01</span
+          ><span data-cms-text="drawer.t2">About us</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="services.html" data-cms-link="drawer.l2"
+          ><span class="menu-number">02</span
+          ><span data-cms-text="drawer.t3">Our Programs</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="study-abroad.html" data-cms-link="drawer.l3"
+          ><span class="menu-number">03</span
+          ><span data-cms-text="drawer.t4">Study Abroad</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="research.html" data-cms-link="drawer.l4"
+          ><span class="menu-number">04</span
+          ><span data-cms-text="drawer.t5">Research</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="become-mentor.html" data-cms-link="drawer.l5"
+          ><span class="menu-number">05</span
+          ><span data-cms-text="drawer.t6">Become a Mentor</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        ><a href="student-stories.html" data-cms-link="drawer.l6"
+          ><span class="menu-number">06</span
+          ><span data-cms-text="drawer.t7">Student Stories</span
+          ><span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          ></a
+        >
+      </nav>
+      <div class="drawer-bottom">
+        <a
+          class="button button-primary"
+          href="contact.html?program=study-abroad#consultation"
+          data-cms-link="drawer.l7"
+        >
+          <span data-cms-wrap="true" data-cms-text="drawer.t8"
+            >Book a consultation</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          ></a
+        ><a href="questions.html" class="text-link" data-cms-link="drawer.l8">
+          <span data-cms-wrap="true" data-cms-text="drawer.t9"
+            >Frequently asked questions</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          ></a
+        ><a
+          href="tel:0327326655"
+          data-cms-text="drawer.t10"
+          data-cms-link="drawer.l9"
+          >032 732 6655</a
+        ><a
+          href="mailto:info@gsj.edu.vn"
+          data-cms-text="drawer.t11"
+          data-cms-link="drawer.l10"
+          >info@gsj.edu.vn</a
+        ><span class="small" data-cms-text="drawer.t12"
+          >Hanoi · Ho Chi Minh City · Da Nang</span
+        >
+      </div>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="text-hero">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px;">
-                
-                <!-- Left: FAQ / Info -->
-                <div>
-                    <h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 30px; line-height: 1.2;">Common Concerns</h2>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 25px;">
-                        <div style="background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
-                            <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">"Will I have enough time?"</h4>
-                            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">Most of our students balance research with a full high-school workload. Our mentors help you set a realistic schedule, typically requiring just 3-5 hours a week.</p>
-                        </div>
-
-                        <div style="background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
-                            <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">"I don't know what to research."</h4>
-                            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">That's completely normal! The first phase of the program is dedicated entirely to exploring your interests and brainstorming a unique topic alongside your mentor.</p>
-                        </div>
-
-                        <div style="background: white; padding: 25px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
-                            <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">"Is my English good enough?"</h4>
-                            <p style="color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0;">We welcome students from all backgrounds. Your mentor will support you not just with research, but also with academic writing and communication skills.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Dedicated Questions Form -->
-                <div>
-                    <div style="background: white; padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.04); border-top: 6px solid #d97706;">
-                        <h3 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 10px;">Tell us what you're thinking</h3>
-                        <p style="color: #64748b; margin-bottom: 30px;">Let's clear up any doubts before you apply.</p>
-                        
-                        <form id="question-form" class="form-input-enhanced" onsubmit="submitQuestion(event)" style="display: flex; flex-direction: column; gap: 20px;">
-                            <!-- Row 1: Name & Email -->
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                                <div>
-                                    <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Full Name</label>
-                                    <input id="question-name" type="text" placeholder="Your name" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Email Address</label>
-                                    <input id="question-email" type="email" placeholder="Your email" style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" required>
-                                </div>
-                            </div>
-                            
-                            <!-- Row 2: Main Concern -->
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">What is your main concern?</label>
-                                <select style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; background-color: white; color: #0f172a; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;" required>
-                                    <option value="" disabled selected>Select what's on your mind...</option>
-                                    <option value="time">I'm worried about the time commitment</option>
-                                    <option value="topic">I don't know what topic to research</option>
-                                    <option value="skills">I'm not sure if I have the right skills</option>
-                                    <option value="cost">I have questions about program costs</option>
-                                    <option value="other">Something else...</option>
-                                </select>
-                            </div>
-                            
-                            <!-- Row 3: Message -->
-                            <div>
-                                <label style="display: block; font-weight: 700; color: #0f172a; margin-bottom: 8px; font-size: 0.95rem;">Tell us more about your situation</label>
-                                <textarea id="question-message" placeholder="E.g. I am currently in 11th grade and taking 3 AP classes. I love biology but I'm not sure if I have enough time for a 12-week research project..." style="width: 100%; padding: 14px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: inherit; font-size: 1rem; height: 140px; resize: vertical;" required></textarea>
-                            </div>
-                            
-                            <!-- Submit Button -->
-                            <button type="submit" style="width: 100%; background: #d97706; color: white; border: none; padding: 16px; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; transition: background 0.3s; box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);">
-                                <span class="material-symbols-outlined" style="font-size: 1.2rem;">support_agent</span> Get Advice from our Experts
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+          <p class="eyebrow" data-cms-text="section1.t1">
+            A LITTLE CLARITY GOES A LONG WAY
+          </p>
+          <h1>
+            <span data-cms-wrap="true" data-cms-text="section1.t2"
+              >Your questions.</span
+            >
+            <br /><em data-cms-text="section1.t3">Our guidance.</em>
+          </h1>
+          <p data-cms-text="section1.t4">
+            Everything you need to take your next step with confidence.
+          </p>
         </div>
-    </section>
-
-    <!-- FAQ Section with 10 questions from Plan -->
-    <section class="section-padding" style="background: white; padding-top: 80px; padding-bottom: 100px;">
-        <div class="container" style="max-width: 900px;">
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
-
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">1. What is GSJ's Science Research Program? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">GSJ's Science Research Program guides high school students through an research project in their chosen field, from forming a research question to presenting findings at local and international competitions.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">2. Who can apply to GSJ's programs? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">Our programs are open to students in grades 8 to 12 who are curious, motivated, and eager to explore academic research, business, or study abroad pathways.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">3. What fields of research does GSJ support? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">Students can pursue research across Natural Sciences, Technology and Engineering, Social Sciences, and Business and Finance,...</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">4. How long does a research project typically take? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">Most research projects run over a period of 5 to 6 months, with regular sessions each week guided by a dedicated mentor and teaching assistant.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">5. Will my child work with a real researcher or scientist? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">Yes. Student is paired with a qualified mentor from an academic institution or professional background relevant to their research field.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">6. Does GSJ offer study abroad consulting? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">Yes. GSJ provides personalized study abroad consulting, supporting students with profile building, essay writing, university selection, and application preparation.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">7. What competitions can students participate in through GSJ? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">- Prestigious International Academic Competitions in Biology, Chemistry, Physics, Mathematics, Social Sciences, and related disciplines (IBO, BBO, JCOO, UKChO, etc.)<br>
-                    - National and International Science and Engineering Competitions<br>
-                    - Innovation, STEM, and Technology Competitions: SVIIF, IIENA, iCAN, AI-JAM US, INTARG, INOVA Croatia, Innoverse, iWISE<br>
-                    - National and International Academic Competitions Across Specialized Disciplines</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">8. Does GSJ offer summer camps or international programs? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">Yes. GSJ organizes international career exploration camps and summer programs in destinations such as Singapore and Australia, America,... designed to broaden students' academic horizons and expand their global network.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">9. How does GSJ personalize its programs for each student? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">GSJ designs individualized academic roadmaps based on each student's strengths, interests, and goals, ensuring guidance that is relevant and meaningful to their personal journey.</p>
-                </details>
-
-                <details style="background: #f8fafc; border-radius: 12px; padding: 20px 24px; border: 1px solid #e2e8f0; cursor: pointer;">
-                    <summary style="font-weight: 700; color: #0f172a; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">10. How can I get started with GSJ? <span class="material-symbols-outlined" style="color: #0f4c81;">expand_more</span></summary>
-                    <p style="color: #475569; margin-top: 12px; line-height: 1.7; font-size: 0.98rem;">You can reach out to our team via our website or contact us directly to schedule a one-on-one consultation. Our staff will help identify the most suitable program for your child.</p>
-                </details>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <!-- Column 1: Brand & Contact -->
-            <div class="footer-brand">
-                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 100px;">
-                </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">
-                    Encouraging & Inspiring Young Minds
+      </section>
+      <section class="section">
+        <div class="container faq-layout">
+          <aside>
+            <p class="eyebrow" data-cms-text="section2.t1">
+              WE’RE HERE TO HELP
+            </p>
+            <h2 data-cms-text="section2.t2">Let’s talk it through.</h2>
+            <p data-cms-text="section2.t3">
+              Every student’s journey is different. Our team can help you find a
+              starting point that fits.
+            </p>
+            <a
+              class="button button-primary"
+              href="contact.html#consultation"
+              data-cms-link="section2.l1"
+            >
+              <span data-cms-wrap="true" data-cms-text="section2.t4"
+                >Talk to GSJ</span
+              >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_forward</span
+              ></a
+            >
+          </aside>
+          <div class="faq-list">
+            <details>
+              <summary>
+                <span class="faq-number">01</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t5"
+                  >What is GSJ's Science Research Program?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t6">
+                  GSJ's Science Research Program guides high school students
+                  through a research project in their chosen field, from forming
+                  a research question to presenting findings at local and
+                  international competitions.
                 </p>
-                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
-                    <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">location_on</span>
-                        <span style="font-size: 0.9rem; line-height: 1.5;">Lot A2.1 & A2.2, 1st Floor, Building A, Zone A, Imperia Garden Mall, 203 Nguyen Huy Tuong, Thanh Xuan, Hanoi, Vietnam</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">phone</span>
-                        <span style="font-size: 0.9rem;">032 732 6655</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--primary-light);">mail</span>
-                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Column 2: Quick Links -->
-            <div>
-                <h4>Programs</h4>
-                <div class="footer-links">
-                    <a href="services.html#pathway-1">Integrated STEM</a>
-                    <a href="services.html#pathway-2">Advanced Business</a>
-                    <a href="services.html#pathway-3">Global Scholarship</a>
-                    <a href="contact.html">Apply Now</a>
-                </div>
-            </div>
-
-            <!-- Column 3: About -->
-            <div>
-                <h4>About GSJ</h4>
-                <div class="footer-links">
-                    <a href="about.html">Our Story</a>
-                    <a href="mentors.html">Expert Mentors</a>
-                    <a href="about.html#blog">Research Blog</a>
-                    <a href="index.html#testimonials">Testimonials</a>
-                </div>
-            </div>
-
-            <!-- Column 4: Legal -->
-            <div>
-                <h4>Support</h4>
-                <div class="footer-links">
-                    <a href="contact.html">Contact Us</a>
-                    <a href="services.html">FAQ</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">02</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t7"
+                  >Who can apply to GSJ's programs?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t8">
+                  Our programs are open to students in grades 8 to 12 who are
+                  curious, motivated, and eager to explore academic research,
+                  business, or study abroad pathways.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">03</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t9"
+                  >What fields of research does GSJ support?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t10">
+                  Students can pursue research across Natural Sciences,
+                  Technology and Engineering, Social Sciences, and Business and
+                  Finance,...
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">04</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t11"
+                  >How long does a research project typically take?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t12">
+                  Most research projects run over a period of 5 to 6 months,
+                  with regular sessions each week guided by a dedicated mentor
+                  and teaching assistant.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">05</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t13"
+                  >Will my child work with a real researcher or scientist?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t14">
+                  Yes. Each student is paired with a qualified mentor from an
+                  academic institution or professional background relevant to
+                  their research field.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">06</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t15"
+                  >Does GSJ offer study abroad consulting?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t16">
+                  Yes. GSJ provides personalized study abroad consulting,
+                  supporting students with profile building, essay writing,
+                  university selection, and application preparation.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">07</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t17"
+                  >What competitions can students participate in through
+                  GSJ?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t18">
+                  GSJ prepares students for a wide range of local and
+                  international competitions, including iCAN, SVIIF, iWISE, ABS,
+                  and various scientific research symposia.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">08</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t19"
+                  >Does GSJ offer summer camps or international programs?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t20">
+                  Yes. GSJ organizes international career exploration camps and
+                  summer programs in destinations such as Singapore and
+                  Australia and America designed to broaden students' academic
+                  horizons and expand their global network.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">09</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t21"
+                  >How does GSJ personalize its programs for each student?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t22">
+                  GSJ designs individualized academic roadmaps based on each
+                  student's strengths, interests, and goals, ensuring guidance
+                  that is relevant and meaningful to their personal journey.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span class="faq-number">10</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t23"
+                  >How can I get started with GSJ?</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >add</span
+                >
+              </summary>
+              <div class="prose">
+                <p data-cms-text="section2.t24">
+                  You can reach out to our team via our website or contact us
+                  directly to schedule a one-on-one consultation. Our staff will
+                  help identify the most suitable program for your child.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+      </section>
+      <section class="section pale">
+        <div class="container form-layout">
+          <div class="form-intro">
+            <p class="eyebrow" data-cms-text="section3.t1">
+              STILL SOMETHING ON YOUR MIND?
+            </p>
+            <h2 data-cms-text="section3.t2">
+              Tell us what<br />you’re thinking.
+            </h2>
+            <p data-cms-text="section3.t3">
+              Share your situation and our team will get back to you with
+              guidance.
+            </p>
+          </div>
+          <div class="form-panel">
+            <form id="question-form" data-form="question">
+              <p class="small form-required" data-cms-text="section3.t4">
+                Fields marked * are required.
+              </p>
+              <div class="form-row">
+                <div class="field">
+                  <label for="question-name">
+                    <span data-cms-wrap="true" data-cms-text="section3.t5"
+                      >Full name</span
+                    >
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="question-name"
+                    name="question-name"
+                    type="text"
+                    required=""
+                  />
+                </div>
+                <div class="field">
+                  <label for="question-email">
+                    <span data-cms-wrap="true" data-cms-text="section3.t6"
+                      >Email</span
+                    >
+                    <span aria-hidden="true">*</span></label
+                  ><input
+                    id="question-email"
+                    name="question-email"
+                    type="email"
+                    required=""
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="question-concern" data-cms-text="section3.t7"
+                  >What is your main concern?</label
+                ><select id="question-concern" name="question-concern">
+                  <option value="" data-cms-text="section3.t8">
+                    Select an option
+                  </option>
+                  <option value="Time commitment" data-cms-text="section3.t9">
+                    Time commitment
+                  </option>
+                  <option
+                    value="Choosing a research topic"
+                    data-cms-text="section3.t10"
+                  >
+                    Choosing a research topic
+                  </option>
+                  <option
+                    value="Skills and preparation"
+                    data-cms-text="section3.t11"
+                  >
+                    Skills and preparation
+                  </option>
+                  <option value="Program costs" data-cms-text="section3.t12">
+                    Program costs
+                  </option>
+                  <option
+                    value="Study abroad pathways"
+                    data-cms-text="section3.t13"
+                  >
+                    Study abroad pathways
+                  </option>
+                  <option value="Something else" data-cms-text="section3.t14">
+                    Something else
+                  </option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="question-message">
+                  <span data-cms-wrap="true" data-cms-text="section3.t15"
+                    >Tell us more about your situation</span
+                  >
+                  <span aria-hidden="true">*</span></label
+                ><textarea
+                  id="question-message"
+                  name="question-message"
+                  rows="4"
+                  required=""
+                ></textarea>
+              </div>
+              <button class="button button-primary" type="submit">
+                <span data-cms-wrap="true" data-cms-text="section3.t16"
+                  >Get advice from our team</span
+                >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >arrow_forward</span
+                >
+              </button>
+              <p class="form-feedback" role="status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="footer-logo" href="index.html" data-cms-link="footer.l1"
+              ><img
+                src="images/optimized/gsj_logo_new.webp"
+                alt="GSJ — Global Scholars Journey"
+                class=""
+                width="332"
+                height="160"
+                loading="lazy"
+                decoding="async"
+                data-cms-image="footer.i1"
+            /></a>
+            <h2 data-cms-text="footer.t1">
+              Your potential.<br />A world of possibilities.
+            </h2>
+            <p data-cms-text="footer.t2">
+              Empowering young minds on their journey<br />to becoming global
+              scholars.
+            </p>
+            <a
+              href="mailto:info@gsj.edu.vn"
+              data-cms-text="footer.t3"
+              data-cms-link="footer.l2"
+              >info@gsj.edu.vn</a
+            ><a
+              href="tel:0327326655"
+              data-cms-text="footer.t4"
+              data-cms-link="footer.l3"
+              >032 732 6655</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t5">Explore GSJ</h3>
+            <a
+              href="about.html"
+              data-cms-text="footer.t6"
+              data-cms-link="footer.l4"
+              >About us</a
+            ><a
+              href="services.html"
+              data-cms-text="footer.t7"
+              data-cms-link="footer.l5"
+              >Our Programs</a
+            ><a
+              href="study-abroad.html"
+              data-cms-text="footer.t8"
+              data-cms-link="footer.l6"
+              >Study Abroad</a
+            ><a
+              href="research.html"
+              data-cms-text="footer.t9"
+              data-cms-link="footer.l7"
+              >Research</a
+            ><a
+              href="become-mentor.html"
+              data-cms-text="footer.t10"
+              data-cms-link="footer.l8"
+              >Become a Mentor</a
+            ><a
+              href="student-stories.html"
+              data-cms-text="footer.t11"
+              data-cms-link="footer.l9"
+              >Student Stories</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t12">Let’s connect</h3>
+            <a
+              href="contact.html"
+              data-cms-text="footer.t13"
+              data-cms-link="footer.l10"
+              >Book a consultation</a
+            ><a
+              href="questions.html"
+              data-cms-text="footer.t14"
+              data-cms-link="footer.l11"
+              >FAQs &amp; support</a
+            ><a
+              href="https://www.facebook.com/hocvienkhoahocgsj"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t15"
+              data-cms-link="footer.l12"
+              >Facebook ↗</a
+            ><a
+              href="https://www.tiktok.com/@gsj.education"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t16"
+              data-cms-link="footer.l13"
+              >TikTok ↗</a
+            ><a
+              href="https://www.youtube.com/@gsj-hocviensangtaokhoahoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t17"
+              data-cms-link="footer.l14"
+              >YouTube ↗</a
+            >
+          </div>
+        </div>
+        <div class="footer-offices">
+          <div>
+            <h3 data-cms-text="footer.t18">Hanoi - Head Office</h3>
+            <p data-cms-text="footer.t19">
+              Building A-Imperia Garden Building, 203 Nguyen Huy Tuong, Thanh
+              Xuan Ward, Hanoi
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t20">Hanoi - Office 2</h3>
+            <p data-cms-text="footer.t21">
+              Nguyet Que 25-08, Vinhomes Harmony, Phuc Dong, Long Bien, Hanoi,
+              Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t22">Ho Chi Minh City Office</h3>
+            <p data-cms-text="footer.t23">
+              36D Luong Dinh Cua Street, An Khanh Ward, Thu Duc City, Ho Chi
+              Minh City, Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t24">Da Nang Office</h3>
+            <p data-cms-text="footer.t25">
+              89-91 Doan Huu Trung Street, An Khe, Da Nang, Vietnam.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-cms-text="footer.t26"
+            >© 2026 GSJ. All rights reserved.</span
+          ><a
+            href="terms.html"
+            data-cms-text="footer.t27"
+            data-cms-link="footer.l15"
+            >Terms of service</a
+          ><span data-cms-text="footer.t28">Global Scholars Journey</span>
+        </div>
+      </div>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase.js"></script>
-<script src="main.js"></script>
-</body>
+    <button class="back-top icon-button" aria-label="Back to top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >arrow_upward</span
+      >
+    </button>
+    <div
+      id="form-status"
+      class="form-status"
+      role="status"
+      aria-live="polite"
+      hidden=""
+    ></div>
+  </body>
 </html>

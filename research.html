@@ -1,341 +1,1296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Scientific Research | GSJ</title>
-    <meta name="description" content="GSJ's Advanced Scientific Research program guides high school students through authentic, mentor-led research projects across Natural Sciences, Technology, Engineering, Social Sciences, and Business.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=7">
-    <style>
-        .grid-2-cols {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        @media (max-width: 768px) {
-            .grid-2-cols {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header / Navigation -->
-    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 90px; width: auto; object-fit: contain; vertical-align: middle;">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <div class="nav-dropdown">
-                    <a href="about.html">About ▾</a>
-                    <div class="nav-dropdown-content">
-                        <a href="about.html">About us</a>
-                        <a href="about.html#blog">Research Blog</a>
-                        <a href="about.html#partnership">Partnership</a>
-                    </div>
-                </div>
-                <a href="services.html">Our Program</a>
-                <a href="research.html" style="color: var(--primary-color);">Advanced Scientific Research</a>
-                <a href="become-mentor.html">Become A Mentor</a>
-                <a href="index.html#testimonials">Testimonials</a>
-            </nav>
-            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-                <div class="lang-wrapper">
-                    <button class="lang-btn">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
-                    </button>
-                    <div class="lang-menu">
-                        <div class="lang-menu-inner">
-                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
-                            <a href="#" class="lang-item">Tiếng Việt</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">FAQ</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
-            </div>
-            <button class="mobile-menu-btn">☰</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced Scientific Research | GSJ — Global Scholars Journey</title>
+    <meta
+      name="description"
+      content="Advanced Scientific Research' refers to the process in which a student, typically in grades 8-12, will identify a topic of their own choosing based on their own personal interests and curiosity and will develop an authentic research project to answer an original research question across fields spanning Natural Sciences, Technology &amp; Engineering, Social Sciences, Business &amp; Finance,... Working alongside expert mentors, students formulate their research question, design a methodology, collect and analyze data, and produce findings that are entirely their own. These findings are then written up as an academic paper and presented at local, national, and international science competitions and symposia with standout projects moving forward to publication in peer-reviewed journals."
+    />
+    <meta name="theme-color" content="#0f4c81" />
+    <link rel="icon" href="images/gsj_logo_new.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261031-portraits" />
+    <script src="main.js?v=20261031-cms" defer=""></script>
+    <script data-gsj-cms="" src="cms-config.js?v=1" defer=""></script>
+    <script data-gsj-cms="" src="cms-client.js?v=1" defer=""></script>
+  </head>
+  <body data-cms-page="research">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="GSJ — Global Scholars Journey home"
+          data-cms-link="header.l1"
+        >
+          <img
+            src="images/optimized/gsj_logo_new.webp"
+            alt="GSJ"
+            class=""
+            width="332"
+            height="160"
+            fetchpriority="high"
+            decoding="async"
+            data-cms-image="header.i1"
+          />
+          <span data-cms-text="header.t1">GLOBAL SCHOLARS<br />JOURNEY</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a
+            href="about.html"
+            data-cms-text="header.t2"
+            data-cms-link="header.l2"
+            >About us</a
+          >
+          <a
+            href="services.html"
+            data-cms-text="header.t3"
+            data-cms-link="header.l3"
+            >Our Programs</a
+          >
+          <a
+            href="study-abroad.html"
+            data-cms-text="header.t4"
+            data-cms-link="header.l4"
+            >Study Abroad</a
+          >
+          <a
+            href="research.html"
+            aria-current="page"
+            data-cms-text="header.t5"
+            data-cms-link="header.l5"
+            >Research</a
+          >
+          <a
+            href="become-mentor.html"
+            data-cms-text="header.t6"
+            data-cms-link="header.l6"
+            >Become a Mentor</a
+          >
+          <a
+            href="student-stories.html"
+            data-cms-text="header.t7"
+            data-cms-link="header.l7"
+            >Student Stories</a
+          >
+        </nav>
+        <div class="header-actions">
+          <a
+            href="contact.html"
+            class="button button-primary header-cta"
+            data-cms-link="header.l8"
+          >
+            <span data-cms-wrap="true" data-cms-text="header.t8"
+              >Let’s talk</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >north_east</span
+            >
+          </a>
+          <button
+            class="menu-toggle icon-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >menu</span
+            >
+          </button>
         </div>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </header>
-
-    <!-- Hero Section -->
-    <section style="position: relative; padding: 180px 0 100px; background-color: #f8fafc;">
-        <div style="position: absolute; top: 0; right: 0; bottom: 0; width: 55%; background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; z-index: 1;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to right, #f8fafc 0%, rgba(248,250,252,0.8) 20%, transparent 50%);"></div>
+    <dialog id="site-menu" class="menu-drawer" aria-labelledby="menu-title">
+      <div class="drawer-top">
+        <p id="menu-title" class="eyebrow" data-cms-text="drawer.t1">
+          YOUR NEXT CHAPTER
+        </p>
+        <button
+          class="menu-close icon-button"
+          aria-label="Close navigation menu"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >close</span
+          >
+        </button>
+      </div>
+      <nav aria-label="Sidebar navigation">
+        <a href="about.html" data-cms-link="drawer.l1">
+          <span class="menu-number">01</span>
+          <span data-cms-text="drawer.t2">About us</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="services.html" data-cms-link="drawer.l2">
+          <span class="menu-number">02</span>
+          <span data-cms-text="drawer.t3">Our Programs</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="study-abroad.html" data-cms-link="drawer.l3">
+          <span class="menu-number">03</span>
+          <span data-cms-text="drawer.t4">Study Abroad</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="research.html" aria-current="page" data-cms-link="drawer.l4">
+          <span class="menu-number">04</span>
+          <span data-cms-text="drawer.t5">Research</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="become-mentor.html" data-cms-link="drawer.l5">
+          <span class="menu-number">05</span>
+          <span data-cms-text="drawer.t6">Become a Mentor</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="student-stories.html" data-cms-link="drawer.l6">
+          <span class="menu-number">06</span>
+          <span data-cms-text="drawer.t7">Student Stories</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+      </nav>
+      <div class="drawer-bottom">
+        <a
+          class="button button-primary"
+          href="contact.html?program=study-abroad#consultation"
+          data-cms-link="drawer.l7"
+        >
+          <span data-cms-wrap="true" data-cms-text="drawer.t8"
+            >Book a consultation</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+        <a href="questions.html" class="text-link" data-cms-link="drawer.l8">
+          <span data-cms-wrap="true" data-cms-text="drawer.t9"
+            >Frequently asked questions</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+        <a
+          href="tel:0327326655"
+          data-cms-text="drawer.t10"
+          data-cms-link="drawer.l9"
+          >032 732 6655</a
+        >
+        <a
+          href="mailto:info@gsj.edu.vn"
+          data-cms-text="drawer.t11"
+          data-cms-link="drawer.l10"
+          >info@gsj.edu.vn</a
+        >
+        <span class="small" data-cms-text="drawer.t12"
+          >Hanoi · Ho Chi Minh City · Da Nang</span
+        >
+      </div>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="page-hero">
+        <div class="container split-hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-cms-text="section1.t1">
+              ADVANCED SCIENTIFIC RESEARCH
+            </p>
+            <h1>
+              <span data-cms-wrap="true" data-cms-text="section1.t2"
+                >Your curiosity.</span
+              >
+              <br />
+              <em data-cms-text="section1.t3">Original discoveries.</em>
+            </h1>
+            <p class="hero-description" data-cms-text="section1.t4">
+              A research project built around your curiosity - with expert
+              mentorship to take it further.
+            </p>
+            <a
+              class="button button-primary"
+              href="contact.html?program=research#consultation"
+              data-cms-link="section1.l1"
+            >
+              <span data-cms-wrap="true" data-cms-text="section1.t5"
+                >Start your research journey</span
+              >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <figure class="page-hero-visual">
+            <img
+              src="images/research-experience.webp"
+              alt="GSJ students conducting hands-on laboratory research"
+              class=""
+              width="1600"
+              height="1200"
+              fetchpriority="high"
+              decoding="async"
+              data-cms-image="section1.i1"
+            />
+            <figcaption>
+              <span class="caption-dot"> </span>
+              <span data-cms-wrap="true" data-cms-text="section1.t6"
+                >Real experiences. Meaningful growth.</span
+              >
+            </figcaption>
+          </figure>
         </div>
-        
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="max-width: 600px;">
-                <span style="font-size: 0.9rem; font-weight: 700; color: #0f4c81; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 20px;">The Science Behind Success</span>
-                <h1 style="font-size: 4rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px;">
-                    Advanced Scientific<br>
-                    <span style="color: #0f4c81;">Research</span>
-                </h1>
-                <p style="font-size: 1.15rem; color: #475569; line-height: 1.6; margin-bottom: 40px; max-width: 500px;">
-                    Authentic, mentor-led research projects that transform curious students into published researchers and future innovators.
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="prose narrow">
+            <div class="section-head reveal">
+              <div>
+                <p class="eyebrow" data-cms-text="section2.t1">
+                  ASK ORIGINAL QUESTIONS
                 </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="contact.html" class="btn btn-primary" style="border-radius: 30px; padding: 12px 28px; display: flex; align-items: center; gap: 8px;">Apply Now <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span></a>
-                    <a href="#overview" class="btn btn-secondary" style="border-radius: 30px; padding: 12px 28px; display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #ddd; color: #0f172a;">Learn More <span class="material-symbols-outlined" style="font-size: 1.2rem;">expand_more</span></a>
-                </div>
+                <h2 data-cms-text="section2.t2">
+                  What is Advanced Scientific Research?
+                </h2>
+              </div>
             </div>
+            <p data-cms-text="section2.t3">
+              Advanced Scientific Research refers to the process in which a
+              student, typically in grades 8-12, will identify a topic of their
+              own choosing based on their own personal interests and curiosity
+              and will develop an authentic research project to answer an
+              original research question across fields spanning Natural
+              Sciences, Technology &amp; Engineering, Social Sciences, Business
+              &amp; Finance,... Working alongside expert mentors, students
+              formulate their research question, design a methodology, collect
+              and analyze data, and produce findings that are entirely their
+              own. These findings are then written up as an academic paper and
+              presented at local, national, and international science
+              competitions and symposia with standout projects moving forward to
+              publication in peer-reviewed journals.
+            </p>
+            <p data-cms-text="section2.t4">
+              At GSJ, we recognize that the most powerful driver behind every
+              great research project is a student's genuine curiosity and
+              passion for discovery and our scientific research program is built
+              to channel exactly that into real, publishable, competition-ready
+              work.
+            </p>
+          </div>
+          <div class="discipline-strip">
+            <span data-cms-text="section2.t5">Business &amp; Economics</span>
+            <span data-cms-text="section2.t6"
+              >Technology &amp; Engineering</span
+            >
+            <span data-cms-text="section2.t7">Natural Sciences</span>
+            <span data-cms-text="section2.t8">Social Sciences</span>
+          </div>
         </div>
-    </section>
-
-    <!-- What is Science Research -->
-    <section class="section-padding" style="background-color: white; padding-top: 100px; padding-bottom: 80px;">
-        <div class="container" style="max-width: 1000px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 60px; align-items: center; margin-bottom: 80px;">
-                <!-- Left text -->
+      </section>
+      <section class="section pale">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section3.t1">
+                FROM QUESTION TO CONTRIBUTION
+              </p>
+              <h2 data-cms-text="section3.t2">Our Research Program Overview</h2>
+            </div>
+          </div>
+          <div class="info-grid">
+            <article class="info-card reveal">
+              <span class="line-icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >groups</span
+                >
+              </span>
+              <h3 data-cms-text="section3.t3">Mentorship</h3>
+              <p data-cms-text="section3.t4">
+                Students are grouped into team (4-6 members) or potentially
+                paired with professional scientists who act as their mentors
+                throughout the program. The mentors provide guidance, knowledge,
+                and support as the student undertakes research.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="line-icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >description</span
+                >
+              </span>
+              <h3 data-cms-text="section3.t5">Research Report</h3>
+              <p data-cms-text="section3.t6">
+                Upon completion of their research, students are required to
+                write an academic-level research paper detailing their
+                methodology, results, and conclusions following standard
+                scientific format and guidelines.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="line-icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >record_voice_over</span
+                >
+              </span>
+              <h3 data-cms-text="section3.t7">Presentation</h3>
+              <p data-cms-text="section3.t8">
+                Students showcase their findings before a panel of experts at
+                GSJ, various competitions, symposia, and science fairs at
+                national and international levels. This provides them with the
+                opportunity to communicate their research effectively and
+                receive feedback from peers and professionals in the field.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <span class="line-icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >article</span
+                >
+              </span>
+              <h3 data-cms-text="section3.t9">Publication</h3>
+              <p data-cms-text="section3.t10">
+                Exceptional research projects have the chance to be published in
+                scientific journals, thereby contributing meaningfully to the
+                scientific community. Moreover, students stand a chance to win
+                accolades and recognition for their exemplary work through
+                competitions and symposia.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section4.t1">
+                GROW THROUGH DISCOVERY
+              </p>
+              <h2 data-cms-text="section4.t2">Why participate?</h2>
+            </div>
+          </div>
+          <div class="benefit-list">
+            <article class="reveal">
+              <span data-cms-text="section4.t3">01</span>
+              <div>
+                <h3 data-cms-text="section4.t4">Curiosity &amp; Creativity</h3>
+                <p data-cms-text="section4.t5">
+                  Scientific research encourages students to explore their
+                  curiosity, think outside the box, and come up with innovative
+                  solutions to complex problems.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span data-cms-text="section4.t6">02</span>
+              <div>
+                <h3 data-cms-text="section4.t7">Hands-On Experience</h3>
+                <p data-cms-text="section4.t8">
+                  Students gain practical experience in scientific research,
+                  learning essential skills in critical thinking,
+                  problem-solving, data analysis, and scientific writing.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span data-cms-text="section4.t9">03</span>
+              <div>
+                <h3 data-cms-text="section4.t10">Professional Networking</h3>
+                <p data-cms-text="section4.t11">
+                  By working closely with a mentor, students build valuable
+                  connections within the scientific community, opening doors to
+                  future opportunities in academia and industry. Students also
+                  learn to work collaboratively with peers and supervisors in a
+                  professional setting.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span data-cms-text="section4.t12">04</span>
+              <div>
+                <h3 data-cms-text="section4.t13">Skill Development</h3>
+                <p data-cms-text="section4.t14">
+                  The program hones students' skills in research design,
+                  experimentation, data interpretation, and presentation, laying
+                  a solid foundation for their future academic and professional
+                  pursuits.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span data-cms-text="section4.t15">05</span>
+              <div>
+                <h3 data-cms-text="section4.t16">
+                  Stronger University Applications
+                </h3>
+                <p data-cms-text="section4.t17">
+                  Participation in scientific research demonstrates to
+                  university admissions officers a student's passion for
+                  learning, ability to work independently, and dedication to a
+                  particular field of study, giving applicants a competitive
+                  edge during the university admissions process.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section ink">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section5.t1">
+                THE RESEARCH PROCESS
+              </p>
+              <h2 data-cms-text="section5.t2">
+                From a question to something that matters.
+              </h2>
+            </div>
+          </div>
+          <ol class="process-grid">
+            <li>
+              <span data-cms-text="section5.t3">01</span>
+              <h3 data-cms-text="section5.t4">Topic Selection</h3>
+              <p data-cms-text="section5.t5">
+                Choose a topic driven by your own interests and curiosity.
+              </p>
+            </li>
+            <li>
+              <span data-cms-text="section5.t6">02</span>
+              <h3 data-cms-text="section5.t7">Research Question</h3>
+              <p data-cms-text="section5.t8">
+                Review the literature, identify a gap and frame an original
+                question.
+              </p>
+            </li>
+            <li>
+              <span data-cms-text="section5.t9">03</span>
+              <h3 data-cms-text="section5.t10">Research Plan</h3>
+              <p data-cms-text="section5.t11">
+                Design the methodology and plan the work with your mentor.
+              </p>
+            </li>
+            <li>
+              <span data-cms-text="section5.t12">04</span>
+              <h3 data-cms-text="section5.t13">Research Execution</h3>
+              <p data-cms-text="section5.t14">
+                Collect evidence and carry out your research in professional
+                environments.
+              </p>
+            </li>
+            <li>
+              <span data-cms-text="section5.t15">05</span>
+              <h3 data-cms-text="section5.t16">Analysis &amp; Conclusions</h3>
+              <p data-cms-text="section5.t17">
+                Analyze the data and develop evidence-based conclusions.
+              </p>
+            </li>
+            <li>
+              <span data-cms-text="section5.t18">06</span>
+              <h3 data-cms-text="section5.t19">Findings &amp; Presentation</h3>
+              <p data-cms-text="section5.t20">
+                Write a research report and share your findings with an expert
+                audience.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="section pale" id="testimonials">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section6.t1">
+                OUR STUDENTS, OUR IMPACT
+              </p>
+              <h2 data-cms-text="section6.t2">
+                Real journeys. In their own words.
+              </h2>
+              <p class="section-intro" data-cms-text="section6.t3">
+                Hear from the students and families behind the achievements.
+              </p>
+            </div>
+            <div class="carousel-actions">
+              <button
+                class="icon-button"
+                data-carousel-prev=""
+                aria-label="Previous student story"
+              >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >arrow_back</span
+                >
+              </button>
+              <button
+                class="icon-button"
+                data-carousel-next=""
+                aria-label="Next student story"
+              >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+          <div
+            class="story-carousel"
+            tabindex="0"
+            role="region"
+            aria-label="Student stories carousel"
+          >
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t4">
+                  Looking back on my high school years, what has shaped me the
+                  most was not only exams or grades, but also my experience
+                  working on research project at GSJ.
+                </p>
+              </blockquote>
+              <details class="story-more">
+                <summary>
+                  <span data-cms-wrap="true" data-cms-text="section6.t5"
+                    >Read the full story</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >add</span
+                  >
+                </summary>
                 <div>
-                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                        <span style="font-size: 0.85rem; font-weight: 700; color: #0f4c81; letter-spacing: 1px; text-transform: uppercase;">The Science Behind Success</span>
-                        <div style="height: 1px; width: 60px; background-color: #cbd5e1;"></div>
-                    </div>
-                    <h2 style="font-size: 2.8rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1;">What is 'Science Research'?</h2>
-                    <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px; text-align: justify;">
-                        'Science Research' refers to the process in which a student, typically in their secondary level of education (grades 8-12), will identify a topic of their own choosing based on their own personal interests and curiosity and will develop an authentic research project to answer an original research question across fields spanning Natural Sciences, Technology & Engineering, Social Sciences, Business & Finance,... Working alongside expert mentors, students formulate their research question, design a methodology, collect and analyze data, and produce findings that are entirely their own. These findings are then written up as an academic paper and presented at local, national, and international science competitions and symposia with standout projects moving forward to publication in peer-reviewed journals.
-                    </p>
-                    <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px; text-align: justify;">
-                        At GSJ, we recognize that the most powerful driver behind every great research project is a student's genuine curiosity and passion for discovery and our scientific research program is built to channel exactly that into real, publishable, competition-ready work.
-                    </p>
+                  <p data-cms-text="section6.t6">
+                    Before this project, I had participated in several smaller
+                    research activities, but mostly at an introductory level. It
+                    was only through hands-on experimental research that I began
+                    to understand the level of persistence and pressure that
+                    laboratory work requires.
+                  </p>
+                  <p data-cms-text="section6.t7">
+                    To optimize the product, my team continuously tested
+                    different conditions, including strip-drying temperatures
+                    and gold nanoparticle incubation times. During some stages,
+                    we spent multiple sessions assembling dozens to hundreds of
+                    test kits, followed by spectral measurements and result
+                    evaluations. Although the repetitive nature of the work
+                    could sometimes be demanding, it also taught me how to stay
+                    focused and work more systematically.
+                  </p>
+                  <p data-cms-text="section6.t8">
+                    Throughout the process, I received significant support from
+                    the teachers and mentors at GSJ. From shaping the research
+                    direction and refining the procedure to providing technical
+                    guidance during experiments, their support motivated me to
+                    stay committed to the project. Being introduced to research
+                    early on and having clear guidance also helped me feel more
+                    confident when presenting my academic journey during
+                    university applications.
+                  </p>
+                  <p data-cms-text="section6.t9">
+                    What I found most meaningful was how scientific research
+                    transformed learning from something purely theoretical into
+                    a practical experience. Instead of only studying concepts
+                    from textbooks, I had the opportunity to test hypotheses
+                    directly through real data and experimental results.
+                  </p>
+                  <p data-cms-text="section6.t10">
+                    By the end of this journey, what I gained was not only a
+                    completed research project, but also stronger working
+                    skills, better time management, and a more proactive mindset
+                    as I prepare for university life ahead.
+                  </p>
                 </div>
-                <!-- Right quote card -->
-                <div style="position: relative;">
-                    <div style="position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; opacity: 0.15; border-radius: 24px;"></div>
-                    <div style="background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.85) 100%); backdrop-filter: blur(10px); padding: 50px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); position: relative; z-index: 2; border: 1px solid white;">
-                        <span class="material-symbols-outlined" style="font-size: 3rem; color: #0f4c81; margin-bottom: 20px; display: block;">format_quote</span>
-                        <p style="font-size: 1.8rem; font-weight: 600; color: #0f172a; line-height: 1.4; margin-bottom: 20px;">
-                            The best way to predict the future is to invent it.
-                        </p>
-                        <p style="color: #0f4c81; font-weight: 700; font-size: 1.1rem;">– Alan Kay</p>
-                    </div>
+              </details>
+              <div class="story-person">
+                <img
+                  src="images/optimized/_nh_testimonial____Ho_ng_Minh_Tu_.webp"
+                  alt="Do Hoang Minh Tue"
+                  class=""
+                  width="1449"
+                  height="1021"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i1"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t11">Do Hoang Minh Tue</h3>
+                  <p data-cms-text="section6.t12">
+                    Nearly US$400,000 in scholarships from leading universities
+                    worldwide (NUS, UVA, UGA, UConn, USF, University of
+                    Melbourne, VinUniversity, ...)
+                  </p>
                 </div>
-            </div>
-
-        <!-- Core Pillars -->
-            <div id="overview" style="margin-bottom: 100px;">
-                <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 20px; text-align: center;">Our Science Research Overview</h2>
-                <p style="font-size: 1.05rem; color: #475569; line-height: 1.8; margin-bottom: 30px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    The GSJ Scientific Research Program gives students full, structured access to the scientific research process - the way it actually works in academia. Students are guided through every stage: literature review, research design, data collection and analysis, expert panel presentation, and the development of publication-ready scientific manuscripts in both Vietnamese and English.
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t13">
+                  I sincerely want to thank all the teachers at GSJ, friends,
+                  mothers, and everyone who joined the competition in Dubai. I’m
+                  truly grateful not only for the opportunity to participate in
+                  this competition, but also for all the memorable experiences
+                  throughout the journey.
                 </p>
-                <p style="font-size: 1.05rem; color: #475569; line-height: 1.8; margin-bottom: 40px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    Research takes place inside real university and institute laboratories including VNU University of Science, Hanoi University of Pharmacy, Hanoi University of Science and Technology, and the Institute of Biotechnology — giving students direct access to professional research environments, not simulations.
+              </blockquote>
+              <details class="story-more">
+                <summary>
+                  <span data-cms-wrap="true" data-cms-text="section6.t14"
+                    >Read the full story</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >add</span
+                  >
+                </summary>
+                <div>
+                  <p data-cms-text="section6.t15">
+                    I have never met people as kind and genuine as everyone
+                    here. I truly appreciate and cherish all of you, and I hope
+                    we will meet again someday.
+                  </p>
+                  <p data-cms-text="section6.t16">
+                    Wishing everyone all the best, with lots of happiness, good
+                    health, and peace. Victory Vietnam!
+                  </p>
+                </div>
+              </details>
+              <div class="story-person">
+                <img
+                  src="images/optimized/_nh_testimonial_Hwang_YoungGoon_-_Gold_Medalist_at_iWise_Global_Final__Dubai_.webp"
+                  alt="Hwang YoungGoon"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i2"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t17">Hwang YoungGoon</h3>
+                  <p data-cms-text="section6.t18">
+                    Gold Medalist at iWise Global Final
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t19">
+                  Hi, my name is Lan Bao, and I recently won a Gold Medal at the
+                  iWise Competition in Dubai. Throughout my preparation for the
+                  competition, I was very grateful to receive support from the
+                  GSJ team, especially Mrs. Vu Ngan Binh.
                 </p>
-                <div class="grid-2-cols" style="max-width: 900px; margin: 0 auto;">
-                    <div style="background: white; padding: 35px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #0f4c81;">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <span class="material-symbols-outlined" style="color: #0f4c81; font-size: 1.6rem;">science</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">In-Depth Knowledge</h3>
-                        </div>
-                        <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">Specialized science, engineering, and technology fields with hands-on research experience.</p>
-                    </div>
-                    <div style="background: white; padding: 35px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #b49a5b;">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 1.6rem;">groups</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">Expert Mentorship</h3>
-                        </div>
-                        <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">One-on-one career guidance with leading local and international specialists.</p>
-                    </div>
-                    <div style="background: white; padding: 35px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #15803d;">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <span class="material-symbols-outlined" style="color: #15803d; font-size: 1.6rem;">psychology</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">Essential Skills</h3>
-                        </div>
-                        <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">Develop teamwork, critical thinking, scientific poster design, presentation, and expert Q&A skills.</p>
-                    </div>
-                    <div style="background: white; padding: 35px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #7c3aed;">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                            <span class="material-symbols-outlined" style="color: #7c3aed; font-size: 1.6rem;">emoji_events</span>
-                            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin: 0;">Research Outputs</h3>
-                        </div>
-                        <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">Publications, conference presentations, and participation in national and international science competitions.</p>
-                    </div>
+              </blockquote>
+              <details class="story-more">
+                <summary>
+                  <span data-cms-wrap="true" data-cms-text="section6.t20"
+                    >Read the full story</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >add</span
+                  >
+                </summary>
+                <div>
+                  <p data-cms-text="section6.t21">
+                    She helped me carefully prepare every detail of my project,
+                    including the abstract, report files, tables, and
+                    presentation materials. With the support and guidance from
+                    the GSJ team, I was able to complete all of my work on time
+                    and feel much more prepared for the competition.
+                  </p>
+                  <p data-cms-text="section6.t22">
+                    The mentoring process also helped me improve my presentation
+                    skills and become more confident in answering questions
+                    during the judging session. I truly appreciate all the
+                    support and encouragement I received throughout this
+                    journey.
+                  </p>
                 </div>
-                <p style="font-size: 1.1rem; font-weight: 600; font-style: italic; color: #0f172a; text-align: center; margin-top: 30px;">More than a research project — a foundation for future academic work.</p>
-            </div>
-
-            <!-- Why Participate -->
-            <div style="margin-bottom: 100px; background: #0f4c81; padding: 60px 40px; border-radius: 24px; color: white;">
-                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 40px; text-align: center; color: white;">Why Participate?</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                    <div style="display: flex; gap: 15px;">
-                        <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 1.8rem;">check_circle</span>
-                        <div>
-                            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: white;">Fosters Curiosity & Creativity</h4>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.5;">Scientific research encourages students to explore their curiosity, think outside the box, and come up with innovative solutions to complex problems.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 15px;">
-                        <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 1.8rem;">check_circle</span>
-                        <div>
-                            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: white;">Hands-On Experience</h4>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.5;">Students gain practical experience in scientific research, learning essential skills in critical thinking, problem-solving, data analysis, and scientific writing.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 15px;">
-                        <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 1.8rem;">check_circle</span>
-                        <div>
-                            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: white;">Professional Networking</h4>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.5;">By working closely with a mentor, students build valuable connections within the scientific community, opening doors to future opportunities in academia and industry. Students also learn to work collaboratively with peers and supervisors in a professional setting.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 15px;">
-                        <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 1.8rem;">check_circle</span>
-                        <div>
-                            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: white;">Skill Development</h4>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.5;">The program hones students' skills in research design, experimentation, data interpretation, and presentation, laying a solid foundation for their future academic and professional pursuits.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 15px;">
-                        <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 1.8rem;">check_circle</span>
-                        <div>
-                            <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: white;">Enhances University Applications</h4>
-                            <p style="color: rgba(255,255,255,0.8); line-height: 1.5;">Participation in scientific research demonstrates to university admissions officers a student's passion for learning, ability to work independently, and dedication to a particular field of study, giving applicants a competitive edge during the university admissions process.</p>
-                        </div>
-                    </div>
+              </details>
+              <div class="story-person">
+                <img
+                  src="images/optimized/_nh_testimonial_Nguyen_Lan_Bao_-_Gold_Medalist_at_iWise_Global_Final__Dubai_.webp"
+                  alt="Nguyen Lan Bao"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i3"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t23">Nguyen Lan Bao</h3>
+                  <p data-cms-text="section6.t24">
+                    Student at The Dewey Schools, Gold Medalist at iWise Global
+                    Final
+                  </p>
                 </div>
-            </div>
-
-            <!-- The Process -->
-            <div style="margin-bottom: 100px;">
-                <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 40px; text-align: center;">The Research Process</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                    <div style="background: white; padding: 30px; border-radius: 16px; border-top: 4px solid #b49a5b; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
-                        <div style="position: absolute; top: -15px; left: 30px; background: #b49a5b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800;">1</div>
-                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; margin-top: 10px;">Choose Topic</h4>
-                        <p style="color: #475569; line-height: 1.6;">The first step is choosing a topic to study that you have a personal interest or curiosity about.</p>
-                    </div>
-                    <div style="background: white; padding: 30px; border-radius: 16px; border-top: 4px solid #b49a5b; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
-                        <div style="position: absolute; top: -15px; left: 30px; background: #b49a5b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800;">2</div>
-                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; margin-top: 10px;">Develop Research Question</h4>
-                        <p style="color: #475569; line-height: 1.6;">After reading some of the current published literature around your topic, you will develop a research question to investigate.</p>
-                    </div>
-                    <div style="background: white; padding: 30px; border-radius: 16px; border-top: 4px solid #b49a5b; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
-                        <div style="position: absolute; top: -15px; left: 30px; background: #b49a5b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800;">3</div>
-                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; margin-top: 10px;">Create Research Plan</h4>
-                        <p style="color: #475569; line-height: 1.6;">At this point, you will collaborate with your Research Coach and Mentor to create a research plan prior to starting your study.</p>
-                    </div>
-                    <div style="background: white; padding: 30px; border-radius: 16px; border-top: 4px solid #b49a5b; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
-                        <div style="position: absolute; top: -15px; left: 30px; background: #b49a5b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800;">4</div>
-                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; margin-top: 10px;">Conduct Research</h4>
-                        <p style="color: #475569; line-height: 1.6;">Students will conduct their research following the methodology they outlined in their research plan. This can be done in-person or remotely.</p>
-                    </div>
-                    <div style="background: white; padding: 30px; border-radius: 16px; border-top: 4px solid #b49a5b; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
-                        <div style="position: absolute; top: -15px; left: 30px; background: #b49a5b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800;">5</div>
-                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; margin-top: 10px;">Conduct Analysis & Draw Conclusions</h4>
-                        <p style="color: #475569; line-height: 1.6;">Students will analyze the data collected in their methodology to draw conclusions. These conclusions will be original findings in their field.</p>
-                    </div>
-                    <div style="background: white; padding: 30px; border-radius: 16px; border-top: 4px solid #b49a5b; box-shadow: 0 4px 20px rgba(0,0,0,0.06); position: relative;">
-                        <div style="position: absolute; top: -15px; left: 30px; background: #b49a5b; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800;">6</div>
-                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #0f172a; margin-bottom: 15px; margin-top: 10px;">Present Findings</h4>
-                        <p style="color: #475569; line-height: 1.6;">Write an academic paper and create visual presentations to share your findings with the world!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div style="text-align: center; background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%); padding: 60px 40px; border-radius: 24px;">
-                <h2 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Ready to Start Your Research Journey?</h2>
-                <p style="font-size: 1.1rem; color: #475569; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Join GSJ and work alongside expert mentors to develop authentic, competition-ready scientific research.</p>
-                <a href="contact.html" class="btn btn-primary btn-large" style="border-radius: 30px; padding: 14px 36px;">Apply Now <span class="material-symbols-outlined" style="font-size: 1.2rem; margin-left: 5px;">arrow_forward</span></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <!-- Column 1: Brand & Contact -->
-            <div class="footer-brand">
-                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 100px;">
-                </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">
-                    Encouraging & Inspiring Young Minds
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t25">
+                  During the experimental research process, there were times
+                  when our results did not turn out as expected. But under the
+                  guidance of our teachers, we were able to find the root causes
+                  and solutions, which helped us develop our problem-solving
+                  mindset. I am truly grateful to the teachers for always
+                  encouraging and accompanying us throughout the entire research
+                  journey. This was truly an incredible milestone that we will
+                  always remember and cherish.
                 </p>
-                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
-                    <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">location_on</span>
-                        <span style="font-size: 0.9rem; line-height: 1.5;">Lot A2.1 & A2.2, 1st Floor, Building A, Zone A, Imperia Garden Mall, 203 Nguyen Huy Tuong, Thanh Xuan, Hanoi, Vietnam</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">phone</span>
-                        <span style="font-size: 0.9rem;">032 732 6655</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">mail</span>
-                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
-                    </div>
+              </blockquote>
+              <div class="story-person">
+                <img
+                  src="images/optimized/_nh_testimonial_Tran_Mai_Chi__Student_at_Hanoi_Amsterdam_High_School_for_the_Gifted.webp"
+                  alt="Tran Mai Chi"
+                  class=""
+                  width="1600"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i4"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t26">Tran Mai Chi</h3>
+                  <p data-cms-text="section6.t27">
+                    Student at Hanoi Amsterdam High School for the Gifted,
+                    University of Illinois Urbana-Champaign (#34 NU)
+                  </p>
                 </div>
-                <!-- Social Links -->
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/GlobalScienceJourney" target="_blank" title="Facebook">
-                        <span class="material-symbols-outlined">public</span>
-                    </a>
-                    <a href="mailto:cskh@gsj.edu.vn" title="Email">
-                        <span class="material-symbols-outlined">mail</span>
-                    </a>
-                    <a href="tel:0327326655" title="Phone">
-                        <span class="material-symbols-outlined">call</span>
-                    </a>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t28">
+                  All of us in this project are students from Chemistry classes
+                  at our high school for the gifted. The depth and breadth of
+                  knowledge we receive at school is fairly solid, comparable to
+                  university level. However, our hands-on experience is still
+                  limited, most of what we learn remains theoretical. That is
+                  why joining GSJ's scientific research program felt like the
+                  right decision. It is a way for me to explore whether research
+                  is truly the path I want to pursue, and to discover which
+                  specialization within such a vast field genuinely resonates
+                  with me.
+                </p>
+              </blockquote>
+              <div class="story-person">
+                <img
+                  src="images/optimized/_nh_testimonial_Vu_Ba_Minh__Student_in_the_Environmental_Chemistry_Research_Project.webp"
+                  alt="Vu Ba Minh"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i5"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t29">Vu Ba Minh</h3>
+                  <p data-cms-text="section6.t30">
+                    Student in the Environmental Chemistry Research Project
+                  </p>
                 </div>
-            </div>
-
-            <!-- Column 2: Navigation -->
-            <div>
-                <h4>Navigation</h4>
-                <div class="footer-links">
-                    <a href="about.html">About us</a>
-                    <a href="services.html">Our Program</a>
-                    <a href="mentors.html">Mentors</a>
-                    <a href="index.html#testimonials">Testimonials</a>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t31">
+                  The most valuable thing today is that the teachers here are
+                  people who have genuinely conducted research and are still
+                  actively doing so. This is incredibly precious, as our
+                  children can learn a great deal from them for the journey
+                  ahead. This is also a rare opportunity for children to engage
+                  in research from an early age, which will nurture their
+                  scientific thinking in the natural sciences and beyond.
+                </p>
+              </blockquote>
+              <div class="story-person">
+                <img
+                  src="images/optimized/testimonial_cao_bich_hue.webp"
+                  alt="Mrs. Cao Bich Hue"
+                  class=""
+                  width="472"
+                  height="598"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i6"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t32">Mrs. Cao Bich Hue</h3>
+                  <p data-cms-text="section6.t33">
+                    Parent of Student Nguyen Tue Linh - Silver Medalist at iWise
+                    Global Final
+                  </p>
                 </div>
-            </div>
-
-            <!-- Column 3: Resources -->
-            <div>
-                <h4>Resources</h4>
-                <div class="footer-links">
-                    <a href="about.html#blog">Research Blog</a>
-                    <a href="contact.html">Apply now / More Questions</a>
-                    <a href="terms.html">Term of service</a>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t34">
+                  Watching my child grow step by step through the scientific
+                  research journey, I cannot help but feel deeply moved and
+                  proud. From the very first days coming to the lab for hands-on
+                  practice, to the moment she confidently presented in front of
+                  professors and experts, I truly witnessed her grow more than I
+                  ever imagined. And when she received the certificate of merit
+                  at an international competition, I knew that all of her
+                  efforts and the support from GSJ had been well rewarded. I am
+                  truly grateful to the team of teachers who have created such a
+                  professional learning environment, where students not only
+                  gain knowledge but also have the opportunity to develop their
+                  skills and discover their own potential.
+                </p>
+              </blockquote>
+              <div class="story-person">
+                <img
+                  src="images/optimized/testimonial_duong_quynh_huong.webp"
+                  alt="Mrs. Duong Quynh Huong"
+                  class=""
+                  width="748"
+                  height="950"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i7"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t35">Mrs. Duong Quynh Huong</h3>
+                  <p data-cms-text="section6.t36">
+                    Parent of Student Nguyen Quynh Trang - University of
+                    Illinois Urbana-Champaign (#34 NU)
+                  </p>
                 </div>
-            </div>
-
-            <!-- Column 4: Reference -->
-            <div>
-                <h4>Reference</h4>
-                <div class="footer-links">
-                    <a href="https://www.scienceresearchacademy.com/" target="_blank">Science Research Academy</a>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t37">
+                  Throughout our training time at GSJ, Mrs Nga and Mrs Binh have
+                  always been with us and been training us all the time.They
+                  were like mothers to us. They took care of us and walked us
+                  through all the rounds; they stayed up with us to check our
+                  progress and make sure that everything was neat, such as
+                  operation and auction. Especially, they showed us the mindset,
+                  how to work with the numbers, and how to get the best prices,
+                  especially for auction and operation. It decided a lot of our
+                  results in the end, and without their help, we wouldn't have
+                  this award today.
+                </p>
+              </blockquote>
+              <div class="story-person">
+                <img
+                  src="images/optimized/testimonial_le_khanh_hoa.webp"
+                  alt="Le Khanh Hoa"
+                  class=""
+                  width="901"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i8"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t38">Le Khanh Hoa</h3>
+                  <p data-cms-text="section6.t39">
+                    Gold Medalist, ABS Ho Chi Minh City Regional Round
+                  </p>
                 </div>
-            </div>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t40">
+                  The thorough preparation and dedicated support from the GSJ
+                  teachers gave me the confidence to step onto the international
+                  stage. The principle of ‘better overprepared than overlooking
+                  anything’ during our training became one of our team’s
+                  greatest advantages.
+                </p>
+              </blockquote>
+              <details class="story-more">
+                <summary>
+                  <span data-cms-wrap="true" data-cms-text="section6.t41"
+                    >Read the full story</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >add</span
+                  >
+                </summary>
+                <div>
+                  <p data-cms-text="section6.t42">
+                    The Auction and Operation rounds were the most mentally
+                    challenging, requiring us to calculate accurately,
+                    communicate effectively, and confidently debate with
+                    international teams. After the journey, our entire team
+                    became more mature, calmer, and better at accepting as well
+                    as facing every decision.
+                  </p>
+                  <p data-cms-text="section6.t43">
+                    I learned many valuable lessons, connected with outstanding
+                    friends, and felt deeply grateful for the enthusiastic
+                    support from the GSJ teachers and the trust from my parents
+                    - the people who gave me the courage to see the world more
+                    clearly.
+                  </p>
+                  <p data-cms-text="section6.t44">
+                    Give it your all so you will never have regrets.
+                  </p>
+                </div>
+              </details>
+              <div class="story-person">
+                <img
+                  src="images/optimized/testimonial_le_trinh_bao_han.webp"
+                  alt="Le Trinh Bao Han"
+                  class=""
+                  width="1188"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i9"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t45">Le Trinh Bao Han</h3>
+                  <p data-cms-text="section6.t46">
+                    Gold Medalist, ABS Global Final Winning Team
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t47">
+                  My most memorable experience was staying up until 2 or 3 a.m.
+                  preparing presentation slides for the next day. Seeing
+                  everyone still working tirelessly after such a long and
+                  exhausting competition day gave me so much motivation to keep
+                  pushing forward.
+                </p>
+              </blockquote>
+              <details class="story-more">
+                <summary>
+                  <span data-cms-wrap="true" data-cms-text="section6.t48"
+                    >Read the full story</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >add</span
+                  >
+                </summary>
+                <div>
+                  <p data-cms-text="section6.t49">
+                    Hard work pays off with tremendous effort and a little bit
+                    of luck, we managed to win first prize in every category and
+                    bring home the gold trophy.
+                  </p>
+                </div>
+              </details>
+              <div class="story-person">
+                <img
+                  src="images/optimized/testimonial_pham_anh_kiet.webp"
+                  alt="Pham Anh Kiet"
+                  class=""
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i10"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t50">Pham Anh Kiet</h3>
+                  <p data-cms-text="section6.t51">
+                    Gold Medalist, ABS Global Final Winning Team
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="story-card">
+              <div class="quote-mark" aria-hidden="true">“</div>
+              <blockquote>
+                <p data-cms-text="section6.t52">
+                  Before the competition, I was still shy and hesitant when
+                  applying knowledge to real-life situations, and I was nervous
+                  about sharing my ideas with international peers. After ABS, I
+                  became much more confident in presenting and defending my
+                  viewpoints, while also learning how to listen and respond
+                  effectively.
+                </p>
+              </blockquote>
+              <details class="story-more">
+                <summary>
+                  <span data-cms-wrap="true" data-cms-text="section6.t53"
+                    >Read the full story</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >add</span
+                  >
+                </summary>
+                <div>
+                  <p data-cms-text="section6.t54">
+                    I also broadened my perspective by making friends with
+                    students from many different countries. This experience
+                    helped me gain a clearer vision for my future path pursuing
+                    fields related to critical thinking, creativity, and solving
+                    global issues while also becoming a valuable advantage for
+                    my study abroad profile.
+                  </p>
+                </div>
+              </details>
+              <div class="story-person">
+                <img
+                  src="images/optimized/testimonial_vu_bao_nghi.webp"
+                  alt="Vu Bao Nghi"
+                  class=""
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section6.i11"
+                />
+                <div>
+                  <h3 data-cms-text="section6.t55">Vu Bao Nghi</h3>
+                  <p data-cms-text="section6.t56">
+                    Gold Medalist, ABS Global Final Winning Team
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <a
+            class="text-link stories-link"
+            href="student-stories.html"
+            data-cms-link="section6.l1"
+          >
+            <span data-cms-wrap="true" data-cms-text="section6.t57"
+              >Read all student stories</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >arrow_forward</span
+            >
+          </a>
         </div>
-        
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+      </section>
+      <section class="cta-section section">
+        <div class="container cta-inner reveal">
+          <div>
+            <p class="eyebrow" data-cms-text="section7.t1">
+              LET’S SHAPE WHAT’S NEXT
+            </p>
+            <h2 data-cms-text="section7.t2">
+              Ready to start your research journey?
+            </h2>
+            <p data-cms-text="section7.t3">
+              Explore a question that matters to you, with expert mentorship at
+              every stage.
+            </p>
+          </div>
+          <a
+            class="button button-primary"
+            href="contact.html?program=study-abroad#consultation"
+            data-cms-link="section7.l1"
+          >
+            <span data-cms-wrap="true" data-cms-text="section7.t4"
+              >Talk to our research team</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >arrow_forward</span
+            >
+          </a>
         </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="footer-logo" href="index.html" data-cms-link="footer.l1">
+              <img
+                src="images/optimized/gsj_logo_new.webp"
+                alt="GSJ — Global Scholars Journey"
+                class=""
+                width="332"
+                height="160"
+                loading="lazy"
+                decoding="async"
+                data-cms-image="footer.i1"
+              />
+            </a>
+            <h2 data-cms-text="footer.t1">
+              Your potential.<br />A world of possibilities.
+            </h2>
+            <p data-cms-text="footer.t2">
+              Empowering young minds on their journey<br />to becoming global
+              scholars.
+            </p>
+            <a
+              href="mailto:info@gsj.edu.vn"
+              data-cms-text="footer.t3"
+              data-cms-link="footer.l2"
+              >info@gsj.edu.vn</a
+            >
+            <a
+              href="tel:0327326655"
+              data-cms-text="footer.t4"
+              data-cms-link="footer.l3"
+              >032 732 6655</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t5">Explore GSJ</h3>
+            <a
+              href="about.html"
+              data-cms-text="footer.t6"
+              data-cms-link="footer.l4"
+              >About us</a
+            >
+            <a
+              href="services.html"
+              data-cms-text="footer.t7"
+              data-cms-link="footer.l5"
+              >Our Programs</a
+            >
+            <a
+              href="study-abroad.html"
+              data-cms-text="footer.t8"
+              data-cms-link="footer.l6"
+              >Study Abroad</a
+            >
+            <a
+              href="research.html"
+              data-cms-text="footer.t9"
+              data-cms-link="footer.l7"
+              >Research</a
+            >
+            <a
+              href="become-mentor.html"
+              data-cms-text="footer.t10"
+              data-cms-link="footer.l8"
+              >Become a Mentor</a
+            >
+            <a
+              href="student-stories.html"
+              data-cms-text="footer.t11"
+              data-cms-link="footer.l9"
+              >Student Stories</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t12">Let’s connect</h3>
+            <a
+              href="contact.html"
+              data-cms-text="footer.t13"
+              data-cms-link="footer.l10"
+              >Book a consultation</a
+            >
+            <a
+              href="questions.html"
+              data-cms-text="footer.t14"
+              data-cms-link="footer.l11"
+              >FAQs &amp; support</a
+            >
+            <a
+              href="https://www.facebook.com/hocvienkhoahocgsj"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t15"
+              data-cms-link="footer.l12"
+              >Facebook ↗</a
+            >
+            <a
+              href="https://www.tiktok.com/@gsj.education"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t16"
+              data-cms-link="footer.l13"
+              >TikTok ↗</a
+            >
+            <a
+              href="https://www.youtube.com/@gsj-hocviensangtaokhoahoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t17"
+              data-cms-link="footer.l14"
+              >YouTube ↗</a
+            >
+          </div>
+        </div>
+        <div class="footer-offices">
+          <div>
+            <h3 data-cms-text="footer.t18">Hanoi - Head Office</h3>
+            <p data-cms-text="footer.t19">
+              Building A-Imperia Garden Building, 203 Nguyen Huy Tuong, Thanh
+              Xuan Ward, Hanoi
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t20">Hanoi - Office 2</h3>
+            <p data-cms-text="footer.t21">
+              Nguyet Que 25-08, Vinhomes Harmony, Phuc Dong, Long Bien, Hanoi,
+              Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t22">Ho Chi Minh City Office</h3>
+            <p data-cms-text="footer.t23">
+              36D Luong Dinh Cua Street, An Khanh Ward, Thu Duc City, Ho Chi
+              Minh City, Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t24">Da Nang Office</h3>
+            <p data-cms-text="footer.t25">
+              89-91 Doan Huu Trung Street, An Khe, Da Nang, Vietnam.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-cms-text="footer.t26"
+            >© 2026 GSJ. All rights reserved.</span
+          >
+          <a
+            href="terms.html"
+            data-cms-text="footer.t27"
+            data-cms-link="footer.l15"
+            >Terms of service</a
+          >
+          <span data-cms-text="footer.t28">Global Scholars Journey</span>
+        </div>
+      </div>
     </footer>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About us</a>
-        <a href="services.html">Our Program</a>
-        <a href="research.html">Advanced Scientific Research</a>
-        <a href="become-mentor.html">Become A Mentor</a>
-        <a href="mentors.html">Mentors</a>
-        <a href="index.html#testimonials">Testimonials</a>
-        <a href="contact.html">Apply Now</a>
-    </div>
-
-<script src="main.js"></script>
-</body>
+    <button class="back-top icon-button" aria-label="Back to top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >arrow_upward</span
+      >
+    </button>
+    <div
+      id="form-status"
+      class="form-status"
+      role="status"
+      aria-live="polite"
+      hidden=""
+    ></div>
+  </body>
 </html>

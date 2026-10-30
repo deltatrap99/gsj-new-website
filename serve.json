@@ -1,0 +1,54 @@
+{
+  "cleanUrls": false,
+  "directoryListing": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/index",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/study-abroad",
+      "destination": "/study-abroad.html"
+    },
+    {
+      "source": "/research",
+      "destination": "/research.html"
+    },
+    {
+      "source": "/become-mentor",
+      "destination": "/become-mentor.html"
+    },
+    {
+      "source": "/mentors",
+      "destination": "/mentors.html"
+    },
+    {
+      "source": "/student-stories",
+      "destination": "/student-stories.html"
+    },
+    {
+      "source": "/questions",
+      "destination": "/questions.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    }
+  ]
+}

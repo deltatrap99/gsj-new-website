@@ -1,747 +1,1230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Offer | GSJ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=7">
-    <style>
-        .service-detail-block {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        .service-detail-block:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .service-detail-block:last-of-type {
-            border-bottom: none;
-        }
-        .service-detail-content {
-            flex: 1;
-        }
-        .service-detail-image {
-            flex: 1;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-        .service-detail-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        .service-detail-image:hover img {
-            transform: scale(1.05);
-        }
-        @media (max-width: 768px) {
-            .service-detail-block, .service-detail-block:nth-child(even) {
-                flex-direction: column;
-                gap: 30px;
-                padding: 50px 0;
-            }
-        }
-        .service-detail-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        .service-detail-text {
-            font-size: 1.2rem;
-            color: var(--text-main);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        /* FAQ Section */
-        .faq-section {
-            background-color: var(--bg-light);
-            padding: 80px 0;
-            margin-top: 40px;
-        }
-        .faq-item {
-            margin-bottom: 30px;
-            background: #fff;
-            padding: 30px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-        }
-        .faq-question {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 15px;
-        }
-        .faq-answer {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-        .faq-answer ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-        .faq-answer li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .faq-answer li::before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-        }
-    </style>
-</head>
-<body>
-    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 90px; width: auto; object-fit: contain; vertical-align: middle;">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <div class="nav-dropdown">
-                    <a href="about.html">About ▾</a>
-                    <div class="nav-dropdown-content">
-                        <a href="about.html">About us</a>
-                        <a href="about.html#blog">Research Blog</a>
-                        <a href="about.html#partnership">Partnership</a>
-                    </div>
-                </div>
-                <a href="services.html" style="color: var(--primary-color);">Our Program</a>
-                <a href="research.html">Advanced Scientific Research</a>
-                <a href="become-mentor.html">Become A Mentor</a>
-                <a href="index.html#testimonials">Testimonials</a>
-            </nav>
-            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-                <div class="lang-wrapper">
-                    <button class="lang-btn">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
-                    </button>
-                    <div class="lang-menu">
-                        <div class="lang-menu-inner">
-                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
-                            <a href="#" class="lang-item">Tiếng Việt</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">FAQ</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Programs | GSJ — Global Scholars Journey</title>
+    <meta
+      name="description"
+      content="Discover nine personalized GSJ pathways in study abroad, research, business, internships, competitions and career development."
+    />
+    <meta name="theme-color" content="#0f4c81" />
+    <link rel="icon" href="images/gsj_logo_new.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261031-portraits" />
+    <script src="main.js?v=20261031-cms" defer=""></script>
+    <script data-gsj-cms="" src="cms-config.js?v=1" defer=""></script>
+    <script data-gsj-cms="" src="cms-client.js?v=1" defer=""></script>
+  </head>
+  <body data-cms-page="programs">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="GSJ — Global Scholars Journey home"
+          data-cms-link="header.l1"
+        >
+          <img
+            src="images/optimized/gsj_logo_new.webp"
+            alt="GSJ"
+            class=""
+            width="332"
+            height="160"
+            fetchpriority="high"
+            decoding="async"
+            data-cms-image="header.i1"
+          />
+          <span data-cms-text="header.t1">GLOBAL SCHOLARS<br />JOURNEY</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a
+            href="about.html"
+            data-cms-text="header.t2"
+            data-cms-link="header.l2"
+            >About us</a
+          >
+          <a
+            href="services.html"
+            aria-current="page"
+            data-cms-text="header.t3"
+            data-cms-link="header.l3"
+            >Our Programs</a
+          >
+          <a
+            href="study-abroad.html"
+            data-cms-text="header.t4"
+            data-cms-link="header.l4"
+            >Study Abroad</a
+          >
+          <a
+            href="research.html"
+            data-cms-text="header.t5"
+            data-cms-link="header.l5"
+            >Research</a
+          >
+          <a
+            href="become-mentor.html"
+            data-cms-text="header.t6"
+            data-cms-link="header.l6"
+            >Become a Mentor</a
+          >
+          <a
+            href="student-stories.html"
+            data-cms-text="header.t7"
+            data-cms-link="header.l7"
+            >Student Stories</a
+          >
+        </nav>
+        <div class="header-actions">
+          <a
+            href="contact.html"
+            class="button button-primary header-cta"
+            data-cms-link="header.l8"
+          >
+            <span data-cms-wrap="true" data-cms-text="header.t8"
+              >Let’s talk</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >north_east</span
+            >
+          </a>
+          <button
+            class="menu-toggle icon-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >menu</span
+            >
+          </button>
         </div>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </header>
-
-    <!-- New Services Hero -->
-    <section class="services-hero">
-        <div class="container services-hero-container">
-            <div class="services-hero-content fade-up-element">
-                <div class="hero-new-tagline">
-                    YOUR GLOBAL JOURNEY BEGINS HERE <span class="tagline-line"></span>
-                </div>
-                <h1 class="services-hero-title">
-                    World-Class Programs.<br>
-                    Real Research.<br>
-                    <span style="color: #0f4c81;">Exceptional Futures.</span>
-                </h1>
-                <p class="hero-new-description">
-                    GSJ empowers students to discover their strengths, explore future pathways, and build real-world capabilities through experiential learning, interdisciplinary programs, and global exposure. Learn with purpose. Experience the world. Shape your future.
-                </p>
-                <div class="hero-new-buttons">
-                    <a href="#programs" class="btn btn-primary btn-pill"><span class="material-symbols-outlined" style="font-size: 1.2rem; margin-right: 8px; vertical-align: middle;">rocket_launch</span> Explore Programs</a>
-                    <button onclick="document.getElementById('videoModal').style.display='flex'" class="btn btn-outline btn-pill" style="cursor:pointer;"><span class="material-symbols-outlined" style="font-size: 1.2rem; margin-right: 8px; vertical-align: middle;">play_circle</span> Watch Overview</button>
-                </div>
-            </div>
-            <div class="services-hero-image fade-up-element fade-up-delay-2">
-                <div class="hero-image-decoration"></div>
-                <div class="hero-image-decoration-2"></div>
-                <img src="images/services_hero.jpg" alt="GSJ Students receiving awards on stage" loading="eager">
-            </div>
-        </div>
-    </section>
-
-    <!-- Overlapping Stats Cards -->
-    <div class="container" style="position: relative; z-index: 10; margin-top: -50px;">
-        <div class="stats-cards-wrapper fade-up-element fade-up-delay-2" style="animation-fill-mode: both;">
-            <div class="stat-card">
-                <div class="stat-icon"><span class="material-symbols-outlined">person</span></div>
-                <div class="stat-text">
-                    <strong>300+</strong>
-                    <span>Expert Mentors</span>
-                    <p>Researchers, professors & industry leaders worldwide</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon"><span class="material-symbols-outlined">science</span></div>
-                <div class="stat-text">
-                    <strong>100+</strong>
-                    <span>Research Opportunities</span>
-                    <p>Cutting-edge projects across STEM disciplines</p>
-                </div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon"><span class="material-symbols-outlined">school</span></div>
-                <div class="stat-text">
-                    <strong>92%</strong>
-                    <span>Student Impact</span>
-                    <p>Students publish, present, or pursue top-tier universities</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Our Programs Intro Section -->
-    <section id="programs" class="programs-intro container section-padding" style="padding-top: 80px; max-width: 1100px;">
-        <div class="programs-intro-header fade-up-element">
-            <div>
-                <span class="programs-tagline">OUR PROGRAMS</span>
-                <h2 class="programs-title">Programs Designed for<br>Future Innovators</h2>
-            </div>
-            <div>
-                <p class="programs-desc">From intensive research experiences to leadership development and scholarships, our programs are built to challenge, inspire, and elevate.</p>
-            </div>
-        </div>
-        
-        <div class="programs-quick-links fade-up-element fade-up-delay-1" style="animation-fill-mode: both;">
-            <a href="#pathway-1" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">biotech</span></div>
-                <div class="ql-text">
-                    <strong>Scientific Research<br>Program</strong>
-                    <p>Build a research project that is entirely yours and ready for publication.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
+    <dialog id="site-menu" class="menu-drawer" aria-labelledby="menu-title">
+      <div class="drawer-top">
+        <p id="menu-title" class="eyebrow" data-cms-text="drawer.t1">
+          YOUR NEXT CHAPTER
+        </p>
+        <button
+          class="menu-close icon-button"
+          aria-label="Close navigation menu"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >close</span
+          >
+        </button>
+      </div>
+      <nav aria-label="Sidebar navigation">
+        <a href="about.html" data-cms-link="drawer.l1">
+          <span class="menu-number">01</span>
+          <span data-cms-text="drawer.t2">About us</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="services.html" aria-current="page" data-cms-link="drawer.l2">
+          <span class="menu-number">02</span>
+          <span data-cms-text="drawer.t3">Our Programs</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="study-abroad.html" data-cms-link="drawer.l3">
+          <span class="menu-number">03</span>
+          <span data-cms-text="drawer.t4">Study Abroad</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="research.html" data-cms-link="drawer.l4">
+          <span class="menu-number">04</span>
+          <span data-cms-text="drawer.t5">Research</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="become-mentor.html" data-cms-link="drawer.l5">
+          <span class="menu-number">05</span>
+          <span data-cms-text="drawer.t6">Become a Mentor</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="student-stories.html" data-cms-link="drawer.l6">
+          <span class="menu-number">06</span>
+          <span data-cms-text="drawer.t7">Student Stories</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+      </nav>
+      <div class="drawer-bottom">
+        <a
+          class="button button-primary"
+          href="contact.html?program=study-abroad#consultation"
+          data-cms-link="drawer.l7"
+        >
+          <span data-cms-wrap="true" data-cms-text="drawer.t8"
+            >Book a consultation</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+        <a href="questions.html" class="text-link" data-cms-link="drawer.l8">
+          <span data-cms-wrap="true" data-cms-text="drawer.t9"
+            >Frequently asked questions</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+        <a
+          href="tel:0327326655"
+          data-cms-text="drawer.t10"
+          data-cms-link="drawer.l9"
+          >032 732 6655</a
+        >
+        <a
+          href="mailto:info@gsj.edu.vn"
+          data-cms-text="drawer.t11"
+          data-cms-link="drawer.l10"
+          >info@gsj.edu.vn</a
+        >
+        <span class="small" data-cms-text="drawer.t12"
+          >Hanoi · Ho Chi Minh City · Da Nang</span
+        >
+      </div>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="page-hero">
+        <div class="container split-hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-cms-text="section1.t1">OUR PROGRAMS</p>
+            <h1>
+              <span data-cms-wrap="true" data-cms-text="section1.t2"
+                >Many possibilities.</span
+              >
+              <br />
+              <em data-cms-text="section1.t3">Your own direction.</em>
+            </h1>
+            <p class="hero-description" data-cms-text="section1.t4">
+              From discovering your interests to preparing for your future,
+              explore the experiences and support that help you take the next
+              step.
+            </p>
+            <a class="button button-primary" href="#programs">
+              <span data-cms-wrap="true" data-cms-text="section1.t5"
+                >Find your pathway</span
+              >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_forward</span
+              >
             </a>
-            <a href="#pathway-9" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">route</span></div>
-                <div class="ql-text">
-                    <strong>Coaching - Mentoring<br>Career Roadmap</strong>
-                    <p>Personalized career roadmap and academic guidance.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
+          </div>
+          <figure class="page-hero-visual">
+            <img
+              src="images/optimized/services_hero.webp"
+              alt="GSJ students celebrating their achievements"
+              class=""
+              width="1600"
+              height="1200"
+              fetchpriority="high"
+              decoding="async"
+              data-cms-image="section1.i1"
+            />
+            <figcaption>
+              <span class="caption-dot"> </span>
+              <span data-cms-wrap="true" data-cms-text="section1.t6"
+                >Real experiences. Meaningful growth.</span
+              >
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section" id="programs">
+        <div class="container program-layout">
+          <aside class="section-sidebar">
+            <p class="eyebrow" data-cms-text="section2.t1">
+              EXPLORE OUR PROGRAMS
+            </p>
+            <nav aria-label="Program sections" data-section-nav="">
+              <a href="#study-abroad">
+                <span data-cms-text="section2.t3">01</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t2"
+                  >GSJ Study Abroad</span
+                >
+              </a>
+              <a href="#research">
+                <span data-cms-text="section2.t5">02</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t4"
+                  >Advanced Scientific Research</span
+                >
+              </a>
+              <a href="#business">
+                <span data-cms-text="section2.t7">03</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t6"
+                  >Business &amp; Entrepreneurship Training</span
+                >
+              </a>
+              <a href="#internship">
+                <span data-cms-text="section2.t9">04</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t8"
+                  >Professional Internship</span
+                >
+              </a>
+              <a href="#competition">
+                <span data-cms-text="section2.t11">05</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t10"
+                  >International Competition Mentoring</span
+                >
+              </a>
+              <a href="#career-camp">
+                <span data-cms-text="section2.t13">06</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t12"
+                  >GSJ Career Youth Camp</span
+                >
+              </a>
+              <a href="#exam-prep">
+                <span data-cms-text="section2.t15">07</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t14"
+                  >International Academic Qualifications &amp; Admissions Exams
+                  Preparation</span
+                >
+              </a>
+              <a href="#practical-science">
+                <span data-cms-text="section2.t17">08</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t16"
+                  >Integrated Practical Science</span
+                >
+              </a>
+              <a href="#career-roadmap">
+                <span data-cms-text="section2.t19">09</span>
+                <span data-cms-wrap="true" data-cms-text="section2.t18"
+                  >Coaching &amp; Mentoring on Career Roadmap</span
+                >
+              </a>
+            </nav>
+          </aside>
+          <div class="program-details">
+            <article id="study-abroad" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t20">
+                  PROGRAM 01 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >school</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t21">GSJ Study Abroad</h2>
+              <p class="program-subtitle" data-cms-text="section2.t22">
+                Developing well-rounded students for competitive university
+                admissions
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/optimized/program_education_consulting.webp"
+                  alt="GSJ Study Abroad"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i1"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t23">
+                  GSJ provides personalized consulting for students applying to
+                  leading high schools and universities across the US, UK,
+                  Australia, Singapore, Canada, and Europe.
+                </p>
+                <p data-cms-text="section2.t24">
+                  Rather than building applications around superficial
+                  activities, GSJ helps students develop authentic academic
+                  experiences through research, competitions, internships,
+                  leadership projects, and long-term academic planning.
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t25">
+                    Personalized University &amp; Portfolio Strategy
+                  </li>
+                  <li data-cms-text="section2.t26">
+                    Standout Profile Development Through Distinctive
+                    Extracurriculars
+                  </li>
+                  <li data-cms-text="section2.t27">
+                    Research, Competition &amp; Academic Pathway Planning
+                  </li>
+                  <li data-cms-text="section2.t28">
+                    Mentorship from Researchers, Experts &amp; Global Educators
+                  </li>
+                  <li data-cms-text="section2.t29">
+                    Authentic Personal Branding Through Real Experiences
+                  </li>
+                  <li data-cms-text="section2.t30">
+                    Long-Term Guidance Throughout The Application Journey
+                  </li>
+                </ul>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=study-abroad#consultation"
+                  data-cms-link="section2.l1"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t31"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+                <a
+                  class="button button-secondary"
+                  href="study-abroad.html"
+                  data-cms-link="section2.l2"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t32"
+                    >Explore the pathway</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="research" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t33">
+                  PROGRAM 02 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >biotech</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t34">Advanced Scientific Research</h2>
+              <p class="program-subtitle" data-cms-text="section2.t35">
+                A research project built around your curiosity - with expert
+                mentorship to take it further.
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/research-experience.webp"
+                  alt="Advanced Scientific Research"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i2"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t36">
+                  Disciplines: Business &amp; Economics · Technology &amp;
+                  Engineering · Natural Sciences · Social Sciences
+                </p>
+                <p data-cms-text="section2.t37">
+                  The GSJ Research Program gives students full, structured
+                  access to the research process - the way it actually works in
+                  academia. Students are guided through every stage: literature
+                  review, research design, data collection and analysis, expert
+                  panel presentation, and the development of scientific
+                  manuscripts.
+                </p>
+                <p data-cms-text="section2.t38">
+                  Research takes place inside real university and institute
+                  laboratories such as: VNU University of Science, Hanoi
+                  University of Pharmacy, Hanoi University of Science and
+                  Technology, and the Institute of Biotechnology which giving
+                  students direct access to professional research environments,
+                  not simulations.
+                </p>
+                <p data-cms-text="section2.t39">
+                  Designed for students pursuing serious academic growth, the
+                  program helps students develop:<br />✓ In-depth knowledge of
+                  specialized science, engineering, and technology fields.<br />✓
+                  Mentorship from local and international experts; benefit from
+                  one-on-one career guidance with leading specialists.<br />✓
+                  Develop teamwork, critical thinking, scientific poster design,
+                  presentation, and expert Q&amp;A skills.<br />✓ Build
+                  meaningful academic and professional connections with experts
+                  worldwide.<br />✓ Research outputs for publications,
+                  conference presentations, and participation in national and
+                  international science and technology competitions,
+                  strengthening university application portfolios.
+                </p>
+                <p data-cms-text="section2.t40">
+                  More than a research project — a foundation for your future
+                  career.
+                </p>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=research#consultation"
+                  data-cms-link="section2.l3"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t41"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+                <a
+                  class="button button-secondary"
+                  href="research.html"
+                  data-cms-link="section2.l4"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t42"
+                    >Explore the pathway</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="business" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t43">
+                  PROGRAM 03 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >business_center</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t44">
+                Business &amp; Entrepreneurship Training
+              </h2>
+              <p class="program-subtitle" data-cms-text="section2.t45">
+                Learn Business Through Real Startup Experience
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/business-experience.webp"
+                  alt="Business &amp; Entrepreneurship Training"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i3"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t46">
+                  A practical entrepreneurship training program designed for
+                  students interested in Business, Economics, Finance, and
+                  Marketing.
+                </p>
+                <p data-cms-text="section2.t47">
+                  Students learn how startups are built from idea development
+                  and market research to business strategy, commercialization,
+                  and pitching while preparing for major competitions such as
+                  ABS, Diamond Challenge, YIS, HCBC, HPEC, and WEC,...
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t48">
+                    Startup &amp; Product Development Training
+                  </li>
+                  <li data-cms-text="section2.t49">
+                    Market Research &amp; Business Strategy
+                  </li>
+                  <li data-cms-text="section2.t50">
+                    Pitching &amp; Presentation Skills
+                  </li>
+                  <li data-cms-text="section2.t51">
+                    Leadership &amp; Teamwork Development
+                  </li>
+                  <li data-cms-text="section2.t52">
+                    Mentoring For International Business Competitions
+                  </li>
+                  <li data-cms-text="section2.t53">
+                    Networking With Experienced Industry Mentors &amp;
+                    Like-Minded Peers
+                  </li>
+                </ul>
+                <p data-cms-text="section2.t54">
+                  Turn ideas into strategies and strategies into impact.
+                </p>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=business#consultation"
+                  data-cms-link="section2.l5"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t55"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="internship" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t56">
+                  PROGRAM 04 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >work</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t57">Professional Internship</h2>
+              <p class="program-subtitle" data-cms-text="section2.t58">
+                The clearest career guidance is experience itself
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/optimized/program_internship.webp"
+                  alt="Professional Internship"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i4"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t59">
+                  GSJ Internship Programs provide high school students with
+                  opportunities to experience professional environments across
+                  research institutes, laboratories, universities, and
+                  companies. By working alongside researchers, engineers, and
+                  industry professionals, students gain practical experience,
+                  workplace awareness, and clearer academic and career direction
+                  beyond the classroom.
+                </p>
+                <p data-cms-text="section2.t60">
+                  Fields include:<br />Biomedical Sciences, Semiconductor
+                  Technology, Computer Science, Business, Economic, Finance...
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t61">
+                    Hands-On Professional Exposure
+                  </li>
+                  <li data-cms-text="section2.t62">
+                    Scientific &amp; Technical Skill Development
+                  </li>
+                  <li data-cms-text="section2.t63">
+                    Personal Portfolio Building
+                  </li>
+                  <li data-cms-text="section2.t64">
+                    Career Clarity Through Experience
+                  </li>
+                </ul>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=internship#consultation"
+                  data-cms-link="section2.l6"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t65"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="competition" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t66">
+                  PROGRAM 05 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >emoji_events</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t67">
+                International Competition Mentoring
+              </h2>
+              <p class="program-subtitle" data-cms-text="section2.t68">
+                Compete On International Stages
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/optimized/program_competition.webp"
+                  alt="International Competition Mentoring"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i5"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t69">
+                  GSJ Mentoring Programs are designed to guide students in
+                  preparing for highly competitive academic, research, and
+                  innovation opportunities at both national and international
+                  levels, including:
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t70">
+                    Innovation, STEM, and Technology Competitions: SVIIF, iENA,
+                    iCAN, AI-JAM US, INTARG, INOVA Croatia, iWISE...
+                  </li>
+                  <li data-cms-text="section2.t71">
+                    Domestic &amp; International Academic Competitions across
+                    Specialized Disciplines: iBO, BBO, JCCO, UKChO, IEO,...
+                  </li>
+                </ul>
+                <p data-cms-text="section2.t72">
+                  Where ambitious students transform ideas into globally
+                  recognized projects.
+                </p>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=competition#consultation"
+                  data-cms-link="section2.l7"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t73"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="career-camp" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t74">
+                  PROGRAM 06 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >public</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t75">GSJ Career Youth Camp</h2>
+              <p class="program-subtitle" data-cms-text="section2.t76">
+                Expanding Perspectives Through International Career Exposure
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/career-experience.webp"
+                  alt="GSJ Career Youth Camp"
+                  class=""
+                  width="1600"
+                  height="1063"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i6"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t77">
+                  GSJ Career Youth Camp provides students with immersive career
+                  exploration experiences across leading universities, research
+                  centers, and companies in the US, Australia, Singapore, and
+                  beyond.
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t78">
+                    America Career Youth Camp
+                  </li>
+                  <li data-cms-text="section2.t79">
+                    Australia Career Youth Camp
+                  </li>
+                  <li data-cms-text="section2.t80">
+                    Singapore Career Youth Camp
+                  </li>
+                </ul>
+                <p data-cms-text="section2.t81">
+                  Through academic visits, industry exposure, and mentorship
+                  from global experts, students gain clearer career direction,
+                  international perspectives, and deeper understanding of future
+                  industries in science, technology, business, and innovation.
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t82">
+                    Career Exploration Across Universities &amp; Global
+                    Companies
+                  </li>
+                  <li data-cms-text="section2.t83">
+                    Mentorship from International Researchers &amp; Industry
+                    Experts
+                  </li>
+                  <li data-cms-text="section2.t84">
+                    Exposure to Global Academic &amp; Professional Environments
+                  </li>
+                  <li data-cms-text="section2.t85">
+                    University, Scholarship &amp; Career Pathway Insights
+                  </li>
+                  <li data-cms-text="section2.t86">
+                    Cross-Cultural Learning &amp; Independent Growth Experiences
+                  </li>
+                </ul>
+                <p data-cms-text="section2.t87">
+                  See the world you're about to step into.
+                </p>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=career-camp#consultation"
+                  data-cms-link="section2.l8"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t88"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="exam-prep" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t89">
+                  PROGRAM 07 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >menu_book</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t90">
+                International Academic Qualifications &amp; Admissions Exams
+                Preparation
+              </h2>
+              <p class="program-subtitle" data-cms-text="section2.t91">
+                Prepare For Top Universities With Global Academic Standards
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/optimized/program_exam_prep.webp"
+                  alt="International Academic Qualifications &amp; Admissions Exams Preparation"
+                  class=""
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i7"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t92">
+                  GSJ offers personalized preparation pathways for international
+                  standardized programs and examinations, helping students
+                  strengthen academic performance and university readiness.
+                </p>
+                <p data-cms-text="section2.t93">
+                  Programs include:<br />✓ IGCSE<br />✓ A-Level<br />✓ SAT<br />✓
+                  AP<br />✓ IB
+                </p>
+                <p data-cms-text="section2.t94">
+                  Designed for students targeting universities in the US, UK,
+                  Singapore, Australia, and beyond.
+                </p>
+                <p data-cms-text="section2.t95">
+                  Achieve the scores that open doors to the world's best
+                  universities.
+                </p>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=exam-prep#consultation"
+                  data-cms-link="section2.l9"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t96"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="practical-science" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t97">
+                  PROGRAM 08 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >science</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t98">Integrated Practical Science</h2>
+              <p class="program-subtitle" data-cms-text="section2.t99">
+                The Perfect Blend of Theory and Hands-On Science
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/optimized/program_practical_science.webp"
+                  alt="Integrated Practical Science"
+                  class=""
+                  width="1600"
+                  height="1067"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i8"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t100">
+                  1. Integrated Practical Science Program
+                </p>
+                <p data-cms-text="section2.t101">
+                  An interdisciplinary science pathway where every lesson
+                  includes experiments, STEM projects, or DIY activities,
+                  helping students strengthen scientific foundations while
+                  developing laboratory skills, creativity, and problem-solving
+                  abilities.
+                </p>
+                <p data-cms-text="section2.t102">
+                  2. Advanced Physics - Chemistry - Biology
+                </p>
+                <p data-cms-text="section2.t103">
+                  Specialized academic tracks designed for students seeking
+                  deeper subject mastery through advanced theory, intensive lab
+                  practice, and STEM-based projects across each discipline.
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t104">
+                    100% Hands-On Practice &amp; Experiments In Every Session
+                  </li>
+                  <li data-cms-text="section2.t105">
+                    12+ STEM &amp; DIY Projects Per Course
+                  </li>
+                  <li data-cms-text="section2.t106">
+                    1:1 Academic Mentoring &amp; STEM Career Guidance
+                  </li>
+                  <li data-cms-text="section2.t107">
+                    MOET &amp; Cambridge Science Curriculum References (Primary
+                    → IGCSE)
+                  </li>
+                </ul>
+                <p data-cms-text="section2.t108">
+                  Develop scientific thinking, practical skills, and the
+                  confidence to explore science beyond the classroom.
+                </p>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=practical-science#consultation"
+                  data-cms-link="section2.l10"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t109"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+            <article id="career-roadmap" class="program-detail" data-spy="">
+              <div class="program-detail-top">
+                <p class="eyebrow" data-cms-text="section2.t110">
+                  PROGRAM 09 / 09
+                </p>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >explore</span
+                >
+              </div>
+              <h2 data-cms-text="section2.t111">
+                Coaching &amp; Mentoring on Career Roadmap
+              </h2>
+              <p class="program-subtitle" data-cms-text="section2.t112">
+                Self-Understanding - Career Exploration - University &amp;
+                Scholarship Roadmap
+              </p>
+              <figure class="program-wide-photo">
+                <img
+                  src="images/optimized/coaching_career_roadmap.webp"
+                  alt="Coaching &amp; Mentoring on Career Roadmap"
+                  class=""
+                  width="1600"
+                  height="1067"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section2.i9"
+                />
+              </figure>
+              <div class="prose">
+                <p data-cms-text="section2.t113">
+                  A career orientation pathway of three specialized programs
+                  that helps students build the foundation for long-term
+                  academic and career decisions - from understanding themselves
+                  and exploring their abilities to experiencing real
+                  professional environments, choosing a suitable field, and
+                  pursuing their dream university with continuous mentorship.
+                </p>
+                <p data-cms-text="section2.t114">
+                  Program 1: Self-Understanding - Motivation - Goal Setting<br />Program
+                  2: Self-Understanding - Career Exploration - Career Experience
+                  - Career Selection<br />Program 3: Self-Understanding - Career
+                  Exploration - Career Experience - Career Selection - Major
+                  Selection - University Selection - Profile Development -
+                  Scholarship Applications
+                </p>
+                <ul class="check-list">
+                  <li data-cms-text="section2.t115">
+                    Self-Discovery Through International Tools
+                  </li>
+                  <li data-cms-text="section2.t116">
+                    Career Experience At Universities, Companies &amp; With
+                    Industry Experts
+                  </li>
+                  <li data-cms-text="section2.t117">
+                    Distinctive Profile &amp; Personal Story For Admissions
+                  </li>
+                  <li data-cms-text="section2.t118">
+                    Full Support From Exam Preparation &amp; Essays To Visa
+                    Application
+                  </li>
+                  <li data-cms-text="section2.t119">
+                    Coach - Mentor - Parent - Student Network Supporting Daily
+                    Action
+                  </li>
+                  <li data-cms-text="section2.t120">
+                    Periodic Progress Reports Through A Detailed Action Plan
+                  </li>
+                </ul>
+              </div>
+              <div class="button-row">
+                <a
+                  class="button button-primary"
+                  href="contact.html?program=career-roadmap#consultation"
+                  data-cms-link="section2.l11"
+                >
+                  <span data-cms-wrap="true" data-cms-text="section2.t121"
+                    >Discuss this program</span
+                  >
+                  <span class="material-symbols-outlined" aria-hidden="true"
+                    >arrow_forward</span
+                  >
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="cta-section section">
+        <div class="container cta-inner reveal">
+          <div>
+            <p class="eyebrow" data-cms-text="section3.t1">
+              LET’S SHAPE WHAT’S NEXT
+            </p>
+            <h2 data-cms-text="section3.t2">
+              Every great journey starts with you.
+            </h2>
+            <p data-cms-text="section3.t3">
+              Explore your strengths, discuss your goals, and discover your next
+              step with GSJ.
+            </p>
+          </div>
+          <a
+            class="button button-primary"
+            href="contact.html?program=study-abroad#consultation"
+            data-cms-link="section3.l1"
+          >
+            <span data-cms-wrap="true" data-cms-text="section3.t4"
+              >Book a 1-on-1 consultation</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >arrow_forward</span
+            >
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="footer-logo" href="index.html" data-cms-link="footer.l1">
+              <img
+                src="images/optimized/gsj_logo_new.webp"
+                alt="GSJ — Global Scholars Journey"
+                class=""
+                width="332"
+                height="160"
+                loading="lazy"
+                decoding="async"
+                data-cms-image="footer.i1"
+              />
             </a>
-            <a href="#pathway-2" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">work</span></div>
-                <div class="ql-text">
-                    <strong>Professional Internship<br>Programs</strong>
-                    <p>Gain practical experience in real professional environments.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
-            <a href="#pathway-3" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">language</span></div>
-                <div class="ql-text">
-                    <strong>Education<br>Consulting</strong>
-                    <p>USA - UK - Australia - Canada - Singapore - Europe</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
-            <a href="#pathway-4" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">emoji_events</span></div>
-                <div class="ql-text">
-                    <strong>Academic Competition<br>Mentoring</strong>
-                    <p>Compete and succeed on international academic stages.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
-            <a href="#pathway-5" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">lightbulb</span></div>
-                <div class="ql-text">
-                    <strong>Business & Entrepreneurship<br>Training</strong>
-                    <p>Learn business through real startup experience.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
-            <a href="#pathway-6" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">flight_takeoff</span></div>
-                <div class="ql-text">
-                    <strong>GSJ Career<br>Youth Camp</strong>
-                    <p>Immersive international career exploration experiences.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
-            <a href="#pathway-7" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">menu_book</span></div>
-                <div class="ql-text">
-                    <strong>International Academic<br>Qualifications & Exams</strong>
-                    <p>Prepare For Top Universities With Global Academic Standards</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
-            <a href="#pathway-8" class="quick-link-card">
-                <div class="ql-icon"><span class="material-symbols-outlined">science</span></div>
-                <div class="ql-text">
-                    <strong>Integrated Practical<br>Science</strong>
-                    <p>Hands-on science and real scientific thinking.</p>
-                </div>
-                <span class="material-symbols-outlined ql-arrow">chevron_right</span>
-            </a>
+            <h2 data-cms-text="footer.t1">
+              Your potential.<br />A world of possibilities.
+            </h2>
+            <p data-cms-text="footer.t2">
+              Empowering young minds on their journey<br />to becoming global
+              scholars.
+            </p>
+            <a
+              href="mailto:info@gsj.edu.vn"
+              data-cms-text="footer.t3"
+              data-cms-link="footer.l2"
+              >info@gsj.edu.vn</a
+            >
+            <a
+              href="tel:0327326655"
+              data-cms-text="footer.t4"
+              data-cms-link="footer.l3"
+              >032 732 6655</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t5">Explore GSJ</h3>
+            <a
+              href="about.html"
+              data-cms-text="footer.t6"
+              data-cms-link="footer.l4"
+              >About us</a
+            >
+            <a
+              href="services.html"
+              data-cms-text="footer.t7"
+              data-cms-link="footer.l5"
+              >Our Programs</a
+            >
+            <a
+              href="study-abroad.html"
+              data-cms-text="footer.t8"
+              data-cms-link="footer.l6"
+              >Study Abroad</a
+            >
+            <a
+              href="research.html"
+              data-cms-text="footer.t9"
+              data-cms-link="footer.l7"
+              >Research</a
+            >
+            <a
+              href="become-mentor.html"
+              data-cms-text="footer.t10"
+              data-cms-link="footer.l8"
+              >Become a Mentor</a
+            >
+            <a
+              href="student-stories.html"
+              data-cms-text="footer.t11"
+              data-cms-link="footer.l9"
+              >Student Stories</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t12">Let’s connect</h3>
+            <a
+              href="contact.html"
+              data-cms-text="footer.t13"
+              data-cms-link="footer.l10"
+              >Book a consultation</a
+            >
+            <a
+              href="questions.html"
+              data-cms-text="footer.t14"
+              data-cms-link="footer.l11"
+              >FAQs &amp; support</a
+            >
+            <a
+              href="https://www.facebook.com/hocvienkhoahocgsj"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t15"
+              data-cms-link="footer.l12"
+              >Facebook ↗</a
+            >
+            <a
+              href="https://www.tiktok.com/@gsj.education"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t16"
+              data-cms-link="footer.l13"
+              >TikTok ↗</a
+            >
+            <a
+              href="https://www.youtube.com/@gsj-hocviensangtaokhoahoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t17"
+              data-cms-link="footer.l14"
+              >YouTube ↗</a
+            >
+          </div>
         </div>
-    </section>
-
-    <section class="container" style="max-width: 1100px;">
-        <!-- Pathway 1 -->
-        <div id="pathway-1" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Scientific Research Program</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Build a research project that is entirely yours
-                </p>
-                <p class="service-detail-text" style="font-size: 1rem; color: #64748b; margin-bottom: 20px;">
-                    Disciplines: Business & Economics · Technology & Engineering · Natural Sciences · Social Sciences
-                </p>
-                <p class="service-detail-text">
-                    The GSJ Scientific Research Program gives students full, structured access to the scientific research process - the way it actually works in academia. Students are guided through every stage: literature review, research design, data collection and analysis, expert panel presentation, and the development of publication-ready scientific manuscripts in both Vietnamese and English.
-                </p>
-                <p class="service-detail-text">
-                    Research takes place inside real university and institute laboratories including VNU University of Science, Hanoi University of Pharmacy, Hanoi University of Science and Technology, and the Institute of Biotechnology which giving students direct access to professional research environments, not simulations.
-                </p>
-                <p class="service-detail-text" style="margin-bottom: 10px;">
-                    Designed for students pursuing serious academic growth, the program helps students develop:
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> In-depth knowledge of specialized science, engineering, and technology fields.</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Mentorship from local and international experts; benefit from one-on-one career guidance with leading specialists.</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Develop teamwork, critical thinking, scientific poster design, presentation, and expert Q&A skills.</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Build meaningful academic and professional connections with experts worldwide.</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Research outputs for publications, conference presentations, and participation in national and international science and technology competitions, strengthening university application portfolios.</li>
-                </ul>
-                <p class="service-detail-text" style="font-weight: 600; font-style: italic; color: #0f172a;">
-                    More than a research project - a foundation for future academic work.
-                </p>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Apply Now</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_scientific_research_new.jpg" alt="Scientific Research Program" style="object-fit: cover;">
-            </div>
+        <div class="footer-offices">
+          <div>
+            <h3 data-cms-text="footer.t18">Hanoi - Head Office</h3>
+            <p data-cms-text="footer.t19">
+              Building A-Imperia Garden Building, 203 Nguyen Huy Tuong, Thanh
+              Xuan Ward, Hanoi
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t20">Hanoi - Office 2</h3>
+            <p data-cms-text="footer.t21">
+              Nguyet Que 25-08, Vinhomes Harmony, Phuc Dong, Long Bien, Hanoi,
+              Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t22">Ho Chi Minh City Office</h3>
+            <p data-cms-text="footer.t23">
+              36D Luong Dinh Cua Street, An Khanh Ward, Thu Duc City, Ho Chi
+              Minh City, Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t24">Da Nang Office</h3>
+            <p data-cms-text="footer.t25">
+              89-91 Doan Huu Trung Street, An Khe, Da Nang, Vietnam.
+            </p>
+          </div>
         </div>
-
-        <!-- Pathway 9: Coaching - Mentoring on Career Roadmap -->
-        <div id="pathway-9" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Coaching - Mentoring on Career Roadmap</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Self-Understanding - Career Exploration - University & Scholarship Roadmap
-                </p>
-                <p class="service-detail-text">
-                    A career orientation pathway of three specialized programs that helps students build the foundation for long-term academic and career decisions - from understanding themselves and exploring their abilities to experiencing real professional environments, choosing a suitable field, and pursuing their dream university with continuous mentorship.
-                </p>
-                <p class="service-detail-text" style="margin-bottom: 10px; font-weight: 600;">
-                    Program 1: Self-Understanding - Motivation - Goal Setting<br>
-                    Program 2: Self-Understanding - Career Exploration - Career Experience - Career Selection<br>
-                    Program 3: Self-Understanding - Career Exploration - Career Experience - Career Selection - Major Selection - University Selection - Profile Development - Scholarship Applications
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Self-Discovery Through International Tools</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Career Experience At Universities, Companies & With Industry Experts</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Distinctive Profile & Personal Story For Admissions</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Full Support From Exam Preparation & Essays To Visa Application</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Coach - Mentor - Parent - Student Network Supporting Daily Action</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Periodic Progress Reports Through A Detailed Action Plan</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Discover The Program</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/coaching_career_roadmap.jpg" alt="Coaching - Mentoring on Career Roadmap" style="object-fit: cover;">
-            </div>
+        <div class="footer-bottom">
+          <span data-cms-text="footer.t26"
+            >© 2026 GSJ. All rights reserved.</span
+          >
+          <a
+            href="terms.html"
+            data-cms-text="footer.t27"
+            data-cms-link="footer.l15"
+            >Terms of service</a
+          >
+          <span data-cms-text="footer.t28">Global Scholars Journey</span>
         </div>
-
-    <!-- Pathway 2 -->
-        <div id="pathway-2" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Professional Internship Programs</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    The clearest career guidance is experience itself
-                </p>
-                <p class="service-detail-text">
-                    GSJ Internship Programs provide high school students with opportunities to experience professional environments across research institutes, laboratories, universities, and companies. By working alongside researchers, engineers, and industry professionals, students gain practical experience, workplace awareness, and clearer academic and career direction beyond the classroom.
-                </p>
-                <p class="service-detail-text" style="margin-bottom: 10px; font-weight: 600;">
-                    Fields include:<br>
-                    <span style="font-weight: 400; color: #475569;">STEM, Business, Economic, Finance...</span>
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Hands-On Professional Exposure</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Scientific & Technical Skill Development</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Personal Portfolio Building</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Career Clarity Through Experience</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Apply Now</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_internship.jpg" alt="Professional Internship Programs" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Pathway 3 -->
-        <div id="pathway-3" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Education Consulting</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    USA - UK - Australia - Canada - Singapore - Europe
-                </p>
-                <p class="service-detail-text" style="font-size: 1rem; color: #64748b; margin-bottom: 20px;">
-                    Developing well-rounded students for competitive university admissions
-                </p>
-                <p class="service-detail-text">
-                    GSJ provides personalized study abroad consulting for students applying to leading high schools and universities across the US, UK, Australia, Singapore, Canada, and Europe.
-                </p>
-                <p class="service-detail-text" style="margin-bottom: 10px;">
-                    Rather than building applications around superficial activities, GSJ helps students develop authentic academic experiences through research, competitions, internships, leadership projects, and long-term academic planning.
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Personalized University & Portfolio Strategy</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Research, Competition & Academic Pathway Planning</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Mentorship from Researchers, Experts & Global Educators</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Authentic Personal Branding Through Real Experiences</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Long-Term Guidance Throughout The Application Journey</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Apply Now</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_education_consulting.png" alt="Study Abroad Consulting" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Pathway 4 -->
-        <div id="pathway-4" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Academic Competition Mentoring</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Compete On International Academic Stages
-                </p>
-                <p class="service-detail-text">
-                    GSJ Mentoring Programs are designed to guide students in preparing for highly competitive academic, research, and innovation opportunities at both national and international levels, including:
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> National & International Science and Engineering Competitions</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Innovation, STEM, and Technology Competitions & Exhibitions: SVIIF, iENA, ICAN, AI-JAM US, INTARG, INOVA Croatia, Innoverse, iWise...</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Research Programs for High School Students</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Domestic & International Academic Competitions across Specialized Disciplines</li>
-                </ul>
-                <p class="service-detail-text" style="font-weight: 600; font-style: italic; color: #0f172a;">
-                    Where ambitious students transform ideas into globally recognized projects.
-                </p>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">See Competition Pathways</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_competition.jpg" alt="Academic Competition Mentoring" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Pathway 5 -->
-        <div id="pathway-5" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Business & Entrepreneurship Training</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Learn Business Through Real Startup Experience
-                </p>
-                <p class="service-detail-text">
-                    A practical entrepreneurship training program designed for students interested in Business, Economics, Finance, and Marketing.
-                </p>
-                <p class="service-detail-text">
-                    Students learn how startups are built from idea development and market research to business strategy, commercialization, and pitching while preparing for major competitions such as ABS, IEO, HCBC, VEO, HPEC, and WEC,...
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Startup & Product Development Training</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Market Research & Business Strategy</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Pitching & Presentation Skills</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Leadership & Teamwork Development</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Mentoring For International Business Competitions</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Networking With Experienced Industry Mentors & Like-Minded Peers</li>
-                </ul>
-                <p class="service-detail-text" style="font-weight: 600; font-style: italic; color: #0f172a;">
-                    Turn ideas into strategies and strategies into impact.
-                </p>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Discover The Program</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_business.jpg" alt="Business & Entrepreneurship Training" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Pathway 6 -->
-        <div id="pathway-6" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">GSJ Career Youth Camp</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Expanding Perspectives Through International Career Exposure
-                </p>
-                <p class="service-detail-text">
-                    GSJ Career Youth Camp provides students with immersive career exploration experiences across leading universities, research centers, and companies in the US, Australia, Singapore, and beyond.
-                </p>
-                <p class="service-detail-text" style="margin-bottom: 10px; font-weight: 600;">
-                    <span style="font-weight: 400; color: #475569;">
-                    ✓ America Career Youth Camp<br>
-                    ✓ Australia Career Youth Camp<br>
-                    ✓ Singapore Career Youth Camp
-                    </span>
-                </p>
-                <p class="service-detail-text">
-                    Through academic visits, industry exposure, and mentorship from global experts, students gain clearer career direction, international perspectives, and deeper understanding of future industries in science, technology, business, and innovation.
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Career Exploration Across Universities & Global Companies</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Mentorship from International Researchers & Industry Experts</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Exposure to Global Academic & Professional Environments</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> University, Scholarship & Career Pathway Insights</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> Cross-Cultural Learning & Independent Growth Experiences</li>
-                </ul>
-                <p class="service-detail-text" style="font-weight: 600; font-style: italic; color: #0f172a;">
-                    See the world you're about to step into.
-                </p>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Discover The Program</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_career_camp.jpg" alt="GSJ Career Youth Camp" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Pathway 7 -->
-        <div id="pathway-7" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">International Academic Qualifications & Admissions Exams Preparation</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Prepare For Top Universities With Global Academic Standards
-                </p>
-                <p class="service-detail-text">
-                    GSJ offers personalized preparation pathways for international standardized programs and examinations, helping students strengthen academic performance and university readiness.
-                </p>
-                <p class="service-detail-text" style="margin-bottom: 10px; font-weight: 600;">
-                    Programs include:
-                </p>
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> IGCSE</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> A-Level</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> SAT</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> AP</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> IB</li>
-                </ul>
-                <p class="service-detail-text">
-                    Designed for students targeting universities in the US, UK, Singapore, Australia, and beyond.
-                </p>
-                <p class="service-detail-text" style="font-weight: 600; font-style: italic; color: #0f172a;">
-                    Achieve the scores that open doors to the world's best universities.
-                </p>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Explore Programs</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_exam_prep.jpg" alt="International Exam Preparation" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Pathway 8 -->
-        <div id="pathway-8" class="service-detail-block">
-            <div class="service-detail-content">
-                <h2 class="service-detail-title">Integrated Practical Science</h2>
-                <p class="service-detail-text" style="font-weight: 600; color: #0f4c81; margin-bottom: 5px;">
-                    Hands-On Science. Real Scientific Thinking.
-                </p>
-                
-                <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 25px 0 10px;">1. Integrated Practical Science Program</h3>
-                <p class="service-detail-text">
-                    An interdisciplinary science pathway where every lesson includes experiments, STEM projects, or DIY activities, helping students strengthen scientific foundations while developing laboratory skills, creativity, and problem-solving abilities.
-                </p>
-
-                <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 25px 0 10px;">2. Advanced Physics - Chemistry - Biology</h3>
-                <p class="service-detail-text" style="margin-bottom: 20px;">
-                    Specialized academic tracks designed for students seeking deeper subject mastery through advanced theory, intensive lab practice, and STEM-based projects across each discipline.
-                </p>
-
-                <ul style="list-style: none; padding-left: 0; margin-bottom: 20px; color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> 100% Hands-On Practice & Experiments In Every Session</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> 12+ STEM & DIY Projects Per Course</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> 1:1 Academic Mentoring & STEM Career Guidance</li>
-                    <li style="margin-bottom: 8px;"><span style="color: #0f4c81; font-weight: bold; margin-right: 8px;">✓</span> MOET & Cambridge Science Curriculum References (Primary → IGCSE)</li>
-                </ul>
-                <p class="service-detail-text" style="font-weight: 600; font-style: italic; color: #0f172a;">
-                    Develop scientific thinking, practical skills, and the confidence to explore science beyond the classroom.
-                </p>
-                <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Explore Programs</a>
-            </div>
-            <div class="service-detail-image">
-                <img src="images/program_practical_science.jpg" alt="Integrated Practical Science" style="object-fit: cover;">
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section like SRA -->
-    <section class="faq-section">
-        <div class="container" style="max-width: 900px;">
-            <div class="faq-item">
-                <h3 class="faq-question">What is GSJ's Science Research Program?</h3>
-                <div class="faq-answer">
-                    <p>GSJ's Science Research Program guides high school students through a research project in their chosen field, from forming a research question to presenting findings at local and international competitions.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Who can apply to GSJ's programs?</h3>
-                <div class="faq-answer">
-                    <p>Our programs are open to students in grades 8 to 12 who are curious, motivated, and eager to explore academic research, business, or study abroad pathways.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What fields of research does GSJ support?</h3>
-                <div class="faq-answer">
-                    <p>Students can pursue research across Natural Sciences, Technology and Engineering, Social Sciences, and Business and Finance, among other fields.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">How long does a research project typically take?</h3>
-                <div class="faq-answer">
-                    <p>Most research projects run over a period of 5 to 6 months, with regular sessions each week guided by a dedicated mentor and teaching assistant.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Will my child work with a real researcher or scientist?</h3>
-                <div class="faq-answer">
-                    <p>Yes. Each student is paired with a qualified mentor from an academic institution or professional background relevant to their research field.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Does GSJ offer study abroad consulting?</h3>
-                <div class="faq-answer">
-                    <p>Yes. GSJ provides personalized study abroad consulting, supporting students with profile building, essay writing, university selection, and application preparation.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What competitions can students participate in through GSJ?</h3>
-                <div class="faq-answer">
-                    <p>GSJ prepares students for a wide range of local and international competitions, including iCAN, SVIIF, iWISE, ABS, and various scientific research symposia.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Does GSJ offer summer camps or international programs?</h3>
-                <div class="faq-answer">
-                    <p>Yes. GSJ organizes international career exploration camps and summer programs in destinations such as Singapore, Australia, and America, designed to broaden students' academic horizons and expand their global network.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">How does GSJ personalize its programs for each student?</h3>
-                <div class="faq-answer">
-                    <p>GSJ designs individualized academic roadmaps based on each student's strengths, interests, and goals, ensuring guidance that is relevant and meaningful to their personal journey.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">How can I get started with GSJ?</h3>
-                <div class="faq-answer">
-                    <p>You can reach out to our team via our website or contact us directly to schedule a one-on-one consultation. Our staff will help identify the most suitable program for your child.</p>
-                </div>
-            </div>
-
-
-
-            <div class="faq-item">
-                <h3 class="faq-question">What payment methods do you accept? Can I pay in installments?</h3>
-                <div class="faq-answer">
-                    <p>We accept all major credit cards and bank transfers. Payments can be made either in full or spread out over monthly installments depending on the specific pathway you choose.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What are GSJ's Terms of Service?</h3>
-                <div class="faq-answer">
-                    <p>You can review our program policies, responsibilities, and guidelines <a href="terms.html" style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">HERE</a>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 100px;">
-                </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">
-                    Encouraging & Inspiring Young Minds
-                </p>
-                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
-                    <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">location_on</span>
-                        <span style="font-size: 0.9rem; line-height: 1.5;">Lot A2.1 & A2.2, 1st Floor, Building A, Zone A, Imperia Garden Mall, 203 Nguyen Huy Tuong, Thanh Xuan, Hanoi, Vietnam</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">phone</span>
-                        <span style="font-size: 0.9rem;">032 732 6655</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">mail</span>
-                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
-                    </div>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/GlobalScienceJourney" target="_blank" title="Facebook"><span class="material-symbols-outlined">public</span></a>
-                    <a href="mailto:cskh@gsj.edu.vn" title="Email"><span class="material-symbols-outlined">mail</span></a>
-                    <a href="tel:0327326655" title="Phone"><span class="material-symbols-outlined">call</span></a>
-                </div>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <div class="footer-links">
-                    <a href="about.html">About us</a>
-                    <a href="services.html">Our Program</a>
-                    <a href="mentors.html">Mentors</a>
-                    <a href="index.html#testimonials">Testimonials</a>
-                </div>
-            </div>
-            <div>
-                <h4>Resources</h4>
-                <div class="footer-links">
-                    <a href="about.html#blog">Research Blog</a>
-                    <a href="contact.html">Apply now / More Questions</a>
-                    <a href="terms.html">Term of service</a>
-                </div>
-            </div>
-            <div>
-                <h4>Reference</h4>
-                <div class="footer-links">
-                    <a href="https://www.scienceresearchacademy.com/" target="_blank">Science Research Academy</a>
-                </div>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
-        </div>
+      </div>
     </footer>
-
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About us</a>
-        <a href="services.html">Our Program</a>
-        <a href="research.html">Advanced Scientific Research</a>
-        <a href="become-mentor.html">Become A Mentor</a>
-        <a href="mentors.html">Mentors</a>
-        <a href="index.html#testimonials">Testimonials</a>
-        <a href="contact.html">Apply Now</a>
-    </div>
-<!-- Video Modal -->
-<div id="videoModal" onclick="if(event.target===this){this.style.display='none';document.getElementById('videoIframe').src=document.getElementById('videoIframe').src;}" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:10000; justify-content:center; align-items:center; backdrop-filter:blur(4px);">
-    <div style="position:relative; width:90%; max-width:900px; aspect-ratio:16/9; background:#000; border-radius:16px; overflow:hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
-        <button onclick="document.getElementById('videoModal').style.display='none';document.getElementById('videoIframe').src=document.getElementById('videoIframe').src;" style="position:absolute; top:12px; right:12px; z-index:10; background:rgba(0,0,0,0.6); border:none; color:white; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.2rem; display:flex; align-items:center; justify-content:center;">✕</button>
-        <iframe id="videoIframe" src="https://drive.google.com/file/d/1NrOf-l56bAb-8XsK8qw57VNzmkKr9uHO/preview" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="border:none;"></iframe>
-    </div>
-</div>
-
-<script src="main.js"></script>
-</body>
+    <button class="back-top icon-button" aria-label="Back to top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >arrow_upward</span
+      >
+    </button>
+    <div
+      id="form-status"
+      class="form-status"
+      role="status"
+      aria-live="polite"
+      hidden=""
+    ></div>
+  </body>
 </html>

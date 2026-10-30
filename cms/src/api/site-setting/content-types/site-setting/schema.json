@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "gsj_site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Cài đặt toàn website",
+    "description": "Logo, menu sidebar, liên hệ và chân trang dùng chung cho toàn website."
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.section"
+    }
+  }
+}

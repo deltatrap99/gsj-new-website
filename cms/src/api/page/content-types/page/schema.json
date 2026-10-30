@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gsj_pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Trang website",
+    "description": "Chỉnh nội dung và hình ảnh từng trang. Save để lưu nháp, Publish để hiển thị trên website."
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "required": true },
+    "seoTitle": { "type": "string" },
+    "seoDescription": { "type": "text" },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.section"
+    }
+  }
+}

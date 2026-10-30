@@ -1,401 +1,1074 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | GSJ</title>
-    <meta name="description" content="Learn about Global Science Journey (GSJ) — our mission, vision, leadership team, and partnerships that empower students worldwide.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css?v=7">
-</head>
-<body>
-    <!-- Header / Navigation -->
-    <header class="navbar" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 90px; width: auto; object-fit: contain; vertical-align: middle;">
-                </a>
-            </div>
-            <nav class="nav-links">
-                <div class="nav-dropdown">
-                    <a href="about.html" style="color: var(--primary-color);">About ▾</a>
-                    <div class="nav-dropdown-content">
-                        <a href="about.html">About us</a>
-                        <a href="about.html#blog">Research Blog</a>
-                        <a href="about.html#partnership">Partnership</a>
-                    </div>
-                </div>
-                <a href="services.html">Our Program</a>
-                <a href="research.html">Advanced Scientific Research</a>
-                <a href="become-mentor.html">Become A Mentor</a>
-                <a href="index.html#testimonials">Testimonials</a>
-            </nav>
-            <div class="nav-actions" style="display: flex; gap: 10px; align-items: center;">
-                <div class="lang-wrapper">
-                    <button class="lang-btn">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">language</span> EN
-                    </button>
-                    <div class="lang-menu">
-                        <div class="lang-menu-inner">
-                            <a href="#" class="lang-item active">English <span class="material-symbols-outlined" style="font-size: 1.1rem;">check</span></a>
-                            <a href="#" class="lang-item">Tiếng Việt</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="questions.html" class="btn btn-secondary" style="padding: 10px 20px;">FAQ</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Apply Now</a>
-            </div>
-            <button class="mobile-menu-btn">☰</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About us | GSJ — Global Scholars Journey</title>
+    <meta
+      name="description"
+      content="Global Scholars Journey (GSJ) empowers the next generation of global scholars through personalized mentorship, interdisciplinary learning, and real-world experiences. Beyond academic excellence, we nurture critical thinking, leadership, and global perspectives, helping students explore their potential, pursue their passions across diverse fields, and confidently navigate their journey toward leading universities and future careers."
+    />
+    <meta name="theme-color" content="#0f4c81" />
+    <link rel="icon" href="images/gsj_logo_new.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261031-portraits" />
+    <script src="main.js?v=20261031-cms" defer=""></script>
+    <script data-gsj-cms="" src="cms-config.js?v=1" defer=""></script>
+    <script data-gsj-cms="" src="cms-client.js?v=1" defer=""></script>
+  </head>
+  <body data-cms-page="about">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="GSJ — Global Scholars Journey home"
+          data-cms-link="header.l1"
+        >
+          <img
+            src="images/optimized/gsj_logo_new.webp"
+            alt="GSJ"
+            class=""
+            width="332"
+            height="160"
+            fetchpriority="high"
+            decoding="async"
+            data-cms-image="header.i1"
+          />
+          <span data-cms-text="header.t1">GLOBAL SCHOLARS<br />JOURNEY</span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a
+            href="about.html"
+            aria-current="page"
+            data-cms-text="header.t2"
+            data-cms-link="header.l2"
+            >About us</a
+          >
+          <a
+            href="services.html"
+            data-cms-text="header.t3"
+            data-cms-link="header.l3"
+            >Our Programs</a
+          >
+          <a
+            href="study-abroad.html"
+            data-cms-text="header.t4"
+            data-cms-link="header.l4"
+            >Study Abroad</a
+          >
+          <a
+            href="research.html"
+            data-cms-text="header.t5"
+            data-cms-link="header.l5"
+            >Research</a
+          >
+          <a
+            href="become-mentor.html"
+            data-cms-text="header.t6"
+            data-cms-link="header.l6"
+            >Become a Mentor</a
+          >
+          <a
+            href="student-stories.html"
+            data-cms-text="header.t7"
+            data-cms-link="header.l7"
+            >Student Stories</a
+          >
+        </nav>
+        <div class="header-actions">
+          <a
+            href="contact.html"
+            class="button button-primary header-cta"
+            data-cms-link="header.l8"
+          >
+            <span data-cms-wrap="true" data-cms-text="header.t8"
+              >Let’s talk</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >north_east</span
+            >
+          </a>
+          <button
+            class="menu-toggle icon-button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >menu</span
+            >
+          </button>
         </div>
+      </div>
+      <div class="reading-progress" aria-hidden="true"></div>
     </header>
-
-    <!-- Landing Page Hero -->
-    <section style="position: relative; padding: 180px 0 120px; background-color: #f8fafc;">
-        <div style="position: absolute; top: 0; right: 0; bottom: 0; width: 55%; background-image: url('images/about_hero.jpg'); background-size: cover; background-position: center; z-index: 1;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to right, #f8fafc 0%, rgba(248,250,252,0.8) 20%, transparent 50%);"></div>
+    <dialog id="site-menu" class="menu-drawer" aria-labelledby="menu-title">
+      <div class="drawer-top">
+        <p id="menu-title" class="eyebrow" data-cms-text="drawer.t1">
+          YOUR NEXT CHAPTER
+        </p>
+        <button
+          class="menu-close icon-button"
+          aria-label="Close navigation menu"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >close</span
+          >
+        </button>
+      </div>
+      <nav aria-label="Sidebar navigation">
+        <a href="about.html" aria-current="page" data-cms-link="drawer.l1">
+          <span class="menu-number">01</span>
+          <span data-cms-text="drawer.t2">About us</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="services.html" data-cms-link="drawer.l2">
+          <span class="menu-number">02</span>
+          <span data-cms-text="drawer.t3">Our Programs</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="study-abroad.html" data-cms-link="drawer.l3">
+          <span class="menu-number">03</span>
+          <span data-cms-text="drawer.t4">Study Abroad</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="research.html" data-cms-link="drawer.l4">
+          <span class="menu-number">04</span>
+          <span data-cms-text="drawer.t5">Research</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="become-mentor.html" data-cms-link="drawer.l5">
+          <span class="menu-number">05</span>
+          <span data-cms-text="drawer.t6">Become a Mentor</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+        <a href="student-stories.html" data-cms-link="drawer.l6">
+          <span class="menu-number">06</span>
+          <span data-cms-text="drawer.t7">Student Stories</span>
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >north_east</span
+          >
+        </a>
+      </nav>
+      <div class="drawer-bottom">
+        <a
+          class="button button-primary"
+          href="contact.html?program=study-abroad#consultation"
+          data-cms-link="drawer.l7"
+        >
+          <span data-cms-wrap="true" data-cms-text="drawer.t8"
+            >Book a consultation</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+        <a href="questions.html" class="text-link" data-cms-link="drawer.l8">
+          <span data-cms-wrap="true" data-cms-text="drawer.t9"
+            >Frequently asked questions</span
+          >
+          <span class="material-symbols-outlined" aria-hidden="true"
+            >arrow_forward</span
+          >
+        </a>
+        <a
+          href="tel:0327326655"
+          data-cms-text="drawer.t10"
+          data-cms-link="drawer.l9"
+          >032 732 6655</a
+        >
+        <a
+          href="mailto:info@gsj.edu.vn"
+          data-cms-text="drawer.t11"
+          data-cms-link="drawer.l10"
+          >info@gsj.edu.vn</a
+        >
+        <span class="small" data-cms-text="drawer.t12"
+          >Hanoi · Ho Chi Minh City · Da Nang</span
+        >
+      </div>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="page-hero">
+        <div class="container split-hero">
+          <div class="hero-copy">
+            <p class="eyebrow" data-cms-text="section1.t1">
+              GLOBAL SCHOLARS JOURNEY
+            </p>
+            <h1>
+              <span data-cms-wrap="true" data-cms-text="section1.t2"
+                >Every student deserves</span
+              >
+              <br />
+              <em data-cms-text="section1.t3">their own path.</em>
+            </h1>
+            <p class="hero-description" data-cms-text="section1.t4">
+              Global Scholars Journey (GSJ) empowers the next generation of
+              global scholars through personalized mentorship, interdisciplinary
+              learning, and real-world experiences. Beyond academic excellence,
+              we nurture critical thinking, leadership, and global perspectives,
+              helping students explore their potential, pursue their passions
+              across diverse fields, and confidently navigate their journey
+              toward leading universities and future careers.
+            </p>
+            <a
+              class="button button-primary"
+              href="services.html"
+              data-cms-link="section1.l1"
+            >
+              <span data-cms-wrap="true" data-cms-text="section1.t5"
+                >Explore our programs</span
+              >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <figure class="page-hero-visual">
+            <img
+              src="images/optimized/about_hero.webp"
+              alt="GSJ students learning from a university educator"
+              class=""
+              width="1600"
+              height="900"
+              fetchpriority="high"
+              decoding="async"
+              data-cms-image="section1.i1"
+            />
+            <figcaption>
+              <span class="caption-dot"> </span>
+              <span data-cms-wrap="true" data-cms-text="section1.t6"
+                >Real experiences. Meaningful growth.</span
+              >
+            </figcaption>
+          </figure>
         </div>
-        
-        <div class="container" style="position: relative; z-index: 2;">
-            <div style="max-width: 600px;">
-                <span style="font-size: 0.9rem; font-weight: 700; color: #0f4c81; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 20px;">Your Global Journey Begins Here</span>
-                <h1 style="font-size: 4.5rem; font-weight: 800; color: #0f172a; margin-bottom: 25px; line-height: 1.1; letter-spacing: -1px;">
-                    Explore. Research.<br>
-                    Innovate. <span style="color: #0f4c81;">Lead.</span>
-                </h1>
-                <p style="font-size: 1.15rem; color: #475569; line-height: 1.6; margin-bottom: 40px; max-width: 500px;">
-                    GSJ empowers ambitious students through world-class STEM research, mentorship, and global opportunities that shape future leaders in science and beyond.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="services.html" class="btn btn-primary" style="border-radius: 30px; padding: 12px 28px; display: flex; align-items: center; gap: 8px;">Explore Programs <span class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_forward</span></a>
-                    <button onclick="document.getElementById('videoModal').style.display='flex'" class="btn btn-secondary" style="border-radius: 30px; padding: 12px 28px; display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #ddd; color: #0f172a; cursor: pointer;"><span class="material-symbols-outlined" style="font-size: 1.2rem;">play_circle</span> Watch Overview</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Floating Stats Bar -->
-        <div class="container" style="position: relative; z-index: 10; margin-top: 80px;">
-            <div style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left; border: 1px solid rgba(255,255,255,0.5);">
-                <div style="display: flex; align-items: center; gap: 15px; border-right: 1px solid #eee;">
-                    <span class="material-symbols-outlined" style="font-size: 2.5rem; color: #0f4c81;">groups</span>
-                    <div>
-                        <strong style="display: block; font-size: 1.4rem; color: #0f172a; font-weight: 800;">5000+</strong>
-                        <span style="font-size: 0.85rem; color: #64748b;">Students Worldwide</span>
-                    </div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px; border-right: 1px solid #eee;">
-                    <span class="material-symbols-outlined" style="font-size: 2.5rem; color: #0f4c81;">science</span>
-                    <div>
-                        <strong style="display: block; font-size: 1.4rem; color: #0f172a; font-weight: 800;">200+</strong>
-                        <span style="font-size: 0.85rem; color: #64748b;">Research Projects</span>
-                    </div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px; border-right: 1px solid #eee;">
-                    <span class="material-symbols-outlined" style="font-size: 2.5rem; color: #0f4c81;">language</span>
-                    <div>
-                        <strong style="display: block; font-size: 1.4rem; color: #0f172a; font-weight: 800;">40+</strong>
-                        <span style="font-size: 0.85rem; color: #64748b;">Countries</span>
-                    </div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <span class="material-symbols-outlined" style="font-size: 2.5rem; color: #0f4c81;">school</span>
-                    <div>
-                        <strong style="display: block; font-size: 1.4rem; color: #0f172a; font-weight: 800;">100+</strong>
-                        <span style="font-size: 0.85rem; color: #64748b;">Top University Placements</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us Content + Mission & Vision -->
-    <section class="section-padding" style="background-color: white; padding-top: 100px; padding-bottom: 80px;">
-        <div class="container" style="max-width: 1000px;">
-            <div style="margin-bottom: 60px;">
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
-                    <span style="font-size: 0.85rem; font-weight: 700; color: #0f4c81; letter-spacing: 1px; text-transform: uppercase;">About GSJ</span>
-                    <div style="height: 1px; width: 60px; background-color: #cbd5e1;"></div>
-                </div>
-                <h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; margin-bottom: 30px; line-height: 1.15;">Who We Are</h2>
-                
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px; text-align: justify;">Global Science Journey is an in-depth knowledge and skills educational ecosystem built with the mission of accompanying young learners on their journey of growth and future development.</p>
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px; text-align: justify;">Bringing together leading educators and researchers from Vietnam and internationally across Natural Sciences, Social Sciences, Engineering, Technology, and Business, we develop meaningful, practice-oriented programs grounded in a shared belief that every student can thrive when guided and supported in a way that is personal to them.</p>
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 20px; text-align: justify;">We continuously expand our network of partner universities, research institutes, and educational organizations worldwide, opening doors for students to access world-class academic environments and global competitions.</p>
-                <p style="font-size: 1.1rem; color: #475569; line-height: 1.7; margin-bottom: 0; text-align: justify;">Guided by the philosophy that "Education is not about making students the same, but about helping each student become the best version of themselves," we design personalized academic pathways and career guidance based on each student's individual strengths, passions, and abilities. Beyond delivering knowledge, we help students build confidence, develop real skills, and find the motivation to live by the ideal of "Become a better version of yourself, every day."</p>
-            </div>
-
-            <!-- Mission & Vision -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 80px;">
-                <div style="background: #f8fafc; padding: 40px; border-radius: 20px; border-left: 5px solid #0f4c81;">
-                    <span class="material-symbols-outlined" style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 15px; display: block;">visibility</span>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Vision</h3>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.7;">To become an internationally recognized organization in career education and skills development for students. We are committed to building a sustainable talent ecosystem by equipping young people with strong academic foundations and practical competencies. Through this, we empower students to develop holistically, integrate confidently into the global community, and take meaningful steps toward becoming responsible global citizens.</p>
-                </div>
-                <div style="background: #f8fafc; padding: 40px; border-radius: 20px; border-left: 5px solid #b49a5b;">
-                    <span class="material-symbols-outlined" style="color: #b49a5b; font-size: 2.5rem; margin-bottom: 15px; display: block;">flag</span>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Mission</h3>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.7;">To empower 1 million students to become the best version of themselves-confident, resilient, and successful in pursuing their future careers.</p>
-                </div>
-            </div>
-
-            <!-- Our Leadership Team -->
-            <div>
-                <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 40px; text-align: center;">Our Leadership Team</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <!-- Member 1 -->
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
-                        <div style="height: 120px; background: linear-gradient(135deg, #0f4c81 0%, #1e293b 100%);"></div>
-                        <div style="padding: 0 30px 30px; text-align: center; margin-top: -50px;">
-                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; padding: 5px; margin: 0 auto 15px;">
-                                <div style="width: 100%; height: 100%; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                    <img src="images/Mrs._Dang_Thuy_Nga.JPG" alt="Mrs. Dang Thuy Nga" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://ui-avatars.com/api/?name=Dang+Thuy+Nga&background=0f4c81&color=fff&size=200'">
-                                </div>
-                            </div>
-                            <h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Mrs. Dang Thuy Nga</h3>
-                            <p style="color: #b49a5b; font-weight: 700; font-size: 0.95rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Founder & CEO</p>
-                            <ul style="color: #475569; line-height: 1.6; font-size: 0.95rem; text-align: left; padding-left: 20px; margin-bottom: 0;">
-                                <li>Former Director of Supply Chain and Quality Director, Phacogen Group</li>
-                                <li>Former Head of Quality Management and Senior Business Development Manager, SISC Vietnam JSC</li>
-                                <li>Senior Expert in Healthcare Quality Management Systems, LEAN & SIX SIGMA</li>
-                                <li>Chemical & Pharmaceutical Engineer, Hanoi University of Science and Technology</li>
-                                <li>Pharmacist, Hanoi University of Pharmacy</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Member 2 -->
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
-                        <div style="height: 120px; background: linear-gradient(135deg, #0f4c81 0%, #1e293b 100%);"></div>
-                        <div style="padding: 0 30px 30px; text-align: center; margin-top: -50px;">
-                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; padding: 5px; margin: 0 auto 15px;">
-                                <div style="width: 100%; height: 100%; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                    <img src="images/Mrs._Vu_Ngan_Binh.JPG" alt="Mrs. Vu Ngan Binh" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://ui-avatars.com/api/?name=Vu+Ngan+Binh&background=0f4c81&color=fff&size=200'">
-                                </div>
-                            </div>
-                            <h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Mrs. Vu Ngan Binh</h3>
-                            <p style="color: #b49a5b; font-weight: 700; font-size: 0.95rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Co-Founder & Product and Training Director</p>
-                            <ul style="color: #475569; line-height: 1.6; font-size: 0.95rem; text-align: left; padding-left: 20px; margin-bottom: 0;">
-                                <li>Lecturer, Hanoi University of Pharmacy</li>
-                                <li>Ph.D. in Pharmaceutical Sciences, Hanoi University of Pharmacy</li>
-                                <li>M.Sc. in Environmental Sciences, Erasmus Mundus (JEMES) Scholarship Recipient</li>
-                                <li>Pharmacist, Hanoi University of Pharmacy</li>
-                                <li>Talented Bachelor of Chemistry, VNU University of Science, Vietnam National University, Hanoi</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Member 3 -->
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
-                        <div style="height: 120px; background: linear-gradient(135deg, #0f4c81 0%, #1e293b 100%);"></div>
-                        <div style="padding: 0 30px 30px; text-align: center; margin-top: -50px;">
-                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; padding: 5px; margin: 0 auto 15px;">
-                                <div style="width: 100%; height: 100%; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                    <img src="images/Mrs._Hoang_Tuyet_Mai.png" alt="Mrs. Hoang Tuyet Mai" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://ui-avatars.com/api/?name=Hoang+Tuyet+Mai&background=0f4c81&color=fff&size=200'">
-                                </div>
-                            </div>
-                            <h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Mrs. Hoang Tuyet Mai</h3>
-                            <p style="color: #b49a5b; font-weight: 700; font-size: 0.95rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Co-Founder</p>
-                            <ul style="color: #475569; line-height: 1.6; font-size: 0.95rem; text-align: left; padding-left: 20px; margin-bottom: 0;">
-                                <li>Director of Business Development, Galaxy Education Ambassador Network</li>
-                                <li>Former Head of Administration & Human Resources, TMT Technology Transfer Company</li>
-                                <li>Former Head of Recruitment & Training, Gia Phat Securities</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Member 4 -->
-                    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
-                        <div style="height: 120px; background: linear-gradient(135deg, #0f4c81 0%, #1e293b 100%);"></div>
-                        <div style="padding: 0 30px 30px; text-align: center; margin-top: -50px;">
-                            <div style="width: 100px; height: 100px; background: white; border-radius: 50%; padding: 5px; margin: 0 auto 15px;">
-                                <div style="width: 100%; height: 100%; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                                    <img src="images/Ms._Luong_Thi_Hong_Hanh.png" alt="Ms. Luong Thi Hong Hanh" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://ui-avatars.com/api/?name=Luong+Thi+Hong+Hanh&background=0f4c81&color=fff&size=200'">
-                                </div>
-                            </div>
-                            <h3 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 5px;">Ms. Luong Thi Hong Hanh</h3>
-                            <p style="color: #b49a5b; font-weight: 700; font-size: 0.95rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Co-Founder</p>
-                            <ul style="color: #475569; line-height: 1.6; font-size: 0.95rem; text-align: left; padding-left: 20px; margin-bottom: 0;">
-                                <li>Bachelor of International Business, National Economics University</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partnership Section -->
-    <section id="partnership" class="section-padding" style="background: #f8fafc;">
+      </section>
+      <section class="section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Partnership</h2>
-                <p style="max-width: 800px; margin: 0 auto; font-size: 1.05rem; color: #475569; line-height: 1.6;">
-                    GSJ collaborates with globally ranked universities, international foundations, and specialist education partners — connecting our students with academic mentorship, world-class learning environments, and early career exposure.
+          <div class="narrow prose reveal">
+            <div class="section-head reveal">
+              <div>
+                <p class="eyebrow" data-cms-text="section2.t1">WHO WE ARE</p>
+                <h2 data-cms-text="section2.t2">
+                  Education built around the individual.
+                </h2>
+              </div>
+            </div>
+            <p data-cms-text="section2.t3">
+              GSJ is an in-depth knowledge and skills educational ecosystem
+              built with the mission of accompanying young learners on their
+              journey of growth and future development.
+            </p>
+            <p data-cms-text="section2.t4">
+              Bringing together leading educators and researchers across Natural
+              Sciences, Social Sciences, Engineering, Technology, and Business,
+              Economic,... we develop meaningful, practice-oriented programs
+              that empower every student to thrive through personalized guidance
+              and support.
+            </p>
+            <p data-cms-text="section2.t5">
+              We continuously expand our network of partner universities,
+              research institutes, and educational organizations worldwide,
+              opening doors for students to access world-class academic
+              environments and global competitions.
+            </p>
+            <p data-cms-text="section2.t6">
+              Guided by the philosophy that "Education is not about making
+              students the same, but about helping each student become the best
+              version of themselves," we design personalized academic pathways
+              and career guidance based on each student's individual strengths,
+              passions, and abilities. Beyond delivering knowledge, we help
+              students build confidence, develop real skills, and find the
+              motivation to live by the ideal of "Become a better version of
+              yourself, every day."
+            </p>
+          </div>
+          <div class="mission-grid">
+            <article class="reveal">
+              <span class="line-icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >visibility</span
+                >
+              </span>
+              <h3 data-cms-text="section2.t7">Vision</h3>
+              <p data-cms-text="section2.t8">
+                To become an internationally recognized organization in career
+                education and skills development for students. We are committed
+                to building a sustainable talent ecosystem by equipping young
+                people with strong academic foundations and practical
+                competencies. Through this, we empower students to develop
+                holistically, integrate confidently into the global community,
+                and take meaningful steps toward becoming responsible global
+                citizens.
+              </p>
+            </article>
+            <article class="mission-card reveal">
+              <span class="line-icon">
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >flag</span
+                >
+              </span>
+              <p class="eyebrow" data-cms-text="section2.t9">OUR MISSION</p>
+              <h3 data-cms-text="section2.t10">
+                One million students.<br />One million possibilities.
+              </h3>
+              <p data-cms-text="section2.t11">
+                To empower 1 million students to become the best version of
+                themselves-confident, resilient, and successful in pursuing
+                their future careers.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section pale" id="leadership">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section3.t1">
+                PEOPLE BEHIND THE PURPOSE
+              </p>
+              <h2 data-cms-text="section3.t2">Our Leadership Team</h2>
+            </div>
+          </div>
+          <div class="team-grid">
+            <article class="team-card reveal">
+              <div class="team-portrait">
+                <img
+                  src="images/optimized/Mrs__Dang_Thuy_Nga.webp"
+                  alt="Mrs. Dang Thuy Nga"
+                  class=""
+                  width="1067"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section3.i1"
+                />
+              </div>
+              <div>
+                <p class="eyebrow" data-cms-text="section3.t3">
+                  Founder &amp; CEO
                 </p>
-            </div>
-            
-            <!-- Partner Logo Grid -->
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; margin-bottom: 50px; padding: 20px 0;">
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_unsw.png" alt="University of New South Wales (UNSW)" style="max-height: 42px; max-width: 130px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_usyd.png" alt="University of Sydney (USYD)" style="max-height: 42px; max-width: 130px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_nus.png" alt="National University of Singapore (NUS)" style="max-height: 44px; max-width: 130px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_ntu.png" alt="Nanyang Technological University (NTU)" style="max-height: 42px; max-width: 135px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_hemispheres.png" alt="Hemispheres Foundation" style="max-height: 52px; max-width: 120px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_hust.png" alt="Hanoi University of Science and Technology (HUST)" style="max-height: 42px; max-width: 135px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_english_connection.jpg" alt="The English Connection" style="max-height: 52px; max-width: 120px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_kevin_doan.png" alt="Kevin Doan English Center" style="max-height: 52px; max-width: 120px; object-fit: contain;">
-                </div>
-                <div style="background: white; padding: 14px 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; height: 75px; min-width: 130px;">
-                    <img src="images/logo_cn_vision.png" alt="CN Vision" style="max-height: 52px; max-width: 120px; object-fit: contain;">
-                </div>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; margin-bottom: 40px;">
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">University of New South Wales (UNSW), Australia</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">A member of Australia's prestigious Group of Eight and consistently ranked among the world's top universities. UNSW is internationally recognised for engineering, business, and applied sciences.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">University of Sydney (USYD), Australia</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">Australia's oldest university and a founding member of the Group of Eight, with a global reputation spanning medicine, law, engineering, and the humanities.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">National University of Singapore (NUS)</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">Singapore's flagship university and consistently the highest-ranked institution in Asia. NUS is a global centre for research and innovation.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">Nanyang Technological University (NTU), Singapore</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">One of the world's leading young universities and a global powerhouse in engineering and technology, known for research impact in AI, materials science, and sustainability.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">Hemispheres Foundation, Singapore</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">A Singapore-based foundation dedicated to youth development and international educational exchange, with programmes designed around leadership, global citizenship, and cross-cultural learning.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">Hanoi University of Science and Technology (HUST)</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">Vietnam's foremost technical university and the country's leading centre for engineering and scientific research, with a long-standing reputation for academic rigour.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">The English Connection</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">A trusted English language centre equipping students with both language proficiency and the essential skills of a 21st-century global citizen, spanning English, debate, mathematics, science, drama, and public speaking.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">Kevin Doan English Center</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">A well-regarded English language centre serving students across Central Vietnam, with more than 13 years of experience in English language teaching and debate instruction.</p>
-                </div>
-                <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
-                    <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700;">CN Vision</h4>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin: 0;">An academy delivering integrated English, skills, summer camp, and coaching programmes, guided by Former Principal of the High School for Gifted Students in Foreign Languages.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Blog Placeholder -->
-    <section id="blog" class="section-padding" style="background: white;">
-        <div class="container" style="max-width: 900px; text-align: center;">
-            <h2 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 15px;">Research Blog</h2>
-            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 30px;">Stay tuned for the latest research insights, student stories, and academic updates from GSJ.</p>
-            <p style="color: #94a3b8; font-style: italic;">Coming soon...</p>
-        </div>
-    </section>
-
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <div style="background-color: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 20px;">
-                    <img src="images/gsj_logo_new.png" alt="GSJ Logo" style="height: 100px;">
-                </div>
-                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">
-                    Encouraging & Inspiring Young Minds
+                <h3 data-cms-text="section3.t4">Mrs. Dang Thuy Nga</h3>
+                <ul>
+                  <li data-cms-text="section3.t5">
+                    Former Director of Supply Chain and Quality Director,
+                    Phacogen Group
+                  </li>
+                  <li data-cms-text="section3.t6">
+                    Former Head of Quality Management and Senior Business
+                    Development Manager, SISC Vietnam JSC
+                  </li>
+                  <li data-cms-text="section3.t7">
+                    Senior Expert in Healthcare Quality Management Systems, LEAN
+                    &amp; SIX SIGMA
+                  </li>
+                  <li data-cms-text="section3.t8">
+                    Chemical &amp; Pharmaceutical Engineer, Hanoi University of
+                    Science and Technology
+                  </li>
+                  <li data-cms-text="section3.t9">
+                    Pharmacist, Hanoi University of Pharmacy
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="team-card reveal">
+              <div class="team-portrait">
+                <img
+                  src="images/optimized/Mrs__Vu_Ngan_Binh.webp"
+                  alt="Mrs. Vu Ngan Binh"
+                  class=""
+                  width="1067"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  data-cms-image="section3.i2"
+                />
+              </div>
+              <div>
+                <p class="eyebrow" data-cms-text="section3.t10">
+                  Co-Founder &amp; Product and Training Director
                 </p>
-                <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px; color: rgba(255, 255, 255, 0.9);">
-                    <div style="display: flex; gap: 10px; align-items: flex-start;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">location_on</span>
-                        <span style="font-size: 0.9rem; line-height: 1.5;">Lot A2.1 & A2.2, 1st Floor, Building A, Zone A, Imperia Garden Mall, 203 Nguyen Huy Tuong, Thanh Xuan, Hanoi, Vietnam</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">phone</span>
-                        <span style="font-size: 0.9rem;">032 732 6655</span>
-                    </div>
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <span class="material-symbols-outlined" style="font-size: 1.2rem; color: var(--accent-gold-light);">mail</span>
-                        <span style="font-size: 0.9rem;">cskh@gsj.edu.vn</span>
-                    </div>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/GlobalScienceJourney" target="_blank" title="Facebook"><span class="material-symbols-outlined">public</span></a>
-                    <a href="mailto:cskh@gsj.edu.vn" title="Email"><span class="material-symbols-outlined">mail</span></a>
-                    <a href="tel:0327326655" title="Phone"><span class="material-symbols-outlined">call</span></a>
-                </div>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <div class="footer-links">
-                    <a href="about.html">About us</a>
-                    <a href="services.html">Our Program</a>
-                    <a href="mentors.html">Mentors</a>
-                    <a href="index.html#testimonials">Testimonials</a>
-                </div>
-            </div>
-            <div>
-                <h4>Resources</h4>
-                <div class="footer-links">
-                    <a href="about.html#blog">Research Blog</a>
-                    <a href="contact.html">Apply now / More Questions</a>
-                    <a href="terms.html">Term of service</a>
-                </div>
-            </div>
-            <div>
-                <h4>Reference</h4>
-                <div class="footer-links">
-                    <a href="https://www.scienceresearchacademy.com/" target="_blank">Science Research Academy</a>
-                </div>
-            </div>
+                <h3 data-cms-text="section3.t11">Mrs. Vu Ngan Binh</h3>
+                <ul>
+                  <li data-cms-text="section3.t12">
+                    Lecturer, Hanoi University of Pharmacy
+                  </li>
+                  <li data-cms-text="section3.t13">
+                    Ph.D. in Pharmaceutical Sciences, Hanoi University of
+                    Pharmacy
+                  </li>
+                  <li data-cms-text="section3.t14">
+                    M.Sc. in Environmental Sciences, Erasmus Mundus (JEMES)
+                    Scholarship Recipient
+                  </li>
+                  <li data-cms-text="section3.t15">
+                    Pharmacist, Hanoi University of Pharmacy
+                  </li>
+                  <li data-cms-text="section3.t16">
+                    Talented Bachelor of Chemistry, VNU University of Science,
+                    Vietnam National University, Hanoi
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 GSJ Education LLC. All rights reserved.</p>
+      </section>
+      <section class="section" id="destinations">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section4.t1">
+                OUR STUDENTS’ NEXT CHAPTER
+              </p>
+              <h2 data-cms-text="section4.t2">
+                GSJ Students’ University Destinations
+              </h2>
+            </div>
+          </div>
+          <div class="university-grid">
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-chicago.png"
+                alt="University of Chicago"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i1"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/johns-hopkins-university.jpg"
+                alt="Johns Hopkins University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i2"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-california-los-angeles-ucla.png"
+                alt="University of California, Los Angeles (UCLA)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i3"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/washington-university-in-st-louis.png"
+                alt="Washington University in St. Louis"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i4"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/new-york-university-nyu.png"
+                alt="New York University (NYU)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i5"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/boston-college.png"
+                alt="Boston College"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i6"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-illinois-urbana-champaign.jpg"
+                alt="University of Illinois Urbana-Champaign"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i7"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-wisconsin-madison.png"
+                alt="University of Wisconsin–Madison"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i8"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/lehigh-university.png"
+                alt="Lehigh University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i9"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/purdue-university.png"
+                alt="Purdue University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i10"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-georgia.png"
+                alt="University of Georgia"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i11"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/tulane-university.jpg"
+                alt="Tulane University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i12"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-south-florida.png"
+                alt="University of South Florida"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i13"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-iowa.png"
+                alt="University of Iowa"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i14"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/university-of-south-carolina.svg"
+                alt="University of South Carolina"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i15"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/trinity-university.svg"
+                alt="Trinity University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i16"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/furman-university.jpg"
+                alt="Furman University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i17"
+              />
+            </figure>
+            <figure class="university-logo" data-region="us">
+              <img
+                src="images/universities/gettysburg-college.svg"
+                alt="Gettysburg College"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i18"
+              />
+            </figure>
+            <figure class="university-logo" data-region="singapore">
+              <img
+                src="images/universities/national-university-of-singapore-nus.jpg"
+                alt="National University of Singapore (NUS)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i19"
+              />
+            </figure>
+            <figure class="university-logo" data-region="singapore">
+              <img
+                src="images/universities/nanyang-technological-university-ntu.jpg"
+                alt="Nanyang Technological University (NTU)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i20"
+              />
+            </figure>
+            <figure class="university-logo" data-region="australia">
+              <img
+                src="images/universities/university-of-sydney.png"
+                alt="University of Sydney"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i21"
+              />
+            </figure>
+            <figure class="university-logo" data-region="australia">
+              <img
+                src="images/universities/monash-university.webp"
+                alt="Monash University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i22"
+              />
+            </figure>
+            <figure class="university-logo" data-region="australia">
+              <img
+                src="images/universities/rmit.jpg"
+                alt="RMIT"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i23"
+              />
+            </figure>
+            <figure class="university-logo" data-region="australia">
+              <img
+                src="images/universities/university-of-melbourne.png"
+                alt="University of Melbourne"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i24"
+              />
+            </figure>
+            <figure class="university-logo" data-region="australia">
+              <img
+                src="images/universities/australia-national-university-anu.svg"
+                alt="Australia National University - ANU"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i25"
+              />
+            </figure>
+            <figure class="university-logo" data-region="australia">
+              <img
+                src="images/universities/university-of-new-south-wales-unsw.webp"
+                alt="University of New South Wales (UNSW)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i26"
+              />
+            </figure>
+            <figure class="university-logo" data-region="asia">
+              <img
+                src="images/universities/hong-kong-university-of-science-and-technology-hkust.png"
+                alt="Hong Kong University of Science and Technology (HKUST)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i27"
+              />
+            </figure>
+            <figure class="university-logo" data-region="asia">
+              <img
+                src="images/universities/korea-university.png"
+                alt="Korea University"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i28"
+              />
+            </figure>
+            <figure class="university-logo" data-region="asia">
+              <img
+                src="images/universities/vinuniversity.png"
+                alt="VinUniversity"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i29"
+              />
+            </figure>
+            <figure class="university-logo" data-region="asia">
+              <img
+                src="images/universities/british-university-vietnam-buv.png"
+                alt="British University Vietnam (BUV)"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i30"
+              />
+            </figure>
+            <figure class="university-logo" data-region="asia">
+              <img
+                src="images/universities/trinity-college.svg"
+                alt="Trinity College"
+                class=""
+                loading="lazy"
+                decoding="async"
+                data-cms-image="section4.i31"
+              />
+            </figure>
+          </div>
         </div>
+      </section>
+      <section class="section pale" id="partnership">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow" data-cms-text="section5.t1">
+                CONNECTING PEOPLE &amp; POSSIBILITY
+              </p>
+              <h2 data-cms-text="section5.t2">Our learning network</h2>
+              <p class="section-intro" data-cms-text="section5.t3">
+                GSJ connects students with educators, researchers and
+                professional learning environments in Vietnam and around the
+                world.
+              </p>
+            </div>
+          </div>
+          <div class="partner-logos">
+            <img
+              src="images/optimized/logo_hust.webp"
+              alt="Hanoi University of Science and Technology"
+              class=""
+              width="671"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              data-cms-image="section5.i1"
+            />
+            <img
+              src="images/optimized/logo_hemispheres.webp"
+              alt="Hemispheres Foundation"
+              class=""
+              width="1131"
+              height="1070"
+              loading="lazy"
+              decoding="async"
+              data-cms-image="section5.i2"
+            />
+            <img
+              src="images/optimized/logo_english_connection.webp"
+              alt="The English Connection"
+              class=""
+              width="1563"
+              height="1563"
+              loading="lazy"
+              decoding="async"
+              data-cms-image="section5.i3"
+            />
+            <img
+              src="images/optimized/logo_kevin_doan.webp"
+              alt="Kevin Doan English Center"
+              class=""
+              width="784"
+              height="766"
+              loading="lazy"
+              decoding="async"
+              data-cms-image="section5.i4"
+            />
+            <img
+              src="images/optimized/logo_cn_vision.webp"
+              alt="CN Vision"
+              class=""
+              width="1600"
+              height="1600"
+              loading="lazy"
+              decoding="async"
+              data-cms-image="section5.i5"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="section" id="blog">
+        <div class="container story-callout reveal">
+          <div>
+            <p class="eyebrow" data-cms-text="section6.t1">
+              GSJ STUDENTS’ BLOG
+            </p>
+            <h2 data-cms-text="section6.t2">
+              Discover the experiences<br />behind the achievements.
+            </h2>
+            <p data-cms-text="section6.t3">
+              Research, competitions and the moments that shape a student’s
+              direction — told by our students and families.
+            </p>
+            <a
+              class="button button-primary"
+              href="student-stories.html"
+              data-cms-link="section6.l1"
+            >
+              <span data-cms-wrap="true" data-cms-text="section6.t4"
+                >Read student stories</span
+              >
+              <span class="material-symbols-outlined" aria-hidden="true"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <img
+            src="images/optimized/_nh_testimonial____Ho_ng_Minh_Tu_.webp"
+            alt="Do Hoang Minh Tue"
+            class=""
+            width="1449"
+            height="1021"
+            loading="lazy"
+            decoding="async"
+            data-cms-image="section6.i1"
+          />
+        </div>
+      </section>
+      <section class="cta-section section">
+        <div class="container cta-inner reveal">
+          <div>
+            <p class="eyebrow" data-cms-text="section7.t1">
+              LET’S SHAPE WHAT’S NEXT
+            </p>
+            <h2 data-cms-text="section7.t2">
+              Every great journey starts with you.
+            </h2>
+            <p data-cms-text="section7.t3">
+              Explore your strengths, discuss your goals, and discover your next
+              step with GSJ.
+            </p>
+          </div>
+          <a
+            class="button button-primary"
+            href="contact.html?program=study-abroad#consultation"
+            data-cms-link="section7.l1"
+          >
+            <span data-cms-wrap="true" data-cms-text="section7.t4"
+              >Book a 1-on-1 consultation</span
+            >
+            <span class="material-symbols-outlined" aria-hidden="true"
+              >arrow_forward</span
+            >
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="footer-logo" href="index.html" data-cms-link="footer.l1">
+              <img
+                src="images/optimized/gsj_logo_new.webp"
+                alt="GSJ — Global Scholars Journey"
+                class=""
+                width="332"
+                height="160"
+                loading="lazy"
+                decoding="async"
+                data-cms-image="footer.i1"
+              />
+            </a>
+            <h2 data-cms-text="footer.t1">
+              Your potential.<br />A world of possibilities.
+            </h2>
+            <p data-cms-text="footer.t2">
+              Empowering young minds on their journey<br />to becoming global
+              scholars.
+            </p>
+            <a
+              href="mailto:info@gsj.edu.vn"
+              data-cms-text="footer.t3"
+              data-cms-link="footer.l2"
+              >info@gsj.edu.vn</a
+            >
+            <a
+              href="tel:0327326655"
+              data-cms-text="footer.t4"
+              data-cms-link="footer.l3"
+              >032 732 6655</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t5">Explore GSJ</h3>
+            <a
+              href="about.html"
+              data-cms-text="footer.t6"
+              data-cms-link="footer.l4"
+              >About us</a
+            >
+            <a
+              href="services.html"
+              data-cms-text="footer.t7"
+              data-cms-link="footer.l5"
+              >Our Programs</a
+            >
+            <a
+              href="study-abroad.html"
+              data-cms-text="footer.t8"
+              data-cms-link="footer.l6"
+              >Study Abroad</a
+            >
+            <a
+              href="research.html"
+              data-cms-text="footer.t9"
+              data-cms-link="footer.l7"
+              >Research</a
+            >
+            <a
+              href="become-mentor.html"
+              data-cms-text="footer.t10"
+              data-cms-link="footer.l8"
+              >Become a Mentor</a
+            >
+            <a
+              href="student-stories.html"
+              data-cms-text="footer.t11"
+              data-cms-link="footer.l9"
+              >Student Stories</a
+            >
+          </div>
+          <div class="footer-links">
+            <h3 data-cms-text="footer.t12">Let’s connect</h3>
+            <a
+              href="contact.html"
+              data-cms-text="footer.t13"
+              data-cms-link="footer.l10"
+              >Book a consultation</a
+            >
+            <a
+              href="questions.html"
+              data-cms-text="footer.t14"
+              data-cms-link="footer.l11"
+              >FAQs &amp; support</a
+            >
+            <a
+              href="https://www.facebook.com/hocvienkhoahocgsj"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t15"
+              data-cms-link="footer.l12"
+              >Facebook ↗</a
+            >
+            <a
+              href="https://www.tiktok.com/@gsj.education"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t16"
+              data-cms-link="footer.l13"
+              >TikTok ↗</a
+            >
+            <a
+              href="https://www.youtube.com/@gsj-hocviensangtaokhoahoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cms-text="footer.t17"
+              data-cms-link="footer.l14"
+              >YouTube ↗</a
+            >
+          </div>
+        </div>
+        <div class="footer-offices">
+          <div>
+            <h3 data-cms-text="footer.t18">Hanoi - Head Office</h3>
+            <p data-cms-text="footer.t19">
+              Building A-Imperia Garden Building, 203 Nguyen Huy Tuong, Thanh
+              Xuan Ward, Hanoi
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t20">Hanoi - Office 2</h3>
+            <p data-cms-text="footer.t21">
+              Nguyet Que 25-08, Vinhomes Harmony, Phuc Dong, Long Bien, Hanoi,
+              Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t22">Ho Chi Minh City Office</h3>
+            <p data-cms-text="footer.t23">
+              36D Luong Dinh Cua Street, An Khanh Ward, Thu Duc City, Ho Chi
+              Minh City, Vietnam.
+            </p>
+          </div>
+          <div>
+            <h3 data-cms-text="footer.t24">Da Nang Office</h3>
+            <p data-cms-text="footer.t25">
+              89-91 Doan Huu Trung Street, An Khe, Da Nang, Vietnam.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-cms-text="footer.t26"
+            >© 2026 GSJ. All rights reserved.</span
+          >
+          <a
+            href="terms.html"
+            data-cms-text="footer.t27"
+            data-cms-link="footer.l15"
+            >Terms of service</a
+          >
+          <span data-cms-text="footer.t28">Global Scholars Journey</span>
+        </div>
+      </div>
     </footer>
-
-    <div class="mobile-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About us</a>
-        <a href="services.html">Our Program</a>
-        <a href="research.html">Advanced Scientific Research</a>
-        <a href="become-mentor.html">Become A Mentor</a>
-        <a href="mentors.html">Mentors</a>
-        <a href="index.html#testimonials">Testimonials</a>
-        <a href="contact.html">Apply Now</a>
-    </div>
-
-<!-- Video Modal -->
-<div id="videoModal" onclick="if(event.target===this){this.style.display='none';document.getElementById('videoIframe').src=document.getElementById('videoIframe').src;}" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:10000; justify-content:center; align-items:center; backdrop-filter:blur(4px);">
-    <div style="position:relative; width:90%; max-width:900px; aspect-ratio:16/9; background:#000; border-radius:16px; overflow:hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
-        <button onclick="document.getElementById('videoModal').style.display='none';document.getElementById('videoIframe').src=document.getElementById('videoIframe').src;" style="position:absolute; top:12px; right:12px; z-index:10; background:rgba(0,0,0,0.6); border:none; color:white; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.2rem; display:flex; align-items:center; justify-content:center;">✕</button>
-        <iframe id="videoIframe" src="https://drive.google.com/file/d/1NrOf-l56bAb-8XsK8qw57VNzmkKr9uHO/preview" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="border:none;"></iframe>
-    </div>
-</div>
-
-<script src="main.js"></script>
-</body>
+    <button class="back-top icon-button" aria-label="Back to top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >arrow_upward</span
+      >
+    </button>
+    <div
+      id="form-status"
+      class="form-status"
+      role="status"
+      aria-live="polite"
+      hidden=""
+    ></div>
+  </body>
 </html>

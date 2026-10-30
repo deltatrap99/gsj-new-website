@@ -1,218 +1,119 @@
-// ============================================
-// GSJ Website — Supabase Integration
-// ============================================
-
-const SUPABASE_URL = 'https://vrdnbwdkapxoaglulujw.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_v83UdxeUwHztASgTKdVvxw_uNfiAcIb';
-
-// Initialize Supabase client
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-// ============================================
-// Utility: Show toast notification
-// ============================================
-function showToast(message, type = 'success') {
-    // Remove existing toast
-    const existing = document.querySelector('.gsj-toast');
-    if (existing) existing.remove();
-
-    const toast = document.createElement('div');
-    toast.className = 'gsj-toast';
-    toast.innerHTML = `
-        <span class="material-symbols-outlined" style="font-size: 1.4rem;">
-            ${type === 'success' ? 'check_circle' : 'error'}
-        </span>
-        <span>${message}</span>
-    `;
-    
-    Object.assign(toast.style, {
-        position: 'fixed',
-        bottom: '30px',
-        right: '30px',
-        background: type === 'success' 
-            ? 'linear-gradient(135deg, #059669, #10b981)' 
-            : 'linear-gradient(135deg, #dc2626, #ef4444)',
-        color: 'white',
-        padding: '16px 28px',
-        borderRadius: '16px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '12px',
-        fontSize: '1rem',
-        fontWeight: '600',
-        fontFamily: 'inherit',
-        boxShadow: '0 10px 40px rgba(0,0,0,0.15)',
-        zIndex: '99999',
-        animation: 'slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-        maxWidth: '420px'
+/* Forms keep the existing Supabase schema and public project configuration.
+   No external SDK is needed; requests are sent only after a visitor submits. */
+(() => {
+  const endpoint = "https://vrdnbwdkapxoaglulujw.supabase.co/rest/v1";
+  const publishableKey = "sb_publishable_v83UdxeUwHztASgTKdVvxw_uNfiAcIb";
+  const value = (form, id) => form.querySelector("#" + id)?.value.trim() || "";
+  const forms = {
+    contact: {
+      table: "contact_submissions",
+      message:
+        "Thank you. Your consultation request has been sent. Our team will contact you to confirm the next step.",
+      data: (form) => ({
+        full_name: value(form, "contact-name"),
+        email: value(form, "contact-email"),
+        subject: value(form, "contact-subject"),
+        message: value(form, "contact-message"),
+      }),
+    },
+    question: {
+      table: "question_submissions",
+      message:
+        "Thank you. Your question has been sent. Our team will get back to you soon.",
+      data: (form) => ({
+        full_name: value(form, "question-name"),
+        email: value(form, "question-email"),
+        question: [
+          value(form, "question-concern"),
+          value(form, "question-message"),
+        ]
+          .filter(Boolean)
+          .join("\n\n"),
+      }),
+    },
+    mentor: {
+      table: "mentor_applications",
+      message:
+        "Application received. Thank you for your interest in mentoring with GSJ. Our team will contact you shortly.",
+      data: (form) =>
+        Object.fromEntries(
+          Object.entries({
+            first_name: "first-name",
+            last_name: "last-name",
+            email: "email",
+            phone: "phone",
+            project_title: "project-title",
+            project_overview: "project-overview",
+            research_field: "research-field",
+            availability: "availability",
+            mode_of_engagement: "mode",
+            prior_experience: "experience",
+            student_responsibilities: "responsibilities",
+            ideal_student_profile: "student-profile",
+            skills_learning_outcomes: "skills",
+            weekly_time_commitment: "time",
+            additional_info: "additional",
+            how_heard: "how-heard",
+          }).map(([key, id]) => [key, value(form, "mentor-" + id)]),
+        ),
+    },
+  };
+  document.querySelectorAll("form[data-form]").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (form.dataset.submitting === "true" || !form.reportValidity()) return;
+      const definition = forms[form.dataset.form];
+      if (!definition) return;
+      const submit = form.querySelector('[type="submit"]');
+      const feedback = form.querySelector(".form-feedback");
+      const original = submit.innerHTML;
+      form.dataset.submitting = "true";
+      form.setAttribute("aria-busy", "true");
+      submit.disabled = true;
+      submit.textContent = "Sending…";
+      feedback.textContent = "";
+      delete feedback.dataset.error;
+      const payload = definition.data(form);
+      try {
+        const response = await fetch(endpoint + "/" + definition.table, {
+          method: "POST",
+          headers: {
+            apikey: publishableKey,
+            "Content-Type": "application/json",
+            Prefer: "return=minimal",
+          },
+          body: JSON.stringify(payload),
+          signal: AbortSignal.timeout(20000),
+        });
+        if (!response.ok) throw new Error("Submission failed");
+        feedback.textContent = definition.message;
+        form.reset();
+      } catch {
+        feedback.dataset.error = "true";
+        feedback.textContent =
+          "We couldn’t send your message. Your information is still here. Please try again, call 032 732 6655, or email info@gsj.edu.vn.";
+        const email = document.createElement("a");
+        email.className = "form-email-fallback";
+        email.textContent = "Send this enquiry by email";
+        const subject =
+          form.dataset.form === "mentor"
+            ? "GSJ mentor application"
+            : "GSJ consultation & enquiry";
+        const body = Object.entries(payload)
+          .map(([key, entry]) => key.replaceAll("_", " ") + ": " + entry)
+          .join("\n\n");
+        email.href =
+          "mailto:info@gsj.edu.vn?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+        feedback.append(email);
+      } finally {
+        form.dataset.submitting = "false";
+        form.removeAttribute("aria-busy");
+        submit.disabled = false;
+        submit.innerHTML = original;
+      }
     });
-
-    document.body.appendChild(toast);
-
-    // Auto-remove after 5s
-    setTimeout(() => {
-        toast.style.animation = 'slideOutRight 0.3s ease-in forwards';
-        setTimeout(() => toast.remove(), 300);
-    }, 5000);
-}
-
-// Inject toast animation CSS
-const toastStyle = document.createElement('style');
-toastStyle.textContent = `
-    @keyframes slideInRight {
-        from { transform: translateX(120%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-    }
-    @keyframes slideOutRight {
-        from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(120%); opacity: 0; }
-    }
-    .btn-loading {
-        pointer-events: none;
-        opacity: 0.7;
-    }
-    .btn-loading::after {
-        content: '';
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border: 2px solid rgba(255,255,255,0.3);
-        border-top-color: white;
-        border-radius: 50%;
-        animation: spin 0.6s linear infinite;
-        margin-left: 8px;
-    }
-    @keyframes spin {
-        to { transform: rotate(360deg); }
-    }
-`;
-document.head.appendChild(toastStyle);
-
-
-// ============================================
-// 1. Contact Form (contact.html)
-// ============================================
-async function submitContactForm(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    // Loading state
-    submitBtn.classList.add('btn-loading');
-    submitBtn.innerHTML = '<span class="material-symbols-outlined" style="font-size: 1.2rem;">hourglass_top</span> Submitting...';
-
-    const data = {
-        full_name: form.querySelector('#contact-name').value.trim(),
-        email: form.querySelector('#contact-email').value.trim(),
-        subject: form.querySelector('#contact-subject').value,
-        message: form.querySelector('#contact-message').value.trim()
-    };
-
-    try {
-        const { error } = await supabaseClient
-            .from('contact_submissions')
-            .insert([data]);
-
-        if (error) throw error;
-
-        showToast('Thank you! Your message has been sent successfully.', 'success');
-        form.reset();
-    } catch (err) {
-        console.error('Contact form error:', err.message || err.details || err);
-        showToast('Something went wrong. Please try again.', 'error');
-    } finally {
-        submitBtn.classList.remove('btn-loading');
-        submitBtn.innerHTML = originalText;
-    }
-}
-
-
-// ============================================
-// 2. Mentor Application Form (mentors.html)
-// ============================================
-async function submitMentorApplication(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.classList.add('btn-loading');
-    submitBtn.innerHTML = '<span class="material-symbols-outlined" style="font-size: 1.2rem;">hourglass_top</span> Submitting...';
-
-    const data = {
-        first_name: form.querySelector('#mentor-first-name').value.trim(),
-        last_name: form.querySelector('#mentor-last-name').value.trim(),
-        email: form.querySelector('#mentor-email').value.trim(),
-        phone: form.querySelector('#mentor-phone').value.trim(),
-        project_title: form.querySelector('#mentor-project-title').value.trim(),
-        project_overview: form.querySelector('#mentor-project-overview').value.trim(),
-        research_field: form.querySelector('#mentor-research-field').value.trim(),
-        availability: form.querySelector('#mentor-availability').value,
-        mode_of_engagement: form.querySelector('#mentor-mode').value,
-        prior_experience: form.querySelector('#mentor-experience').value,
-        student_responsibilities: form.querySelector('#mentor-responsibilities').value.trim(),
-        ideal_student_profile: form.querySelector('#mentor-student-profile').value.trim(),
-        skills_learning_outcomes: form.querySelector('#mentor-skills').value.trim(),
-        weekly_time_commitment: form.querySelector('#mentor-time').value,
-        additional_info: form.querySelector('#mentor-additional').value.trim(),
-        how_heard: form.querySelector('#mentor-how-heard').value.trim()
-    };
-
-    try {
-        const { error } = await supabaseClient
-            .from('mentor_applications')
-            .insert([data]);
-
-        if (error) throw error;
-
-        showToast('Application submitted! We will contact you shortly.', 'success');
-        form.reset();
-    } catch (err) {
-        console.error('Mentor form error:', err.message || err.details || err);
-        showToast('Something went wrong. Please try again.', 'error');
-    } finally {
-        submitBtn.classList.remove('btn-loading');
-        submitBtn.innerHTML = originalText;
-    }
-}
-
-
-// ============================================
-// 3. Question Form (questions.html)
-// ============================================
-async function submitQuestion(event) {
-    event.preventDefault();
-    
-    const form = event.target;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.classList.add('btn-loading');
-    submitBtn.innerHTML = '<span class="material-symbols-outlined" style="font-size: 1.2rem;">hourglass_top</span> Submitting...';
-
-    const data = {
-        full_name: form.querySelector('#question-name').value.trim(),
-        email: form.querySelector('#question-email').value.trim(),
-        question: form.querySelector('#question-message').value.trim()
-    };
-
-    try {
-        const { error } = await supabaseClient
-            .from('question_submissions')
-            .insert([data]);
-
-        if (error) throw error;
-
-        showToast('Thank you! We will get back to you soon.', 'success');
-        form.reset();
-    } catch (err) {
-        console.error('Question form error:', err.message || err.details || err);
-        showToast('Something went wrong. Please try again.', 'error');
-    } finally {
-        submitBtn.classList.remove('btn-loading');
-        submitBtn.innerHTML = originalText;
-    }
-}
+  });
+})();

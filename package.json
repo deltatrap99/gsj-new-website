@@ -1,0 +1,14 @@
+{
+  "name": "gsj-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve-site.mjs",
+    "cms": "npm --prefix cms run develop",
+    "cms:prepare": "node scripts/prepare-cms.mjs",
+    "check": "node scripts/check-site.mjs && node scripts/check-forms.mjs && node scripts/check-cms.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "1.1.2"
+  }
+}
