@@ -11,6 +11,20 @@ const {
 } = require("../cms/src/utils/website.js");
 const seed = JSON.parse(await readFile("cms/seed/website.json", "utf8"));
 assert.equal(seed.pages.length, 10);
+const expectedHeadings = {
+  home: {
+    "section3.t2": "More than academic excellence,",
+    "section5.t2": "Real journeys, In their own words.",
+  },
+  programs: { "section1.t2": "Many possibilities," },
+  "study-abroad": { "section1.t2": "Beyond University Admissions," },
+  research: {
+    "section1.t2": "Your curiosity,",
+    "section6.t2": "Real journeys, In their own words.",
+  },
+  "become-mentor": { "section1.t2": "Share your expertise," },
+  "student-stories": { "section1.t2": "Real experiences," },
+};
 let fields = 0;
 for (const [file, slug] of [...pages, ["mentors.html", "become-mentor"]]) {
   const html = await readFile(file, "utf8"),
@@ -23,6 +37,20 @@ for (const [file, slug] of [...pages, ["mentors.html", "become-mentor"]]) {
   );
   const codes = expected.map((f) => f.code);
   assert.equal(new Set(codes).size, codes.length, `${file}: unique keys`);
+  for (const [code, text] of Object.entries(expectedHeadings[slug] || {})) {
+    const node = $(`[data-cms-text="${code}"]`);
+    assert.equal(node.closest("h1,h2").length, 1, `${file}: heading ${code}`);
+    assert.equal(
+      node.text().replace(/\s+/g, " ").trim(),
+      text,
+      `${file}: comma between heading clauses`,
+    );
+    assert.equal(
+      expected.find((item) => item.code === code)?.text,
+      text,
+      `${file}: CMS seed uses the same punctuation`,
+    );
+  }
   for (const item of expected) {
     const attribute = { text: "text", image: "image", link: "link" }[item.kind];
     assert.equal(
@@ -64,11 +92,20 @@ const output = project({
       texts: [
         { code: "a", text: "<script>alert(1)</script>", private: "omit" },
       ],
+      images: [{
+        code: "b",
+        image: {
+          url: "/uploads/test.webp",
+          updatedAt: "2026-10-30T18:05:46.658Z",
+          private: "omit",
+        },
+      }],
     },
   ],
 });
 assert(!JSON.stringify(output).includes("never expose"));
 assert(!JSON.stringify(output).includes("private"));
+assert.equal(output.fields.find((field) => field.kind === "image").image.updatedAt, "2026-10-30T18:05:46.658Z");
 assert.equal(
   output.fields[0].text,
   "<script>alert(1)</script>",

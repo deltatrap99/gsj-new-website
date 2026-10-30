@@ -79,6 +79,7 @@ function project(document) {
               width: item.image.width,
               height: item.image.height,
               alternativeText: item.image.alternativeText,
+              updatedAt: item.image.updatedAt,
             }
           : null,
       })),

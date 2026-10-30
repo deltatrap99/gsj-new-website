@@ -67,10 +67,21 @@
       }
       if (field.kind === "image") {
         // Static fallback paths belong to the website origin, not to Strapi.
-        const src = field.image?.url
+        let src = field.image?.url
           ? safeUrl(field.image.url, true)
           : safeUrl(field.source);
         if (!src) continue;
+        // Strapi replaces media in place, retaining its URL. Version same-origin
+        // uploads so an already cached logo/photo cannot survive a replacement.
+        // Leave external CDN/signed URLs unchanged.
+        if (field.image?.updatedAt) {
+          const version = Date.parse(field.image.updatedAt);
+          const imageUrl = new URL(src, location.href);
+          if (Number.isFinite(version) && imageUrl.origin === base.origin) {
+            imageUrl.searchParams.set("v", String(version));
+            src = imageUrl.href;
+          }
+        }
         for (const node of window.document.querySelectorAll(
           `[data-cms-image="${field.code}"]`,
         )) {

@@ -2,7 +2,14 @@
   {
     "purpose": "Advanced Scientific Research",
     "source": "https://drive.google.com/file/d/1IobCJGUoQKL9ovjl6LzqfZrk1jI0aUJs/view",
-    "file": "images/research-experience.webp"
+    "file": "images/research-experience.webp",
+    "retouch": {
+      "date": "2026-10-31",
+      "tool": "Built-in image_gen; only the edited corner was composited into the original photo",
+      "region": { "left": 0, "top": 0, "width": 240, "height": 144 },
+      "unchangedPixelsOutsideRegion": true,
+      "prompt": "Use case: precise-object-edit. Input image 1 is the EDIT TARGET, a real GSJ laboratory photograph. Remove ONLY the small pasted GSJ graphic/watermark in the extreme TOP LEFT corner (the white outlined blue-green flask and GSJ lettering, approximately x=0..215, y=0..118 in this 1600x1200 image). Seamlessly reconstruct the pale grey wall/ceiling underneath, matching its existing lighting, subtle gradient, and wall-ceiling seam. Preserve EVERYTHING else exactly: all five students' identities, facial features, hair, clothes, hands, positions, all furniture, equipment, perspective, colors, photograph texture, and the large REAL blue-green GSJ wall sign and Science Journey lettering on the RIGHT wall. Do not alter or remove that real wall-mounted logo. No cropping, no zoom, no reframing, no restyling, no added objects or text. Keep the original 4:3 landscape composition and original resolution if possible. This is a tiny localized retouch, not a regenerated photograph."
+    }
   },
   {
     "purpose": "Business & Entrepreneurship Training",

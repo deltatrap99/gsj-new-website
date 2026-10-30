@@ -798,14 +798,19 @@ summary {
 }
 .intro-split {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 72px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
+}
+.intro-split > div {
+  max-width: 68rem;
+  min-width: 0;
 }
 .intro-split h2 {
   margin-bottom: 24px;
 }
 .intro-split p:not(.eyebrow) {
+  max-width: 84ch;
   color: var(--muted);
   margin-bottom: 28px;
 }
@@ -2259,9 +2264,6 @@ form {
   }
   .program-card h3 {
     font-size: 1.3rem;
-  }
-  .intro-split {
-    gap: 40px;
   }
   .mission-grid {
     gap: 28px;

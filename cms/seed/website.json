@@ -388,7 +388,7 @@
         },
         {
           "code": "section3",
-          "name": "More than academic excellence. A foundation for life.",
+          "name": "More than academic excellence, A foundation for life.",
           "fields": [
             {
               "code": "section3.t1",
@@ -399,8 +399,8 @@
             {
               "code": "section3.t2",
               "kind": "text",
-              "label": "More than academic excellence.",
-              "text": "More than academic excellence."
+              "label": "More than academic excellence,",
+              "text": "More than academic excellence,"
             },
             {
               "code": "section3.t3",
@@ -580,7 +580,7 @@
         },
         {
           "code": "section5",
-          "name": "Real journeys. In their own words.",
+          "name": "Real journeys, In their own words.",
           "fields": [
             {
               "code": "section5.t1",
@@ -591,8 +591,8 @@
             {
               "code": "section5.t2",
               "kind": "text",
-              "label": "Real journeys. In their own words.",
-              "text": "Real journeys. In their own words."
+              "label": "Real journeys, In their own words.",
+              "text": "Real journeys, In their own words."
             },
             {
               "code": "section5.t3",
@@ -1679,7 +1679,7 @@
       "sections": [
         {
           "code": "section1",
-          "name": "Many possibilities. Your own direction.",
+          "name": "Many possibilities, Your own direction.",
           "fields": [
             {
               "code": "section1.t1",
@@ -1690,8 +1690,8 @@
             {
               "code": "section1.t2",
               "kind": "text",
-              "label": "Many possibilities.",
-              "text": "Many possibilities."
+              "label": "Many possibilities,",
+              "text": "Many possibilities,"
             },
             {
               "code": "section1.t3",
@@ -2633,7 +2633,7 @@
       "sections": [
         {
           "code": "section1",
-          "name": "Beyond University Admissions. Towards a FutureBuilt Around You.",
+          "name": "Beyond University Admissions, Towards a FutureBuilt Around You.",
           "fields": [
             {
               "code": "section1.t1",
@@ -2644,8 +2644,8 @@
             {
               "code": "section1.t2",
               "kind": "text",
-              "label": "Beyond University Admissions.",
-              "text": "Beyond University Admissions."
+              "label": "Beyond University Admissions,",
+              "text": "Beyond University Admissions,"
             },
             {
               "code": "section1.t3",
@@ -4599,7 +4599,7 @@
       "sections": [
         {
           "code": "section1",
-          "name": "Your curiosity. Original discoveries.",
+          "name": "Your curiosity, Original discoveries.",
           "fields": [
             {
               "code": "section1.t1",
@@ -4610,8 +4610,8 @@
             {
               "code": "section1.t2",
               "kind": "text",
-              "label": "Your curiosity.",
-              "text": "Your curiosity."
+              "label": "Your curiosity,",
+              "text": "Your curiosity,"
             },
             {
               "code": "section1.t3",
@@ -5008,7 +5008,7 @@
         },
         {
           "code": "section6",
-          "name": "Real journeys. In their own words.",
+          "name": "Real journeys, In their own words.",
           "fields": [
             {
               "code": "section6.t1",
@@ -5019,8 +5019,8 @@
             {
               "code": "section6.t2",
               "kind": "text",
-              "label": "Real journeys. In their own words.",
-              "text": "Real journeys. In their own words."
+              "label": "Real journeys, In their own words.",
+              "text": "Real journeys, In their own words."
             },
             {
               "code": "section6.t3",
@@ -5483,7 +5483,7 @@
       "sections": [
         {
           "code": "section1",
-          "name": "Share your expertise.Shape a scholar’s future.",
+          "name": "Share your expertise,Shape a scholar’s future.",
           "fields": [
             {
               "code": "section1.t1",
@@ -5494,8 +5494,8 @@
             {
               "code": "section1.t2",
               "kind": "text",
-              "label": "Share your expertise.",
-              "text": "Share your expertise."
+              "label": "Share your expertise,",
+              "text": "Share your expertise,"
             },
             {
               "code": "section1.t3",
@@ -5524,9 +5524,9 @@
             {
               "code": "section1.i1",
               "kind": "image",
-              "label": "Mentorship in a GSJ research laboratory",
-              "alt": "Mentorship in a GSJ research laboratory",
-              "source": "images/research-experience.webp"
+              "label": "GSJ mentor guiding students during a collaborative research session",
+              "alt": "GSJ mentor guiding students during a collaborative research session",
+              "source": "images/optimized/program_scientific_research_new.webp"
             }
           ]
         },
@@ -6121,8 +6121,8 @@
             {
               "code": "section1.t2",
               "kind": "text",
-              "label": "Real experiences.",
-              "text": "Real experiences."
+              "label": "Real experiences,",
+              "text": "Real experiences,"
             },
             {
               "code": "section1.t3",

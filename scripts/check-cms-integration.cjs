@@ -132,6 +132,19 @@ const testRoot = path.join(root, "artifacts", "cms-tests", task);
     const mediaResponse = await fetch("http://localhost:1347" + media.url);
     assert.equal(mediaResponse.status, 200);
     assert.match(mediaResponse.headers.get("content-type"), /^image\//);
+    assert(Number.isFinite(Date.parse(media.updatedAt)), "public media includes its cache version");
+    await app.plugin("upload").service("upload").replace(image.id, {
+      data: { fileInfo: { name: image.name, alternativeText: image.alternativeText } },
+      file: {
+        filepath: imagePath,
+        originalFilename: "test.webp",
+        mimetype: "image/webp",
+        size: (await fs.stat(imagePath)).size,
+      },
+    });
+    const replaced = (await get("/api/website/home")).body.data.page.fields.find((field) => field.kind === "image").image;
+    assert.equal(replaced.url, media.url, "Strapi retains the URL when replacing media");
+    assert.notEqual(replaced.updatedAt, media.updatedAt, "replacing media changes its cache version");
     for (const [url, method] of [
       ["/api/pages", "POST"],
       ["/api/upload", "POST"],
@@ -157,6 +170,7 @@ const testRoot = path.join(root, "artifacts", "cms-tests", task);
         "tampered preview rejected",
         "real publish",
         "media upload and delivery",
+        "media replacement cache version",
         "anonymous writes blocked",
         "unpublished content hidden",
       ],
